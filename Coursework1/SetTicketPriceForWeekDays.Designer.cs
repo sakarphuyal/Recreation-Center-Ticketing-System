@@ -85,7 +85,7 @@ namespace Coursework1
             this.weekGroupFiveToTenThreeHour = new System.Windows.Forms.TextBox();
             this.weekGroupTenToFifteenThreeHour = new System.Windows.Forms.TextBox();
             this.weekGroupAboveFifteenThreeHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour = new System.Windows.Forms.TextBox();
+            this.weekGroupTwoToFiveFourHour = new System.Windows.Forms.TextBox();
             this.weekGroupFiveToTenFourHour = new System.Windows.Forms.TextBox();
             this.weekGroupTenToFifteenFourHour = new System.Windows.Forms.TextBox();
             this.weekGroupAboveFifteenFourHour = new System.Windows.Forms.TextBox();
@@ -580,10 +580,10 @@ namespace Coursework1
             // 
             // weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour
             // 
-            this.weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour.Location = new System.Drawing.Point(169, 562);
-            this.weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour.Name = "weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour";
-            this.weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour.TabIndex = 55;
+            this.weekGroupTwoToFiveFourHour.Location = new System.Drawing.Point(169, 562);
+            this.weekGroupTwoToFiveFourHour.Name = "weekGroupTwoToFiveFour";
+            this.weekGroupTwoToFiveFourHour.Size = new System.Drawing.Size(100, 20);
+            this.weekGroupTwoToFiveFourHour.TabIndex = 55;
             // 
             // weekGroupFiveToTenFourHour
             // 
@@ -644,6 +644,7 @@ namespace Coursework1
             this.saveBtnWeek.TabIndex = 64;
             this.saveBtnWeek.Text = "Save";
             this.saveBtnWeek.UseVisualStyleBackColor = false;
+            this.saveBtnWeek.Click += new System.EventHandler(this.saveBtnWeek_Click);
             // 
             // cancelBtnWeek
             // 
@@ -670,7 +671,7 @@ namespace Coursework1
             this.Controls.Add(this.weekGroupAboveFifteenFourHour);
             this.Controls.Add(this.weekGroupTenToFifteenFourHour);
             this.Controls.Add(this.weekGroupFiveToTenFourHour);
-            this.Controls.Add(this.weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour);
+            this.Controls.Add(this.weekGroupTwoToFiveFourHour);
             this.Controls.Add(this.weekGroupAboveFifteenThreeHour);
             this.Controls.Add(this.weekGroupTenToFifteenThreeHour);
             this.Controls.Add(this.weekGroupFiveToTenThreeHour);
@@ -727,7 +728,7 @@ namespace Coursework1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "SetTicketPriceForWeekDays";
-            this.Size = new System.Drawing.Size(732, 699);
+            this.Size = new System.Drawing.Size(715, 682);
             this.Load += new System.EventHandler(this.SetTicketPriceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -748,60 +749,60 @@ namespace Coursework1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox weekIndividualBelowThreeOnehour;
-        private System.Windows.Forms.TextBox weekIndividualAboveSixtyOnehour;
-        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyOnehour;
-        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenOnehour;
+        private System.Windows.Forms.TextBox weekIndividualBelowThreeOnehour;//1,1
+        private System.Windows.Forms.TextBox weekIndividualAboveSixtyOnehour;//1,4
+        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyOnehour;//1,3
+        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenOnehour;//1,2
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox weekIndividualBelowThreeTwoHour;
-        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenTwoHour;
-        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyTwoHour;
-        private System.Windows.Forms.TextBox weekIndividualAboveSixtyTwoHour;
+        private System.Windows.Forms.TextBox weekIndividualBelowThreeTwoHour;//2,1
+        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenTwoHour;//2,2
+        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyTwoHour;//2,3
+        private System.Windows.Forms.TextBox weekIndividualAboveSixtyTwoHour;//2,4
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox weekIndividualBelowThreeThreeHour;
-        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenThreeHour;
-        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyThreeHour;
-        private System.Windows.Forms.TextBox weekIndividualAboveSixtyThreeHour;
+        private System.Windows.Forms.TextBox weekIndividualBelowThreeThreeHour;//3,1
+        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenThreeHour;//3,2
+        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyThreeHour;//3,3
+        private System.Windows.Forms.TextBox weekIndividualAboveSixtyThreeHour;//3,4
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox weekIndividualBelowThreeFourHour;
-        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenFourHour;
-        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyFourHour;
-        private System.Windows.Forms.TextBox weekIndividualAboveSixtyFourHour;
+        private System.Windows.Forms.TextBox weekIndividualBelowThreeFourHour;//4,1
+        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenFourHour;//4,2
+        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyFourHour;//4,3
+        private System.Windows.Forms.TextBox weekIndividualAboveSixtyFourHour;//4,4
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox weekIndividualBelowThreeWholeDay;
-        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenWholeDay;
-        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyWholeDay;
-        private System.Windows.Forms.TextBox weekIndividualAboveSixtyWholeDay;
+        private System.Windows.Forms.TextBox weekIndividualBelowThreeWholeDay;//5,1
+        private System.Windows.Forms.TextBox weekIndividualThreeToSixteenWholeDay;//5,2
+        private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyWholeDay;//5,3
+        private System.Windows.Forms.TextBox weekIndividualAboveSixtyWholeDay;//5,4
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveOneHour;
+        private System.Windows.Forms.TextBox weekGroupTwoToFiveOneHour;//6,1
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox weekGroupFiveToTenOneHour;
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenOneHour;
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenOneHour;
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveTwoHour;
-        private System.Windows.Forms.TextBox weekGroupFiveToTenTwoHour;
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenTwoHour;
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenTwoHour;
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveThreeHour;
-        private System.Windows.Forms.TextBox weekGroupFiveToTenThreeHour;
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenThreeHour;
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenThreeHour;
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour;
-        private System.Windows.Forms.TextBox weekGroupFiveToTenFourHour;
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenFourHour;
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenFourHour;
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveWholeDay;
-        private System.Windows.Forms.TextBox weekGroupFiveToTenWholeDay;
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenWholeDay;
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenWholeDay;
+        private System.Windows.Forms.TextBox weekGroupFiveToTenOneHour;//6,2
+        private System.Windows.Forms.TextBox weekGroupTenToFifteenOneHour;//6,3
+        private System.Windows.Forms.TextBox weekGroupAboveFifteenOneHour;//6,4
+        private System.Windows.Forms.TextBox weekGroupTwoToFiveTwoHour;//7,1
+        private System.Windows.Forms.TextBox weekGroupFiveToTenTwoHour;//7,2
+        private System.Windows.Forms.TextBox weekGroupTenToFifteenTwoHour;//7,3
+        private System.Windows.Forms.TextBox weekGroupAboveFifteenTwoHour;//7,4
+        private System.Windows.Forms.TextBox weekGroupTwoToFiveThreeHour;//8,1
+        private System.Windows.Forms.TextBox weekGroupFiveToTenThreeHour;//8,2
+        private System.Windows.Forms.TextBox weekGroupTenToFifteenThreeHour;//8,3
+        private System.Windows.Forms.TextBox weekGroupAboveFifteenThreeHour;//8,4
+        private System.Windows.Forms.TextBox weekGroupTwoToFiveFourHour;//9,1
+        private System.Windows.Forms.TextBox weekGroupFiveToTenFourHour;//9,2
+        private System.Windows.Forms.TextBox weekGroupTenToFifteenFourHour;//9,3
+        private System.Windows.Forms.TextBox weekGroupAboveFifteenFourHour;//9,4
+        private System.Windows.Forms.TextBox weekGroupTwoToFiveWholeDay;//10,1
+        private System.Windows.Forms.TextBox weekGroupFiveToTenWholeDay;//10,2
+        private System.Windows.Forms.TextBox weekGroupTenToFifteenWholeDay;//10,3
+        private System.Windows.Forms.TextBox weekGroupAboveFifteenWholeDay;//10,4
         private System.Windows.Forms.Button saveBtnWeek;
         private System.Windows.Forms.Button cancelBtnWeek;
     }

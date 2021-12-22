@@ -9,5 +9,6 @@ namespace Coursework1
     static class Constants
     {
         public const string HOLIDAY_FILE = "priceforholiday.txt";
+        public const string WeekDay_FILE = "priceforweekday.txt";
     }
 }
