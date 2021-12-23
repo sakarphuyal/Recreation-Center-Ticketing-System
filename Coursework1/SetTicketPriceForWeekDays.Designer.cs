@@ -212,6 +212,7 @@ namespace Coursework1
             this.weekIndividualBelowThreeOnehour.Name = "weekIndividualBelowThreeOnehour";
             this.weekIndividualBelowThreeOnehour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualBelowThreeOnehour.TabIndex = 9;
+            this.weekIndividualBelowThreeOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualAboveSixtyOnehour
             // 
@@ -219,6 +220,7 @@ namespace Coursework1
             this.weekIndividualAboveSixtyOnehour.Name = "weekIndividualAboveSixtyOnehour";
             this.weekIndividualAboveSixtyOnehour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualAboveSixtyOnehour.TabIndex = 10;
+            this.weekIndividualAboveSixtyOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualSixteenToSixtyOnehour
             // 
@@ -226,6 +228,7 @@ namespace Coursework1
             this.weekIndividualSixteenToSixtyOnehour.Name = "weekIndividualSixteenToSixtyOnehour";
             this.weekIndividualSixteenToSixtyOnehour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualSixteenToSixtyOnehour.TabIndex = 11;
+            this.weekIndividualSixteenToSixtyOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualThreeToSixteenOnehour
             // 
@@ -233,6 +236,7 @@ namespace Coursework1
             this.weekIndividualThreeToSixteenOnehour.Name = "weekIndividualThreeToSixteenOnehour";
             this.weekIndividualThreeToSixteenOnehour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualThreeToSixteenOnehour.TabIndex = 12;
+            this.weekIndividualThreeToSixteenOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label10
             // 
@@ -250,6 +254,7 @@ namespace Coursework1
             this.weekIndividualBelowThreeTwoHour.Name = "weekIndividualBelowThreeTwoHour";
             this.weekIndividualBelowThreeTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualBelowThreeTwoHour.TabIndex = 14;
+            this.weekIndividualBelowThreeTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualThreeToSixteenTwoHour
             // 
@@ -257,6 +262,7 @@ namespace Coursework1
             this.weekIndividualThreeToSixteenTwoHour.Name = "weekIndividualThreeToSixteenTwoHour";
             this.weekIndividualThreeToSixteenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualThreeToSixteenTwoHour.TabIndex = 15;
+            this.weekIndividualThreeToSixteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualSixteenToSixtyTwoHour
             // 
@@ -264,6 +270,7 @@ namespace Coursework1
             this.weekIndividualSixteenToSixtyTwoHour.Name = "weekIndividualSixteenToSixtyTwoHour";
             this.weekIndividualSixteenToSixtyTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualSixteenToSixtyTwoHour.TabIndex = 16;
+            this.weekIndividualSixteenToSixtyTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualAboveSixtyTwoHour
             // 
@@ -271,6 +278,7 @@ namespace Coursework1
             this.weekIndividualAboveSixtyTwoHour.Name = "weekIndividualAboveSixtyTwoHour";
             this.weekIndividualAboveSixtyTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualAboveSixtyTwoHour.TabIndex = 17;
+            this.weekIndividualAboveSixtyTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label11
             // 
@@ -288,6 +296,7 @@ namespace Coursework1
             this.weekIndividualBelowThreeThreeHour.Name = "weekIndividualBelowThreeThreeHour";
             this.weekIndividualBelowThreeThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualBelowThreeThreeHour.TabIndex = 19;
+            this.weekIndividualBelowThreeThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualThreeToSixteenThreeHour
             // 
@@ -295,6 +304,7 @@ namespace Coursework1
             this.weekIndividualThreeToSixteenThreeHour.Name = "weekIndividualThreeToSixteenThreeHour";
             this.weekIndividualThreeToSixteenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualThreeToSixteenThreeHour.TabIndex = 20;
+            this.weekIndividualThreeToSixteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualSixteenToSixtyThreeHour
             // 
@@ -302,6 +312,7 @@ namespace Coursework1
             this.weekIndividualSixteenToSixtyThreeHour.Name = "weekIndividualSixteenToSixtyThreeHour";
             this.weekIndividualSixteenToSixtyThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualSixteenToSixtyThreeHour.TabIndex = 21;
+            this.weekIndividualSixteenToSixtyThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualAboveSixtyThreeHour
             // 
@@ -309,6 +320,7 @@ namespace Coursework1
             this.weekIndividualAboveSixtyThreeHour.Name = "weekIndividualAboveSixtyThreeHour";
             this.weekIndividualAboveSixtyThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualAboveSixtyThreeHour.TabIndex = 22;
+            this.weekIndividualAboveSixtyThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label12
             // 
@@ -326,6 +338,7 @@ namespace Coursework1
             this.weekIndividualBelowThreeFourHour.Name = "weekIndividualBelowThreeFourHour";
             this.weekIndividualBelowThreeFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualBelowThreeFourHour.TabIndex = 24;
+            this.weekIndividualBelowThreeFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualThreeToSixteenFourHour
             // 
@@ -333,6 +346,7 @@ namespace Coursework1
             this.weekIndividualThreeToSixteenFourHour.Name = "weekIndividualThreeToSixteenFourHour";
             this.weekIndividualThreeToSixteenFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualThreeToSixteenFourHour.TabIndex = 25;
+            this.weekIndividualThreeToSixteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualSixteenToSixtyFourHour
             // 
@@ -340,6 +354,7 @@ namespace Coursework1
             this.weekIndividualSixteenToSixtyFourHour.Name = "weekIndividualSixteenToSixtyFourHour";
             this.weekIndividualSixteenToSixtyFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualSixteenToSixtyFourHour.TabIndex = 26;
+            this.weekIndividualSixteenToSixtyFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualAboveSixtyFourHour
             // 
@@ -347,6 +362,7 @@ namespace Coursework1
             this.weekIndividualAboveSixtyFourHour.Name = "weekIndividualAboveSixtyFourHour";
             this.weekIndividualAboveSixtyFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualAboveSixtyFourHour.TabIndex = 27;
+            this.weekIndividualAboveSixtyFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label13
             // 
@@ -385,6 +401,7 @@ namespace Coursework1
             this.weekIndividualBelowThreeWholeDay.Name = "weekIndividualBelowThreeWholeDay";
             this.weekIndividualBelowThreeWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualBelowThreeWholeDay.TabIndex = 31;
+            this.weekIndividualBelowThreeWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualThreeToSixteenWholeDay
             // 
@@ -392,6 +409,7 @@ namespace Coursework1
             this.weekIndividualThreeToSixteenWholeDay.Name = "weekIndividualThreeToSixteenWholeDay";
             this.weekIndividualThreeToSixteenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualThreeToSixteenWholeDay.TabIndex = 32;
+            this.weekIndividualThreeToSixteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualSixteenToSixtyWholeDay
             // 
@@ -400,6 +418,7 @@ namespace Coursework1
             this.weekIndividualSixteenToSixtyWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualSixteenToSixtyWholeDay.TabIndex = 33;
             this.weekIndividualSixteenToSixtyWholeDay.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
+            this.weekIndividualSixteenToSixtyWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekIndividualAboveSixtyWholeDay
             // 
@@ -407,6 +426,7 @@ namespace Coursework1
             this.weekIndividualAboveSixtyWholeDay.Name = "weekIndividualAboveSixtyWholeDay";
             this.weekIndividualAboveSixtyWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekIndividualAboveSixtyWholeDay.TabIndex = 34;
+            this.weekIndividualAboveSixtyWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label16
             // 
@@ -458,6 +478,7 @@ namespace Coursework1
             this.weekGroupTwoToFiveOneHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTwoToFiveOneHour.TabIndex = 39;
             this.weekGroupTwoToFiveOneHour.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
+            this.weekGroupTwoToFiveOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label20
             // 
@@ -507,6 +528,7 @@ namespace Coursework1
             this.weekGroupFiveToTenOneHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupFiveToTenOneHour.TabIndex = 44;
             this.weekGroupFiveToTenOneHour.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
+            this.weekGroupFiveToTenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTenToFifteenOneHour
             // 
@@ -514,6 +536,7 @@ namespace Coursework1
             this.weekGroupTenToFifteenOneHour.Name = "weekGroupTenToFifteenOneHour";
             this.weekGroupTenToFifteenOneHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTenToFifteenOneHour.TabIndex = 45;
+            this.weekGroupTenToFifteenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupAboveFifteenOneHour
             // 
@@ -521,6 +544,7 @@ namespace Coursework1
             this.weekGroupAboveFifteenOneHour.Name = "weekGroupAboveFifteenOneHour";
             this.weekGroupAboveFifteenOneHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupAboveFifteenOneHour.TabIndex = 46;
+            this.weekGroupAboveFifteenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTwoToFiveTwoHour
             // 
@@ -528,6 +552,7 @@ namespace Coursework1
             this.weekGroupTwoToFiveTwoHour.Name = "weekGroupTwoToFiveTwoHour";
             this.weekGroupTwoToFiveTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTwoToFiveTwoHour.TabIndex = 47;
+            this.weekGroupTwoToFiveTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupFiveToTenTwoHour
             // 
@@ -535,6 +560,7 @@ namespace Coursework1
             this.weekGroupFiveToTenTwoHour.Name = "weekGroupFiveToTenTwoHour";
             this.weekGroupFiveToTenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupFiveToTenTwoHour.TabIndex = 48;
+            this.weekGroupFiveToTenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTenToFifteenTwoHour
             // 
@@ -542,6 +568,7 @@ namespace Coursework1
             this.weekGroupTenToFifteenTwoHour.Name = "weekGroupTenToFifteenTwoHour";
             this.weekGroupTenToFifteenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTenToFifteenTwoHour.TabIndex = 49;
+            this.weekGroupTenToFifteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupAboveFifteenTwoHour
             // 
@@ -549,6 +576,7 @@ namespace Coursework1
             this.weekGroupAboveFifteenTwoHour.Name = "weekGroupAboveFifteenTwoHour";
             this.weekGroupAboveFifteenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupAboveFifteenTwoHour.TabIndex = 50;
+            this.weekGroupAboveFifteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTwoToFiveThreeHour
             // 
@@ -556,6 +584,7 @@ namespace Coursework1
             this.weekGroupTwoToFiveThreeHour.Name = "weekGroupTwoToFiveThreeHour";
             this.weekGroupTwoToFiveThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTwoToFiveThreeHour.TabIndex = 51;
+            this.weekGroupTwoToFiveThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupFiveToTenThreeHour
             // 
@@ -563,6 +592,7 @@ namespace Coursework1
             this.weekGroupFiveToTenThreeHour.Name = "weekGroupFiveToTenThreeHour";
             this.weekGroupFiveToTenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupFiveToTenThreeHour.TabIndex = 52;
+            this.weekGroupFiveToTenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTenToFifteenThreeHour
             // 
@@ -570,6 +600,7 @@ namespace Coursework1
             this.weekGroupTenToFifteenThreeHour.Name = "weekGroupTenToFifteenThreeHour";
             this.weekGroupTenToFifteenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTenToFifteenThreeHour.TabIndex = 53;
+            this.weekGroupTenToFifteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupAboveFifteenThreeHour
             // 
@@ -577,13 +608,15 @@ namespace Coursework1
             this.weekGroupAboveFifteenThreeHour.Name = "weekGroupAboveFifteenThreeHour";
             this.weekGroupAboveFifteenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupAboveFifteenThreeHour.TabIndex = 54;
+            this.weekGroupAboveFifteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // weekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHourweekGroupTwoToFiveFourHour
+            // weekGroupTwoToFiveFourHour
             // 
             this.weekGroupTwoToFiveFourHour.Location = new System.Drawing.Point(169, 562);
-            this.weekGroupTwoToFiveFourHour.Name = "weekGroupTwoToFiveFour";
+            this.weekGroupTwoToFiveFourHour.Name = "weekGroupTwoToFiveFourHour";
             this.weekGroupTwoToFiveFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTwoToFiveFourHour.TabIndex = 55;
+            this.weekGroupTwoToFiveFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupFiveToTenFourHour
             // 
@@ -591,6 +624,7 @@ namespace Coursework1
             this.weekGroupFiveToTenFourHour.Name = "weekGroupFiveToTenFourHour";
             this.weekGroupFiveToTenFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupFiveToTenFourHour.TabIndex = 56;
+            this.weekGroupFiveToTenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTenToFifteenFourHour
             // 
@@ -598,6 +632,7 @@ namespace Coursework1
             this.weekGroupTenToFifteenFourHour.Name = "weekGroupTenToFifteenFourHour";
             this.weekGroupTenToFifteenFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTenToFifteenFourHour.TabIndex = 57;
+            this.weekGroupTenToFifteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupAboveFifteenFourHour
             // 
@@ -605,6 +640,7 @@ namespace Coursework1
             this.weekGroupAboveFifteenFourHour.Name = "weekGroupAboveFifteenFourHour";
             this.weekGroupAboveFifteenFourHour.Size = new System.Drawing.Size(100, 20);
             this.weekGroupAboveFifteenFourHour.TabIndex = 58;
+            this.weekGroupAboveFifteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTwoToFiveWholeDay
             // 
@@ -612,6 +648,7 @@ namespace Coursework1
             this.weekGroupTwoToFiveWholeDay.Name = "weekGroupTwoToFiveWholeDay";
             this.weekGroupTwoToFiveWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTwoToFiveWholeDay.TabIndex = 59;
+            this.weekGroupTwoToFiveWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupFiveToTenWholeDay
             // 
@@ -619,6 +656,7 @@ namespace Coursework1
             this.weekGroupFiveToTenWholeDay.Name = "weekGroupFiveToTenWholeDay";
             this.weekGroupFiveToTenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekGroupFiveToTenWholeDay.TabIndex = 60;
+            this.weekGroupFiveToTenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupTenToFifteenWholeDay
             // 
@@ -627,6 +665,7 @@ namespace Coursework1
             this.weekGroupTenToFifteenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekGroupTenToFifteenWholeDay.TabIndex = 61;
             this.weekGroupTenToFifteenWholeDay.TextChanged += new System.EventHandler(this.textBox39_TextChanged);
+            this.weekGroupTenToFifteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // weekGroupAboveFifteenWholeDay
             // 
@@ -634,6 +673,7 @@ namespace Coursework1
             this.weekGroupAboveFifteenWholeDay.Name = "weekGroupAboveFifteenWholeDay";
             this.weekGroupAboveFifteenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.weekGroupAboveFifteenWholeDay.TabIndex = 62;
+            this.weekGroupAboveFifteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // saveBtnWeek
             // 
@@ -655,6 +695,7 @@ namespace Coursework1
             this.cancelBtnWeek.TabIndex = 65;
             this.cancelBtnWeek.Text = "Reset";
             this.cancelBtnWeek.UseVisualStyleBackColor = false;
+            this.cancelBtnWeek.Click += new System.EventHandler(this.cancelBtnWeek_Click);
             // 
             // SetTicketPriceForWeekDays
             // 
@@ -728,7 +769,7 @@ namespace Coursework1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "SetTicketPriceForWeekDays";
-            this.Size = new System.Drawing.Size(715, 682);
+            this.Size = new System.Drawing.Size(681, 648);
             this.Load += new System.EventHandler(this.SetTicketPriceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

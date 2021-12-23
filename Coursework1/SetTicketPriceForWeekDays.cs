@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Coursework1.Data;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Coursework1
@@ -89,7 +93,6 @@ namespace Coursework1
         {
 
         }
-
         private void saveBtnWeek_Click(object sender, EventArgs e)
         {
             Data.TicketPriceForWeekDays weekDayPrice = new Data.TicketPriceForWeekDays();
@@ -335,7 +338,15 @@ namespace Coursework1
             }
 
             Utils.setOnFile(weekDayPrice.toJson(), Constants.WeekDay_FILE);
+        }
+        private void numberKeyDown(object sender, KeyEventArgs e)
+        {
+            Utils.validateForStringPress(sender, e, true);
+        }
 
+        private void cancelBtnWeek_Click(object sender, EventArgs e)
+        {
+      
         }
     }
 }

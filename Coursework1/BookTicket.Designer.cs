@@ -52,7 +52,9 @@ namespace Coursework1
             this.label9 = new System.Windows.Forms.Label();
             this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
-            this.clearBtnTicketBooking = new System.Windows.Forms.Button();
+            this.checkOutBtnTicketBooking = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +93,7 @@ namespace Coursework1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 138);
+            this.label3.Location = new System.Drawing.Point(67, 347);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 3;
@@ -102,11 +104,12 @@ namespace Coursework1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 180);
+            this.label4.Location = new System.Drawing.Point(67, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Name";
+            this.label4.VisibleChanged += new System.EventHandler(this.saveBtnTicketBooking_Click);
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
@@ -144,8 +147,11 @@ namespace Coursework1
             // 
             this.ticketIdTextField.Location = new System.Drawing.Point(175, 141);
             this.ticketIdTextField.Name = "ticketIdTextField";
+            this.ticketIdTextField.ReadOnly = true;
             this.ticketIdTextField.Size = new System.Drawing.Size(174, 20);
             this.ticketIdTextField.TabIndex = 12;
+            this.ticketIdTextField.TextChanged += new System.EventHandler(this.ticketIdTextField_TextChanged);
+            this.ticketIdTextField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // nameTextField
             // 
@@ -153,6 +159,7 @@ namespace Coursework1
             this.nameTextField.Name = "nameTextField";
             this.nameTextField.Size = new System.Drawing.Size(174, 20);
             this.nameTextField.TabIndex = 13;
+            this.nameTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextField_KeyPress);
             // 
             // ageGroupComboBox
             // 
@@ -243,7 +250,7 @@ namespace Coursework1
             // 
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(355, 141);
+            this.button1.Location = new System.Drawing.Point(365, 351);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 22);
             this.button1.TabIndex = 28;
@@ -254,7 +261,7 @@ namespace Coursework1
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(447, 269);
+            this.label9.Location = new System.Drawing.Point(67, 400);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 17);
             this.label9.TabIndex = 66;
@@ -263,37 +270,62 @@ namespace Coursework1
             // 
             // totalCostTextBox
             // 
-            this.totalCostTextBox.Location = new System.Drawing.Point(575, 262);
+            this.totalCostTextBox.Location = new System.Drawing.Point(175, 400);
             this.totalCostTextBox.Name = "totalCostTextBox";
+            this.totalCostTextBox.ReadOnly = true;
             this.totalCostTextBox.Size = new System.Drawing.Size(108, 20);
             this.totalCostTextBox.TabIndex = 67;
+            this.totalCostTextBox.TextChanged += new System.EventHandler(this.clearBtnTicketBooking_Click);
+            this.totalCostTextBox.VisibleChanged += new System.EventHandler(this.clearBtnTicketBooking_Click);
             // 
             // saveBtnTicketBooking
             // 
             this.saveBtnTicketBooking.BackColor = System.Drawing.Color.GreenYellow;
-            this.saveBtnTicketBooking.Location = new System.Drawing.Point(228, 330);
+            this.saveBtnTicketBooking.Location = new System.Drawing.Point(351, 270);
             this.saveBtnTicketBooking.Name = "saveBtnTicketBooking";
             this.saveBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
             this.saveBtnTicketBooking.TabIndex = 68;
             this.saveBtnTicketBooking.Text = "Save";
             this.saveBtnTicketBooking.UseVisualStyleBackColor = false;
+            this.saveBtnTicketBooking.Click += new System.EventHandler(this.saveBtnTicketBooking_Click);
             // 
-            // clearBtnTicketBooking
+            // checkOutBtnTicketBooking
             // 
-            this.clearBtnTicketBooking.BackColor = System.Drawing.Color.LightCoral;
-            this.clearBtnTicketBooking.Location = new System.Drawing.Point(485, 330);
-            this.clearBtnTicketBooking.Name = "clearBtnTicketBooking";
-            this.clearBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
-            this.clearBtnTicketBooking.TabIndex = 69;
-            this.clearBtnTicketBooking.Text = "Clear";
-            this.clearBtnTicketBooking.UseVisualStyleBackColor = false;
+            this.checkOutBtnTicketBooking.BackColor = System.Drawing.Color.LightCoral;
+            this.checkOutBtnTicketBooking.Location = new System.Drawing.Point(487, 363);
+            this.checkOutBtnTicketBooking.Name = "checkOutBtnTicketBooking";
+            this.checkOutBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
+            this.checkOutBtnTicketBooking.TabIndex = 69;
+            this.checkOutBtnTicketBooking.Text = "Check-Out";
+            this.checkOutBtnTicketBooking.UseVisualStyleBackColor = false;
+            this.checkOutBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(175, 351);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(174, 20);
+            this.textBox1.TabIndex = 70;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(62, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 17);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Ticket ID";
             // 
             // BookTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
-            this.Controls.Add(this.clearBtnTicketBooking);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkOutBtnTicketBooking);
             this.Controls.Add(this.saveBtnTicketBooking);
             this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.label9);
@@ -347,6 +379,8 @@ namespace Coursework1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Button saveBtnTicketBooking;
-        private System.Windows.Forms.Button clearBtnTicketBooking;
+        private System.Windows.Forms.Button checkOutBtnTicketBooking;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

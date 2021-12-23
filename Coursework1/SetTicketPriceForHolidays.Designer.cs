@@ -217,6 +217,7 @@ namespace Coursework1
             this.holidayIndividualLessThanThreeOnehour.Name = "holidayIndividualLessThanThreeOnehour";
             this.holidayIndividualLessThanThreeOnehour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualLessThanThreeOnehour.TabIndex = 14;
+            this.holidayIndividualLessThanThreeOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualLessThanThreeTwohour
             // 
@@ -224,6 +225,7 @@ namespace Coursework1
             this.holidayIndividualLessThanThreeTwohour.Name = "holidayIndividualLessThanThreeTwohour";
             this.holidayIndividualLessThanThreeTwohour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualLessThanThreeTwohour.TabIndex = 15;
+            this.holidayIndividualLessThanThreeTwohour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualLessThanThreeThreeHour
             // 
@@ -231,6 +233,7 @@ namespace Coursework1
             this.holidayIndividualLessThanThreeThreeHour.Name = "holidayIndividualLessThanThreeThreeHour";
             this.holidayIndividualLessThanThreeThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualLessThanThreeThreeHour.TabIndex = 16;
+            this.holidayIndividualLessThanThreeThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualBelowThreeFourHour
             // 
@@ -238,6 +241,7 @@ namespace Coursework1
             this.holidayIndividualBelowThreeFourHour.Name = "holidayIndividualBelowThreeFourHour";
             this.holidayIndividualBelowThreeFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualBelowThreeFourHour.TabIndex = 17;
+            this.holidayIndividualBelowThreeFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualLessThanThreeWholeDay
             // 
@@ -245,6 +249,7 @@ namespace Coursework1
             this.holidayIndividualLessThanThreeWholeDay.Name = "holidayIndividualLessThanThreeWholeDay";
             this.holidayIndividualLessThanThreeWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualLessThanThreeWholeDay.TabIndex = 18;
+            this.holidayIndividualLessThanThreeWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualThreeToSixteenOnehour
             // 
@@ -252,6 +257,7 @@ namespace Coursework1
             this.holidayIndividualThreeToSixteenOnehour.Name = "holidayIndividualThreeToSixteenOnehour";
             this.holidayIndividualThreeToSixteenOnehour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualThreeToSixteenOnehour.TabIndex = 19;
+            this.holidayIndividualThreeToSixteenOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualThreeToSixteenTwoHour
             // 
@@ -259,6 +265,7 @@ namespace Coursework1
             this.holidayIndividualThreeToSixteenTwoHour.Name = "holidayIndividualThreeToSixteenTwoHour";
             this.holidayIndividualThreeToSixteenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualThreeToSixteenTwoHour.TabIndex = 20;
+            this.holidayIndividualThreeToSixteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualThreeToSixteenThreeHour
             // 
@@ -266,6 +273,7 @@ namespace Coursework1
             this.holidayIndividualThreeToSixteenThreeHour.Name = "holidayIndividualThreeToSixteenThreeHour";
             this.holidayIndividualThreeToSixteenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualThreeToSixteenThreeHour.TabIndex = 21;
+            this.holidayIndividualThreeToSixteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualThreeToSixteenFourHour
             // 
@@ -273,6 +281,7 @@ namespace Coursework1
             this.holidayIndividualThreeToSixteenFourHour.Name = "holidayIndividualThreeToSixteenFourHour";
             this.holidayIndividualThreeToSixteenFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualThreeToSixteenFourHour.TabIndex = 22;
+            this.holidayIndividualThreeToSixteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualThreeToSixteenWholeDay
             // 
@@ -280,6 +289,7 @@ namespace Coursework1
             this.holidayIndividualThreeToSixteenWholeDay.Name = "holidayIndividualThreeToSixteenWholeDay";
             this.holidayIndividualThreeToSixteenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualThreeToSixteenWholeDay.TabIndex = 23;
+            this.holidayIndividualThreeToSixteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualSixteenToSixtyOnehour
             // 
@@ -287,6 +297,7 @@ namespace Coursework1
             this.holidayIndividualSixteenToSixtyOnehour.Name = "holidayIndividualSixteenToSixtyOnehour";
             this.holidayIndividualSixteenToSixtyOnehour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualSixteenToSixtyOnehour.TabIndex = 24;
+            this.holidayIndividualSixteenToSixtyOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualSixteenToSixtyTwoHour
             // 
@@ -294,6 +305,7 @@ namespace Coursework1
             this.holidayIndividualSixteenToSixtyTwoHour.Name = "holidayIndividualSixteenToSixtyTwoHour";
             this.holidayIndividualSixteenToSixtyTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualSixteenToSixtyTwoHour.TabIndex = 25;
+            this.holidayIndividualSixteenToSixtyTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualSixteenToSixtyThreeHour
             // 
@@ -301,6 +313,7 @@ namespace Coursework1
             this.holidayIndividualSixteenToSixtyThreeHour.Name = "holidayIndividualSixteenToSixtyThreeHour";
             this.holidayIndividualSixteenToSixtyThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualSixteenToSixtyThreeHour.TabIndex = 26;
+            this.holidayIndividualSixteenToSixtyThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualSixteenToSixtyFourHour
             // 
@@ -308,6 +321,7 @@ namespace Coursework1
             this.holidayIndividualSixteenToSixtyFourHour.Name = "holidayIndividualSixteenToSixtyFourHour";
             this.holidayIndividualSixteenToSixtyFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualSixteenToSixtyFourHour.TabIndex = 27;
+            this.holidayIndividualSixteenToSixtyFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualSixteenToSixtyWholeDay
             // 
@@ -315,6 +329,7 @@ namespace Coursework1
             this.holidayIndividualSixteenToSixtyWholeDay.Name = "holidayIndividualSixteenToSixtyWholeDay";
             this.holidayIndividualSixteenToSixtyWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualSixteenToSixtyWholeDay.TabIndex = 28;
+            this.holidayIndividualSixteenToSixtyWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualAboveSixtyOnehour
             // 
@@ -323,6 +338,7 @@ namespace Coursework1
             this.holidayIndividualAboveSixtyOnehour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualAboveSixtyOnehour.TabIndex = 29;
             this.holidayIndividualAboveSixtyOnehour.TextChanged += new System.EventHandler(this.holidayIndividualAboveSixtyOnehour_TextChanged);
+            this.holidayIndividualAboveSixtyOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualSixtyPlusTwoHour
             // 
@@ -330,6 +346,7 @@ namespace Coursework1
             this.holidayIndividualSixtyPlusTwoHour.Name = "holidayIndividualSixtyPlusTwoHour";
             this.holidayIndividualSixtyPlusTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualSixtyPlusTwoHour.TabIndex = 30;
+            this.holidayIndividualSixtyPlusTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualAboveSixtyThreeHour
             // 
@@ -337,6 +354,7 @@ namespace Coursework1
             this.holidayIndividualAboveSixtyThreeHour.Name = "holidayIndividualAboveSixtyThreeHour";
             this.holidayIndividualAboveSixtyThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualAboveSixtyThreeHour.TabIndex = 31;
+            this.holidayIndividualAboveSixtyThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualAboveSixtyFourHour
             // 
@@ -344,6 +362,7 @@ namespace Coursework1
             this.holidayIndividualAboveSixtyFourHour.Name = "holidayIndividualAboveSixtyFourHour";
             this.holidayIndividualAboveSixtyFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualAboveSixtyFourHour.TabIndex = 32;
+            this.holidayIndividualAboveSixtyFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualAboveSixtyWholeDay
             // 
@@ -351,6 +370,7 @@ namespace Coursework1
             this.holidayIndividualAboveSixtyWholeDay.Name = "holidayIndividualAboveSixtyWholeDay";
             this.holidayIndividualAboveSixtyWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayIndividualAboveSixtyWholeDay.TabIndex = 33;
+            this.holidayIndividualAboveSixtyWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label13
             // 
@@ -473,6 +493,7 @@ namespace Coursework1
             this.holidayGroupTwoToFiveOneHour.Name = "holidayGroupTwoToFiveOneHour";
             this.holidayGroupTwoToFiveOneHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTwoToFiveOneHour.TabIndex = 45;
+            this.holidayGroupTwoToFiveOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupFiveToTenOneHour
             // 
@@ -480,6 +501,7 @@ namespace Coursework1
             this.holidayGroupFiveToTenOneHour.Name = "holidayGroupFiveToTenOneHour";
             this.holidayGroupFiveToTenOneHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupFiveToTenOneHour.TabIndex = 46;
+            this.holidayGroupFiveToTenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTenToFifteenOneHour
             // 
@@ -487,6 +509,7 @@ namespace Coursework1
             this.holidayGroupTenToFifteenOneHour.Name = "holidayGroupTenToFifteenOneHour";
             this.holidayGroupTenToFifteenOneHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTenToFifteenOneHour.TabIndex = 47;
+            this.holidayGroupTenToFifteenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupAboveFifteenOneHour
             // 
@@ -494,6 +517,7 @@ namespace Coursework1
             this.holidayGroupAboveFifteenOneHour.Name = "holidayGroupAboveFifteenOneHour";
             this.holidayGroupAboveFifteenOneHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupAboveFifteenOneHour.TabIndex = 48;
+            this.holidayGroupAboveFifteenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTwoToFiveTwoHour
             // 
@@ -501,6 +525,7 @@ namespace Coursework1
             this.holidayGroupTwoToFiveTwoHour.Name = "holidayGroupTwoToFiveTwoHour";
             this.holidayGroupTwoToFiveTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTwoToFiveTwoHour.TabIndex = 49;
+            this.holidayGroupTwoToFiveTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupFiveToTenTwoHour
             // 
@@ -509,6 +534,7 @@ namespace Coursework1
             this.holidayGroupFiveToTenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupFiveToTenTwoHour.TabIndex = 50;
             this.holidayGroupFiveToTenTwoHour.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
+            this.holidayGroupFiveToTenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTenToFifteenTwoHour
             // 
@@ -516,6 +542,7 @@ namespace Coursework1
             this.holidayGroupTenToFifteenTwoHour.Name = "holidayGroupTenToFifteenTwoHour";
             this.holidayGroupTenToFifteenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTenToFifteenTwoHour.TabIndex = 51;
+            this.holidayGroupTenToFifteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupAboveFifteenTwoHour
             // 
@@ -523,6 +550,7 @@ namespace Coursework1
             this.holidayGroupAboveFifteenTwoHour.Name = "holidayGroupAboveFifteenTwoHour";
             this.holidayGroupAboveFifteenTwoHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupAboveFifteenTwoHour.TabIndex = 52;
+            this.holidayGroupAboveFifteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTwoToFiveThreeHour
             // 
@@ -530,6 +558,7 @@ namespace Coursework1
             this.holidayGroupTwoToFiveThreeHour.Name = "holidayGroupTwoToFiveThreeHour";
             this.holidayGroupTwoToFiveThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTwoToFiveThreeHour.TabIndex = 53;
+            this.holidayGroupTwoToFiveThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupFiveToTenThreeHour
             // 
@@ -537,6 +566,7 @@ namespace Coursework1
             this.holidayGroupFiveToTenThreeHour.Name = "holidayGroupFiveToTenThreeHour";
             this.holidayGroupFiveToTenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupFiveToTenThreeHour.TabIndex = 54;
+            this.holidayGroupFiveToTenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTenToFifteenThreeHour
             // 
@@ -544,6 +574,7 @@ namespace Coursework1
             this.holidayGroupTenToFifteenThreeHour.Name = "holidayGroupTenToFifteenThreeHour";
             this.holidayGroupTenToFifteenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTenToFifteenThreeHour.TabIndex = 55;
+            this.holidayGroupTenToFifteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupAboveFifteenThreeHour
             // 
@@ -551,6 +582,7 @@ namespace Coursework1
             this.holidayGroupAboveFifteenThreeHour.Name = "holidayGroupAboveFifteenThreeHour";
             this.holidayGroupAboveFifteenThreeHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupAboveFifteenThreeHour.TabIndex = 56;
+            this.holidayGroupAboveFifteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTwoToFiveFourHour
             // 
@@ -558,6 +590,7 @@ namespace Coursework1
             this.holidayGroupTwoToFiveFourHour.Name = "holidayGroupTwoToFiveFourHour";
             this.holidayGroupTwoToFiveFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTwoToFiveFourHour.TabIndex = 57;
+            this.holidayGroupTwoToFiveFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupFiveToTenFourHour
             // 
@@ -565,6 +598,7 @@ namespace Coursework1
             this.holidayGroupFiveToTenFourHour.Name = "holidayGroupFiveToTenFourHour";
             this.holidayGroupFiveToTenFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupFiveToTenFourHour.TabIndex = 58;
+            this.holidayGroupFiveToTenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTenToFifteenFourHour
             // 
@@ -572,6 +606,7 @@ namespace Coursework1
             this.holidayGroupTenToFifteenFourHour.Name = "holidayGroupTenToFifteenFourHour";
             this.holidayGroupTenToFifteenFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTenToFifteenFourHour.TabIndex = 59;
+            this.holidayGroupTenToFifteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupAboveFifteenFourHour
             // 
@@ -579,6 +614,7 @@ namespace Coursework1
             this.holidayGroupAboveFifteenFourHour.Name = "holidayGroupAboveFifteenFourHour";
             this.holidayGroupAboveFifteenFourHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupAboveFifteenFourHour.TabIndex = 60;
+            this.holidayGroupAboveFifteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTwoToFiveWholeDay
             // 
@@ -586,6 +622,7 @@ namespace Coursework1
             this.holidayGroupTwoToFiveWholeDay.Name = "holidayGroupTwoToFiveWholeDay";
             this.holidayGroupTwoToFiveWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTwoToFiveWholeDay.TabIndex = 61;
+            this.holidayGroupTwoToFiveWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupFiveToTenWholeDay
             // 
@@ -593,6 +630,7 @@ namespace Coursework1
             this.holidayGroupFiveToTenWholeDay.Name = "holidayGroupFiveToTenWholeDay";
             this.holidayGroupFiveToTenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupFiveToTenWholeDay.TabIndex = 62;
+            this.holidayGroupFiveToTenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTenToFifteenWholeDay
             // 
@@ -600,6 +638,7 @@ namespace Coursework1
             this.holidayGroupTenToFifteenWholeDay.Name = "holidayGroupTenToFifteenWholeDay";
             this.holidayGroupTenToFifteenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupTenToFifteenWholeDay.TabIndex = 63;
+            this.holidayGroupTenToFifteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupAboveFifteenWholeDay
             // 
@@ -607,6 +646,7 @@ namespace Coursework1
             this.holidayGroupAboveFifteenWholeDay.Name = "holidayGroupAboveFifteenWholeDay";
             this.holidayGroupAboveFifteenWholeDay.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupAboveFifteenWholeDay.TabIndex = 64;
+            this.holidayGroupAboveFifteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // saveBtnHoliday
             // 
@@ -628,6 +668,7 @@ namespace Coursework1
             this.resetBtnHoliday.TabIndex = 66;
             this.resetBtnHoliday.Text = "Reset";
             this.resetBtnHoliday.UseVisualStyleBackColor = false;
+            this.resetBtnHoliday.Click += new System.EventHandler(this.resetBtnHoliday_Click);
             // 
             // panel1
             // 
@@ -721,7 +762,7 @@ namespace Coursework1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "SetTicketPriceForHolidays";
-            this.Size = new System.Drawing.Size(706, 682);
+            this.Size = new System.Drawing.Size(655, 631);
             this.Load += new System.EventHandler(this.SetTicketPriceForHolidays_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

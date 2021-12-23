@@ -12,6 +12,8 @@ namespace Coursework1
 {
     public partial class BookTicket : UserControl
     {
+        private object setTicketPriceForHolidays;
+
         public BookTicket()
         {
             InitializeComponent();
@@ -53,5 +55,33 @@ namespace Coursework1
         {
 
         }
+
+        private void numberKeyDown(object sender, KeyEventArgs e)
+        {
+            Utils.validateForStringPress(sender, e, false);
+        }
+
+        private void clearBtnTicketBooking_Click(object sender, EventArgs e)
+        {
+            Utils.getHolidayPriceFromFile();
+        }
+
+        private void saveBtnTicketBooking_Click(object sender, EventArgs e)
+        {
+            //Data.Ticket ticketList = new Data.Ticket();
+            //string id = 
+        }
+
+        private void nameTextField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back ||e.KeyChar == (char)Keys.Space);
+        }
+
+        private void ticketIdTextField_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }

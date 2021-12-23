@@ -59,21 +59,6 @@ namespace Coursework1
         {
 
         }
-
-
-        private List<TicketPriceForHolidays> getHolidayPriceFromFile() {
-
-            string[] lineValue = File.ReadAllLines(Constants.HOLIDAY_FILE);
-            List<TicketPriceForHolidays> holidayList = new List<TicketPriceForHolidays>();
-            foreach (string line in lineValue)
-            {
-                TicketPriceForHolidays mTicket = JsonConvert.DeserializeObject<TicketPriceForHolidays>(line);
-                holidayList.Add(mTicket);
-            }
-            return holidayList;
-            
-        }
-
         private void saveBtnHoliday_Click(object sender, EventArgs e)
         {
             TicketPriceForHolidays holidayPrice = new TicketPriceForHolidays();
@@ -323,6 +308,15 @@ namespace Coursework1
         }
 
         private void holidayIndividualAboveSixtyOnehour_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void numberKeyDown(object sender, KeyEventArgs e)
+        {
+            Utils.validateForStringPress(sender, e, true);
+        }
+
+        private void resetBtnHoliday_Click(object sender, EventArgs e)
         {
         }
     }

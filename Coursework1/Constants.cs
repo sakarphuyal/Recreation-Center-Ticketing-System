@@ -10,5 +10,6 @@ namespace Coursework1
     {
         public const string HOLIDAY_FILE = "priceforholiday.txt";
         public const string WeekDay_FILE = "priceforweekday.txt";
+        public const string TICKETBOOKING_FILE = "ticketBookinglist.txt";
     }
 }

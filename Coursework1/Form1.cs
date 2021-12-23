@@ -39,6 +39,7 @@ namespace Coursework1
             setTicketPriceForHolidays1.Visible = false;
             setTicketPriceForWeekDays1.Visible = false;
             bookTicket1.Visible = true;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
