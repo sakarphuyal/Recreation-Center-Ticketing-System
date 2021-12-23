@@ -68,8 +68,46 @@ namespace Coursework1
 
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)
         {
-            //Data.Ticket ticketList = new Data.Ticket();
-            //string id = 
+            Data.Ticket ticketList = new Data.Ticket();
+
+            string id = ticketAutoIncresedId.Text;
+            if (!(id.Length < 1))
+            {
+                ticketList.ticket_auto_incresed_id = id;
+            }
+            string name = nameTextField.Text;
+            if (!(name.Length < 1))
+            {
+                ticketList.name = name;
+            }
+            string ageGroup = ageGroupComboBox.Text;
+            {
+                ticketList.age_group = ageGroup;
+            }
+            DateTime todayDate = datePicker.Value.Date;
+            {
+                ticketList.date = todayDate;
+            }
+            DateTime inTime = timePicker.Value.Date;
+            {
+                ticketList.date = inTime;
+            }
+            string isGroup = null;
+            if (isGroupYesRadiobtn.Checked)
+            {
+                ticketList.is_group = isGroup;
+            }
+            if (isGroupNoRadioBtn.Checked)
+            {
+                ticketList.is_group = isGroup;
+            }
+            //string numberOfPeople = numberOfPeopleComboBox.Text;
+           //{
+             //ticketList.number_of_people = int.Parse(numberOfPeople);
+            //}
+
+            Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
+
         }
 
         private void nameTextField_KeyPress(object sender, KeyPressEventArgs e)

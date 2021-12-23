@@ -38,7 +38,6 @@ namespace Coursework1
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.ticketIdTextField = new System.Windows.Forms.TextBox();
             this.nameTextField = new System.Windows.Forms.TextBox();
             this.ageGroupComboBox = new System.Windows.Forms.ComboBox();
             this.isGroupYesRadiobtn = new System.Windows.Forms.RadioButton();
@@ -55,6 +54,7 @@ namespace Coursework1
             this.checkOutBtnTicketBooking = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ticketAutoIncresedId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,16 +142,6 @@ namespace Coursework1
             this.label10.Size = new System.Drawing.Size(61, 17);
             this.label10.TabIndex = 11;
             this.label10.Text = "Is Group";
-            // 
-            // ticketIdTextField
-            // 
-            this.ticketIdTextField.Location = new System.Drawing.Point(175, 141);
-            this.ticketIdTextField.Name = "ticketIdTextField";
-            this.ticketIdTextField.ReadOnly = true;
-            this.ticketIdTextField.Size = new System.Drawing.Size(174, 20);
-            this.ticketIdTextField.TabIndex = 12;
-            this.ticketIdTextField.TextChanged += new System.EventHandler(this.ticketIdTextField_TextChanged);
-            this.ticketIdTextField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // nameTextField
             // 
@@ -318,11 +308,19 @@ namespace Coursework1
             this.label5.TabIndex = 71;
             this.label5.Text = "Ticket ID";
             // 
+            // ticketAutoIncresedId
+            // 
+            this.ticketAutoIncresedId.Location = new System.Drawing.Point(175, 138);
+            this.ticketAutoIncresedId.Name = "ticketAutoIncresedId";
+            this.ticketAutoIncresedId.Size = new System.Drawing.Size(174, 20);
+            this.ticketAutoIncresedId.TabIndex = 72;
+            // 
             // BookTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
+            this.Controls.Add(this.ticketAutoIncresedId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkOutBtnTicketBooking);
@@ -339,7 +337,6 @@ namespace Coursework1
             this.Controls.Add(this.isGroupYesRadiobtn);
             this.Controls.Add(this.ageGroupComboBox);
             this.Controls.Add(this.nameTextField);
-            this.Controls.Add(this.ticketIdTextField);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -365,7 +362,6 @@ namespace Coursework1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox ticketIdTextField;
         private System.Windows.Forms.TextBox nameTextField;
         private System.Windows.Forms.ComboBox ageGroupComboBox;
         private System.Windows.Forms.RadioButton isGroupYesRadiobtn;
@@ -382,5 +378,6 @@ namespace Coursework1
         private System.Windows.Forms.Button checkOutBtnTicketBooking;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox ticketAutoIncresedId;
     }
 }

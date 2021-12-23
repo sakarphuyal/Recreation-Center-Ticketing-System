@@ -63,10 +63,5 @@ namespace Coursework1
             return weekDayList;
 
         }
-        private static Int32 IncrementedResult(string dataToParse)
-        {
-            int result;
-            return Int32.TryParse(dataToParse, out result) ? ++result : result;
-        }
     }
 }
