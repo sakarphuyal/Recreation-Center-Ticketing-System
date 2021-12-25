@@ -49,7 +49,7 @@ namespace Coursework1
             this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
             this.checkOutBtnTicketBooking = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkoutTextBoxId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ticketAutoIncresedId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -139,7 +139,6 @@ namespace Coursework1
             // 
             // ageGroupComboBox
             // 
-            this.ageGroupComboBox.FormattingEnabled = true;
             this.ageGroupComboBox.Items.AddRange(new object[] {
             "0-3 years",
             "3-16 years",
@@ -149,6 +148,7 @@ namespace Coursework1
             this.ageGroupComboBox.Name = "ageGroupComboBox";
             this.ageGroupComboBox.Size = new System.Drawing.Size(174, 21);
             this.ageGroupComboBox.TabIndex = 17;
+            this.ageGroupComboBox.Text = "----Select Age Group----";
             this.ageGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.ageGroupComboBox_SelectedIndexChanged);
             // 
             // timePicker
@@ -172,7 +172,6 @@ namespace Coursework1
             // 
             // numberOfPeopleComboBox
             // 
-            this.numberOfPeopleComboBox.FormattingEnabled = true;
             this.numberOfPeopleComboBox.Items.AddRange(new object[] {
             "0-5",
             "5-10",
@@ -180,8 +179,10 @@ namespace Coursework1
             "15+"});
             this.numberOfPeopleComboBox.Location = new System.Drawing.Point(575, 224);
             this.numberOfPeopleComboBox.Name = "numberOfPeopleComboBox";
-            this.numberOfPeopleComboBox.Size = new System.Drawing.Size(108, 21);
+            this.numberOfPeopleComboBox.Size = new System.Drawing.Size(95, 21);
             this.numberOfPeopleComboBox.TabIndex = 25;
+            this.numberOfPeopleComboBox.Text = "----Select Number Of People----";
+            this.numberOfPeopleComboBox.SelectedIndexChanged += new System.EventHandler(this.numberOfPeopleComboBox_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -256,13 +257,13 @@ namespace Coursework1
             this.checkOutBtnTicketBooking.UseVisualStyleBackColor = false;
             this.checkOutBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click);
             // 
-            // textBox1
+            // checkoutTextBoxId
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 351);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 20);
-            this.textBox1.TabIndex = 70;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.checkoutTextBoxId.Location = new System.Drawing.Point(175, 351);
+            this.checkoutTextBoxId.Name = "checkoutTextBoxId";
+            this.checkoutTextBoxId.Size = new System.Drawing.Size(108, 20);
+            this.checkoutTextBoxId.TabIndex = 70;
+            this.checkoutTextBoxId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -278,6 +279,7 @@ namespace Coursework1
             // 
             this.ticketAutoIncresedId.Location = new System.Drawing.Point(175, 138);
             this.ticketAutoIncresedId.Name = "ticketAutoIncresedId";
+            this.ticketAutoIncresedId.ReadOnly = true;
             this.ticketAutoIncresedId.Size = new System.Drawing.Size(174, 20);
             this.ticketAutoIncresedId.TabIndex = 72;
             // 
@@ -288,7 +290,7 @@ namespace Coursework1
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.Controls.Add(this.ticketAutoIncresedId);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkoutTextBoxId);
             this.Controls.Add(this.checkOutBtnTicketBooking);
             this.Controls.Add(this.saveBtnTicketBooking);
             this.Controls.Add(this.totalCostTextBox);
@@ -307,7 +309,7 @@ namespace Coursework1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Name = "BookTicket";
-            this.Size = new System.Drawing.Size(900, 475);
+            this.Size = new System.Drawing.Size(789, 475);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -336,7 +338,7 @@ namespace Coursework1
         private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Button saveBtnTicketBooking;
         private System.Windows.Forms.Button checkOutBtnTicketBooking;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox checkoutTextBoxId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ticketAutoIncresedId;
     }

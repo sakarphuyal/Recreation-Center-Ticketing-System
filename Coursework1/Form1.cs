@@ -65,10 +65,9 @@ namespace Coursework1
         private void setTicketPriceForHolidays1_Load(object sender, EventArgs e)
         {
         }
-
+        
         private void bookTicket1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button5_Click(object sender, EventArgs e)

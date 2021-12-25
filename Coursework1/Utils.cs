@@ -46,6 +46,7 @@ namespace Coursework1
                 TicketPriceForHolidays mTicket = JsonConvert.DeserializeObject<TicketPriceForHolidays>(line);
                 holidayList.Add(mTicket);
                 System.Diagnostics.Debug.WriteLine(mTicket.holiday_individual_less_than_three_one_hour.ToString());
+                System.Diagnostics.Debug.WriteLine(mTicket.holiday_group_five_to_ten_one_hour.ToString());
             }
             return holidayList;
 
@@ -61,7 +62,6 @@ namespace Coursework1
                 System.Diagnostics.Debug.WriteLine(mTicket.week_individual_less_than_three_one_hour.ToString());
             }
             return weekDayList;
-
         }
     }
 }
