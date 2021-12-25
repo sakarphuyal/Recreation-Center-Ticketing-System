@@ -346,7 +346,48 @@ namespace Coursework1
 
         private void cancelBtnWeek_Click(object sender, EventArgs e)
         {
-      
+            weekIndividualBelowThreeOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualThreeToSixteenOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualSixteenToSixtyOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualAboveSixtyOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualBelowThreeTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualThreeToSixteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualSixteenToSixtyTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualAboveSixtyTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualBelowThreeThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualThreeToSixteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualSixteenToSixtyThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualAboveSixtyThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualBelowThreeFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualThreeToSixteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualSixteenToSixtyFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualAboveSixtyFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualBelowThreeWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualThreeToSixteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualSixteenToSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekIndividualAboveSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTwoToFiveOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupFiveToTenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTenToFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupAboveFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTwoToFiveTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupFiveToTenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTenToFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupAboveFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTwoToFiveThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupFiveToTenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTenToFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupAboveFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTwoToFiveFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupFiveToTenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTenToFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupAboveFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTwoToFiveWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupFiveToTenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTenToFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupAboveFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+
+
         }
     }
 }

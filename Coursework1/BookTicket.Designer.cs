@@ -52,6 +52,7 @@ namespace Coursework1
             this.checkoutTextBoxId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ticketAutoIncresedId = new System.Windows.Forms.TextBox();
+            this.clearBtnTicketBooking = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,6 +136,7 @@ namespace Coursework1
             this.nameTextField.Name = "nameTextField";
             this.nameTextField.Size = new System.Drawing.Size(174, 20);
             this.nameTextField.TabIndex = 13;
+            this.nameTextField.TextChanged += new System.EventHandler(this.nameTextField_TextChanged);
             this.nameTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextField_KeyPress);
             // 
             // ageGroupComboBox
@@ -283,11 +285,23 @@ namespace Coursework1
             this.ticketAutoIncresedId.Size = new System.Drawing.Size(174, 20);
             this.ticketAutoIncresedId.TabIndex = 72;
             // 
+            // clearBtnTicketBooking
+            // 
+            this.clearBtnTicketBooking.BackColor = System.Drawing.Color.LightCoral;
+            this.clearBtnTicketBooking.Location = new System.Drawing.Point(487, 417);
+            this.clearBtnTicketBooking.Name = "clearBtnTicketBooking";
+            this.clearBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
+            this.clearBtnTicketBooking.TabIndex = 73;
+            this.clearBtnTicketBooking.Text = "Clear";
+            this.clearBtnTicketBooking.UseVisualStyleBackColor = false;
+            this.clearBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click_1);
+            // 
             // BookTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
+            this.Controls.Add(this.clearBtnTicketBooking);
             this.Controls.Add(this.ticketAutoIncresedId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.checkoutTextBoxId);
@@ -341,5 +355,6 @@ namespace Coursework1
         private System.Windows.Forms.TextBox checkoutTextBoxId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ticketAutoIncresedId;
+        private System.Windows.Forms.Button clearBtnTicketBooking;
     }
 }

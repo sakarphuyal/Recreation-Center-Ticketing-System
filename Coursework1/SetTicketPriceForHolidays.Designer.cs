@@ -41,7 +41,7 @@ namespace Coursework1
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.holidayIndividualLessThanThreeOnehour = new System.Windows.Forms.TextBox();
-            this.holidayIndividualLessThanThreeTwohour = new System.Windows.Forms.TextBox();
+            this.holidayIndividualLessThanThreeTwoHour = new System.Windows.Forms.TextBox();
             this.holidayIndividualLessThanThreeThreeHour = new System.Windows.Forms.TextBox();
             this.holidayIndividualBelowThreeFourHour = new System.Windows.Forms.TextBox();
             this.holidayIndividualLessThanThreeWholeDay = new System.Windows.Forms.TextBox();
@@ -219,13 +219,13 @@ namespace Coursework1
             this.holidayIndividualLessThanThreeOnehour.TabIndex = 14;
             this.holidayIndividualLessThanThreeOnehour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // holidayIndividualLessThanThreeTwohour
+            // holidayIndividualLessThanThreeTwoHour
             // 
-            this.holidayIndividualLessThanThreeTwohour.Location = new System.Drawing.Point(169, 191);
-            this.holidayIndividualLessThanThreeTwohour.Name = "holidayIndividualLessThanThreeTwohour";
-            this.holidayIndividualLessThanThreeTwohour.Size = new System.Drawing.Size(100, 20);
-            this.holidayIndividualLessThanThreeTwohour.TabIndex = 15;
-            this.holidayIndividualLessThanThreeTwohour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.holidayIndividualLessThanThreeTwoHour.Location = new System.Drawing.Point(169, 191);
+            this.holidayIndividualLessThanThreeTwoHour.Name = "holidayIndividualLessThanThreeTwoHour";
+            this.holidayIndividualLessThanThreeTwoHour.Size = new System.Drawing.Size(100, 20);
+            this.holidayIndividualLessThanThreeTwoHour.TabIndex = 15;
+            this.holidayIndividualLessThanThreeTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayIndividualLessThanThreeThreeHour
             // 
@@ -501,6 +501,7 @@ namespace Coursework1
             this.holidayGroupFiveToTenOneHour.Name = "holidayGroupFiveToTenOneHour";
             this.holidayGroupFiveToTenOneHour.Size = new System.Drawing.Size(100, 20);
             this.holidayGroupFiveToTenOneHour.TabIndex = 46;
+            this.holidayGroupFiveToTenOneHour.TextChanged += new System.EventHandler(this.holidayGroupFiveToTenOneHour_TextChanged);
             this.holidayGroupFiveToTenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // holidayGroupTenToFifteenOneHour
@@ -748,7 +749,7 @@ namespace Coursework1
             this.Controls.Add(this.holidayIndividualLessThanThreeWholeDay);
             this.Controls.Add(this.holidayIndividualBelowThreeFourHour);
             this.Controls.Add(this.holidayIndividualLessThanThreeThreeHour);
-            this.Controls.Add(this.holidayIndividualLessThanThreeTwohour);
+            this.Controls.Add(this.holidayIndividualLessThanThreeTwoHour);
             this.Controls.Add(this.holidayIndividualLessThanThreeOnehour);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -762,7 +763,7 @@ namespace Coursework1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "SetTicketPriceForHolidays";
-            this.Size = new System.Drawing.Size(655, 631);
+            this.Size = new System.Drawing.Size(638, 614);
             this.Load += new System.EventHandler(this.SetTicketPriceForHolidays_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -784,7 +785,7 @@ namespace Coursework1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox holidayIndividualLessThanThreeOnehour;
-        private System.Windows.Forms.TextBox holidayIndividualLessThanThreeTwohour;
+        private System.Windows.Forms.TextBox holidayIndividualLessThanThreeTwoHour;
         private System.Windows.Forms.TextBox holidayIndividualLessThanThreeThreeHour;
         private System.Windows.Forms.TextBox holidayIndividualBelowThreeFourHour;
         private System.Windows.Forms.TextBox holidayIndividualLessThanThreeWholeDay;

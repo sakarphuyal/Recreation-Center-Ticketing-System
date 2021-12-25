@@ -318,6 +318,52 @@ namespace Coursework1
 
         private void resetBtnHoliday_Click(object sender, EventArgs e)
         {
+            holidayIndividualLessThanThreeOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualThreeToSixteenOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualSixteenToSixtyOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualAboveSixtyOnehour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualLessThanThreeTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualThreeToSixteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualSixteenToSixtyTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualSixtyPlusTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualLessThanThreeThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualThreeToSixteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualSixteenToSixtyThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualAboveSixtyThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualBelowThreeFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualThreeToSixteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualSixteenToSixtyFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualAboveSixtyFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualLessThanThreeWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualThreeToSixteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualSixteenToSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayIndividualAboveSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTwoToFiveOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupFiveToTenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTenToFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupAboveFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTwoToFiveTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupFiveToTenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTenToFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupAboveFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTwoToFiveThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupFiveToTenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTenToFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupAboveFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTwoToFiveFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupFiveToTenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTenToFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupAboveFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTwoToFiveWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupFiveToTenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTenToFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupAboveFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
+
+        }
+
+        private void holidayGroupFiveToTenOneHour_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

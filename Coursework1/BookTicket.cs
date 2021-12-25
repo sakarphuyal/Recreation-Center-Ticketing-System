@@ -174,5 +174,20 @@ namespace Coursework1
             }*/
         }
 
+        private void clearBtnTicketBooking_Click_1(object sender, EventArgs e)
+        {
+            nameTextField.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            ageGroupComboBox.Text = Properties.Settings.Default.ComboBoxDefaultvalue;
+            numberOfPeopleComboBox.Text = Properties.Settings.Default.ComboBoxDefaultvalue;
+            checkoutTextBoxId.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            totalCostTextBox.Text = Properties.Settings.Default.TextBoxDefaultValue;
+        }
+        
+
+        private void nameTextField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //ticketAutoIncresedId
     }
 }
