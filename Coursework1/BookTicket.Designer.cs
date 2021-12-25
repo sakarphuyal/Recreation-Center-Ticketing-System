@@ -37,17 +37,14 @@ namespace Coursework1
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.nameTextField = new System.Windows.Forms.TextBox();
             this.ageGroupComboBox = new System.Windows.Forms.ComboBox();
-            this.isGroupYesRadiobtn = new System.Windows.Forms.RadioButton();
-            this.isGroupNoRadioBtn = new System.Windows.Forms.RadioButton();
             this.timePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.numberOfPeopleComboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
@@ -126,22 +123,12 @@ namespace Coursework1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(447, 144);
+            this.label8.Location = new System.Drawing.Point(447, 141);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 17);
             this.label8.TabIndex = 9;
             this.label8.Text = "In Time";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(447, 183);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Is Group";
             // 
             // nameTextField
             // 
@@ -155,36 +142,15 @@ namespace Coursework1
             // 
             this.ageGroupComboBox.FormattingEnabled = true;
             this.ageGroupComboBox.Items.AddRange(new object[] {
-            "0-3 years,",
-            "3-16 years,",
-            "16-60 years,",
+            "0-3 years",
+            "3-16 years",
+            "16-60 years",
             "60 + years"});
             this.ageGroupComboBox.Location = new System.Drawing.Point(175, 224);
             this.ageGroupComboBox.Name = "ageGroupComboBox";
             this.ageGroupComboBox.Size = new System.Drawing.Size(174, 21);
             this.ageGroupComboBox.TabIndex = 17;
-            // 
-            // isGroupYesRadiobtn
-            // 
-            this.isGroupYesRadiobtn.AutoSize = true;
-            this.isGroupYesRadiobtn.Location = new System.Drawing.Point(575, 184);
-            this.isGroupYesRadiobtn.Name = "isGroupYesRadiobtn";
-            this.isGroupYesRadiobtn.Size = new System.Drawing.Size(43, 17);
-            this.isGroupYesRadiobtn.TabIndex = 20;
-            this.isGroupYesRadiobtn.TabStop = true;
-            this.isGroupYesRadiobtn.Text = "Yes";
-            this.isGroupYesRadiobtn.UseVisualStyleBackColor = true;
-            // 
-            // isGroupNoRadioBtn
-            // 
-            this.isGroupNoRadioBtn.AutoSize = true;
-            this.isGroupNoRadioBtn.Location = new System.Drawing.Point(644, 184);
-            this.isGroupNoRadioBtn.Name = "isGroupNoRadioBtn";
-            this.isGroupNoRadioBtn.Size = new System.Drawing.Size(39, 17);
-            this.isGroupNoRadioBtn.TabIndex = 21;
-            this.isGroupNoRadioBtn.TabStop = true;
-            this.isGroupNoRadioBtn.Text = "No";
-            this.isGroupNoRadioBtn.UseVisualStyleBackColor = true;
+            this.ageGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.ageGroupComboBox_SelectedIndexChanged);
             // 
             // timePicker
             // 
@@ -209,9 +175,9 @@ namespace Coursework1
             // 
             this.numberOfPeopleComboBox.FormattingEnabled = true;
             this.numberOfPeopleComboBox.Items.AddRange(new object[] {
-            "0-5,",
-            "5-10,",
-            "10-15,",
+            "0-5",
+            "5-10",
+            "10-15",
             "15+"});
             this.numberOfPeopleComboBox.Location = new System.Drawing.Point(575, 224);
             this.numberOfPeopleComboBox.Name = "numberOfPeopleComboBox";
@@ -222,7 +188,7 @@ namespace Coursework1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(447, 92);
+            this.label11.Location = new System.Drawing.Point(456, 183);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 17);
             this.label11.TabIndex = 26;
@@ -231,21 +197,22 @@ namespace Coursework1
             // datePicker
             // 
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(514, 92);
+            this.datePicker.Location = new System.Drawing.Point(575, 183);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(95, 20);
             this.datePicker.TabIndex = 27;
             // 
-            // button1
+            // searchBtn
             // 
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(365, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 22);
-            this.button1.TabIndex = 28;
-            this.button1.Tag = "";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
+            this.searchBtn.Location = new System.Drawing.Point(365, 351);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(46, 22);
+            this.searchBtn.TabIndex = 28;
+            this.searchBtn.Tag = "";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // label9
             // 
@@ -327,17 +294,14 @@ namespace Coursework1
             this.Controls.Add(this.saveBtnTicketBooking);
             this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.numberOfPeopleComboBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.timePicker);
-            this.Controls.Add(this.isGroupNoRadioBtn);
-            this.Controls.Add(this.isGroupYesRadiobtn);
             this.Controls.Add(this.ageGroupComboBox);
             this.Controls.Add(this.nameTextField);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -361,17 +325,14 @@ namespace Coursework1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox nameTextField;
         private System.Windows.Forms.ComboBox ageGroupComboBox;
-        private System.Windows.Forms.RadioButton isGroupYesRadiobtn;
-        private System.Windows.Forms.RadioButton isGroupNoRadioBtn;
         private System.Windows.Forms.DateTimePicker timePicker;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox numberOfPeopleComboBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker datePicker;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Button saveBtnTicketBooking;

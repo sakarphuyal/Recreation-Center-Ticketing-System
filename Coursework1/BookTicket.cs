@@ -12,8 +12,6 @@ namespace Coursework1
 {
     public partial class BookTicket : UserControl
     {
-        private object setTicketPriceForHolidays;
-
         public BookTicket()
         {
             InitializeComponent();
@@ -82,7 +80,10 @@ namespace Coursework1
             }
             string ageGroup = ageGroupComboBox.Text;
             {
-                ticketList.age_group = ageGroup;
+                if  (ageGroupComboBox.SelectedItem != null){
+                    ageGroup = ageGroupComboBox.SelectedItem.ToString();
+                    ticketList.age_group = ageGroup;
+                }
             }
             DateTime todayDate = datePicker.Value.Date;
             {
@@ -92,19 +93,14 @@ namespace Coursework1
             {
                 ticketList.date = inTime;
             }
-            string isGroup = null;
-            if (isGroupYesRadiobtn.Checked)
+            string numberOfPeople = numberOfPeopleComboBox.Text;
             {
-                ticketList.is_group = isGroup;
+                if (numberOfPeopleComboBox.SelectedItem != null)
+                {
+                    numberOfPeople = numberOfPeopleComboBox.SelectedItem.ToString();
+                    ticketList.number_of_people = numberOfPeople;
+                }
             }
-            if (isGroupNoRadioBtn.Checked)
-            {
-                ticketList.is_group = isGroup;
-            }
-            //string numberOfPeople = numberOfPeopleComboBox.Text;
-           //{
-             //ticketList.number_of_people = int.Parse(numberOfPeople);
-            //}
 
             Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
 
@@ -120,6 +116,14 @@ namespace Coursework1
             
         }
 
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void ageGroupComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

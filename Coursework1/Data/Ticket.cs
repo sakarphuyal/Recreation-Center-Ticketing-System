@@ -15,12 +15,8 @@ namespace Coursework1.Data
         public string age_group { get; set; }
         public DateTime date { get; set; }
         public  DateTime in_time { get; set; }
-        public string is_group { get; set; }
-        public int number_of_people { get; set; }
-        public int check_out_id { get; set; }
-
-        public double  total_cost { get; set; }
-
+        public string number_of_people { get; set; }
+        public int total_cost { get; set; }
 
         public string toJson() {
             return JsonConvert.SerializeObject(this);
