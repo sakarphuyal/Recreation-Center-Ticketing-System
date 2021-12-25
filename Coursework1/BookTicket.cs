@@ -78,6 +78,10 @@ namespace Coursework1
             {
                 ticketList.name = name;
             }
+            else
+            {
+                MessageBox.Show("Enter Name Please.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             string ageGroup = ageGroupComboBox.Text;
             {
                 if  (ageGroupComboBox.SelectedItem != null){

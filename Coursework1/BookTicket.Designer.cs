@@ -106,7 +106,6 @@ namespace Coursework1
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Name";
-            this.label4.VisibleChanged += new System.EventHandler(this.saveBtnTicketBooking_Click);
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
