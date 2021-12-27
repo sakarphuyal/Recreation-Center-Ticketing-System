@@ -216,127 +216,32 @@ namespace Coursework1
             {
                 weekDayPrice.week_individual_sixty_plus_whole_day = int.Parse(wholeDaySixtyPlusIndividualWeekDay);
             }
+
             //6,1
-            string oneHourTwoToFiveGroupWeekDay = weekGroupTwoToFiveOneHour.Text;
-            if (!(oneHourTwoToFiveGroupWeekDay.Length < 1))
+            string discountTwoToFiveGroupWeekDay = weekGroupTwoToFiveDiscount.Text;
+            if (!(discountTwoToFiveGroupWeekDay.Length < 1))
             {
-                weekDayPrice.week_group_two_to_five_one_hour = int.Parse(oneHourTwoToFiveGroupWeekDay);
+                weekDayPrice.week_group_two_to_five_discount = int.Parse(discountTwoToFiveGroupWeekDay);
             }
             //6,2
-            string oneHourFiveToTenGroupWeekDay = weekGroupFiveToTenOneHour.Text;
-            if (!(oneHourFiveToTenGroupWeekDay.Length < 1))
+            string discountFiveToTenGroupWeekDay = weekGroupFiveToTenDiscount.Text;
+            if (!(discountFiveToTenGroupWeekDay.Length < 1))
             {
-                weekDayPrice.week_group_five_to_ten_one_hour = int.Parse(oneHourFiveToTenGroupWeekDay);
+                weekDayPrice.week_group_five_to_ten_discount = int.Parse(discountFiveToTenGroupWeekDay);
             }
             //6,3
-            string oneHourTenToFifteenGroupWeekDay = weekGroupTenToFifteenOneHour.Text;
-            if (!(oneHourTenToFifteenGroupWeekDay.Length < 1))
+            string discountTenToFifteenGroupWeekDay = weekGroupTenToFifteenDiscount.Text;
+            if (!(discountTenToFifteenGroupWeekDay.Length < 1))
             {
-                weekDayPrice.week_group_ten_to_fifteen_one_hour = int.Parse(oneHourTenToFifteenGroupWeekDay);
+                weekDayPrice.week_group_ten_to_fifteen_discount = int.Parse(discountTenToFifteenGroupWeekDay);
             }
             //6,4
-            string oneHourFifteenPlusGroupWeekDay = weekGroupAboveFifteenOneHour.Text;
-            if (!(oneHourFifteenPlusGroupWeekDay.Length < 1))
+            string discountFifteenPlusGroupWeekDay = weekGroupAboveFifteenDiscount.Text;
+            if (!(discountFifteenPlusGroupWeekDay.Length < 1))
             {
-                weekDayPrice.week_group_fifteen_plus_one_hour = int.Parse(oneHourFifteenPlusGroupWeekDay);
+                weekDayPrice.week_group_fifteen_plus_discount = int.Parse(discountFifteenPlusGroupWeekDay);
             }
-            //7,1
-            string twoHourTwoToFiveGroupWeekDay = weekGroupTwoToFiveTwoHour.Text;
-            if (!(twoHourTwoToFiveGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_two_to_five_two_hour = int.Parse(twoHourTwoToFiveGroupWeekDay);
-            }
-            //7,2
-            string twoHourFiveToTenGroupWeekDay = weekGroupFiveToTenTwoHour.Text;
-            if (!(twoHourFiveToTenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_five_to_ten_two_hour = int.Parse(twoHourFiveToTenGroupWeekDay);
-            }
-            //7,3
-            string twoHourTenToFifteenGroupWeekDay = weekGroupTenToFifteenTwoHour.Text;
-            if (!(twoHourTenToFifteenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_ten_to_fifteen_two_hour = int.Parse(twoHourTenToFifteenGroupWeekDay);
-            }
-            //7,4
-            string twoHourFifteenPlusGroupWeekDay = weekGroupAboveFifteenTwoHour.Text;
-            if (!(twoHourFifteenPlusGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_fifteen_above_two_hour = int.Parse(twoHourFifteenPlusGroupWeekDay);
-            }
-            //8,1
-            string threeHourTwoToFiveGroupWeekDay = weekGroupTwoToFiveThreeHour.Text;
-            if (!(threeHourTwoToFiveGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_two_to_five_three_hour = int.Parse(threeHourTwoToFiveGroupWeekDay);
-            }
-            //8,2
-            string threeHourFiveToTenGroupWeekDay = weekGroupFiveToTenThreeHour.Text;
-            if (!(threeHourFiveToTenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_five_to_ten_three_hour = int.Parse(threeHourFiveToTenGroupWeekDay);
-            }
-            //8,3
-            string threeHourTenToFifteenGroupWeekDay = weekGroupTenToFifteenThreeHour.Text;
-            if (!(threeHourTenToFifteenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_ten_to_fifteen_three_hour = int.Parse(threeHourTenToFifteenGroupWeekDay);
-            }
-            //8,4
-            string threeHourFifteenPlusGroupWeekDay = weekGroupAboveFifteenThreeHour.Text;
-            if (!(threeHourFifteenPlusGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_fifteen_plus_three_hour = int.Parse(threeHourFifteenPlusGroupWeekDay);
-            }
-            //9,1
-            string fourHourTwoToFiveGroupWeekDay = weekGroupTwoToFiveFourHour.Text;
-            if (!(fourHourTwoToFiveGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_two_to_five_four_hour = int.Parse(fourHourTwoToFiveGroupWeekDay);
-            }
-            //9,2
-            string fourHourFiveToTenGroupWeekDay = weekGroupFiveToTenFourHour.Text;
-            if (!(fourHourFiveToTenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_five_to_ten_four_hour = int.Parse(fourHourFiveToTenGroupWeekDay);
-            }
-            //9,3
-            string fourHourTenToFifteenGroupWeekDay = weekGroupTenToFifteenFourHour.Text;
-            if (!(fourHourTenToFifteenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_ten_to_fifteen_four_hour = int.Parse(fourHourTenToFifteenGroupWeekDay);
-            }
-            //9,4
-            string fourHourFifteenPlusGroupWeekDay = weekGroupAboveFifteenFourHour.Text;
-            if (!(fourHourFifteenPlusGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_fifteen_plus_four_hour = int.Parse(fourHourFifteenPlusGroupWeekDay);
-            }
-            //10,1
-            string wholeDayTwoToFiveGroupWeekDay = weekGroupTwoToFiveWholeDay.Text;
-            if (!(wholeDayTwoToFiveGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_two_to_five_whole_day = int.Parse(wholeDayTwoToFiveGroupWeekDay);
-            }
-            //10,2
-            string wholeDayFiveToTenGroupWeekDay = weekGroupFiveToTenWholeDay.Text;
-            if (!(wholeDayFiveToTenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_five_to_ten_whole_day = int.Parse(wholeDayFiveToTenGroupWeekDay);
-            }
-            //10,3
-            string wholeDayTenToFifteenGroupWeekDay = weekGroupTenToFifteenWholeDay.Text;
-            if (!(wholeDayTenToFifteenGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_ten_to_fifteen_whole_day = int.Parse(wholeDayTenToFifteenGroupWeekDay);
-            }
-            //10,4
-            string wholeDayFifteenPlusGroupWeekDay = weekGroupAboveFifteenWholeDay.Text;
-            if (!(wholeDayFifteenPlusGroupWeekDay.Length < 1))
-            {
-                weekDayPrice.week_group_fifteen_plus_whole_day = int.Parse(wholeDayFifteenPlusGroupWeekDay);
-            }
-
+            
             Utils.setOnFile(weekDayPrice.toJson(), Constants.WeekDay_FILE);
         }
         private void numberKeyDown(object sender, KeyEventArgs e)
@@ -366,28 +271,10 @@ namespace Coursework1
             weekIndividualThreeToSixteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
             weekIndividualSixteenToSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
             weekIndividualAboveSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTwoToFiveOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupFiveToTenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTenToFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupAboveFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTwoToFiveTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupFiveToTenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTenToFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupAboveFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTwoToFiveThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupFiveToTenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTenToFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupAboveFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTwoToFiveFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupFiveToTenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTenToFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupAboveFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTwoToFiveWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupFiveToTenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupTenToFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            weekGroupAboveFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-
-
+            weekGroupTwoToFiveDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupFiveToTenDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupTenToFifteenDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            weekGroupAboveFifteenDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
         }
     }
 }

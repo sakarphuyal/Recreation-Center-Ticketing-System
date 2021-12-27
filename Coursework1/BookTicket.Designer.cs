@@ -136,8 +136,9 @@ namespace Coursework1
             this.nameTextField.Name = "nameTextField";
             this.nameTextField.Size = new System.Drawing.Size(174, 20);
             this.nameTextField.TabIndex = 13;
-            this.nameTextField.TextChanged += new System.EventHandler(this.nameTextField_TextChanged);
-            this.nameTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextField_KeyPress);
+            this.nameTextField.TextChanged += new System.EventHandler(this.nameTextField_TextChanged_1);
+            this.nameTextField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.stringKeyDown);
+            this.nameTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.stringKeyDown);
             // 
             // ageGroupComboBox
             // 
@@ -151,7 +152,7 @@ namespace Coursework1
             this.ageGroupComboBox.Size = new System.Drawing.Size(174, 21);
             this.ageGroupComboBox.TabIndex = 17;
             this.ageGroupComboBox.Text = "----Select Age Group----";
-            this.ageGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.ageGroupComboBox_SelectedIndexChanged);
+            this.ageGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.ageGroupComboBox_SelectedIndexChanged_1);
             // 
             // timePicker
             // 
@@ -184,7 +185,7 @@ namespace Coursework1
             this.numberOfPeopleComboBox.Size = new System.Drawing.Size(95, 21);
             this.numberOfPeopleComboBox.TabIndex = 25;
             this.numberOfPeopleComboBox.Text = "----Select Number Of People----";
-            this.numberOfPeopleComboBox.SelectedIndexChanged += new System.EventHandler(this.numberOfPeopleComboBox_SelectedIndexChanged);
+            this.numberOfPeopleComboBox.SelectedIndexChanged += new System.EventHandler(this.numberOfPeopleComboBox_SelectedIndexChanged_1);
             // 
             // label11
             // 
@@ -214,7 +215,7 @@ namespace Coursework1
             this.searchBtn.TabIndex = 28;
             this.searchBtn.Tag = "";
             this.searchBtn.UseVisualStyleBackColor = true;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click_1);
             // 
             // label9
             // 
@@ -234,8 +235,6 @@ namespace Coursework1
             this.totalCostTextBox.ReadOnly = true;
             this.totalCostTextBox.Size = new System.Drawing.Size(108, 20);
             this.totalCostTextBox.TabIndex = 67;
-            this.totalCostTextBox.TextChanged += new System.EventHandler(this.clearBtnTicketBooking_Click);
-            this.totalCostTextBox.VisibleChanged += new System.EventHandler(this.clearBtnTicketBooking_Click);
             // 
             // saveBtnTicketBooking
             // 
@@ -257,7 +256,6 @@ namespace Coursework1
             this.checkOutBtnTicketBooking.TabIndex = 69;
             this.checkOutBtnTicketBooking.Text = "Check-Out";
             this.checkOutBtnTicketBooking.UseVisualStyleBackColor = false;
-            this.checkOutBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click);
             // 
             // checkoutTextBoxId
             // 
@@ -265,7 +263,7 @@ namespace Coursework1
             this.checkoutTextBoxId.Name = "checkoutTextBoxId";
             this.checkoutTextBoxId.Size = new System.Drawing.Size(108, 20);
             this.checkoutTextBoxId.TabIndex = 70;
-            this.checkoutTextBoxId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.checkoutTextBoxId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label5
             // 
@@ -294,7 +292,7 @@ namespace Coursework1
             this.clearBtnTicketBooking.TabIndex = 73;
             this.clearBtnTicketBooking.Text = "Clear";
             this.clearBtnTicketBooking.UseVisualStyleBackColor = false;
-            this.clearBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click_1);
+            this.clearBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click_2);
             // 
             // BookTicket
             // 

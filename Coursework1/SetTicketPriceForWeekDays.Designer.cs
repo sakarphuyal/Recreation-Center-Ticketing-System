@@ -65,34 +65,14 @@ namespace Coursework1
             this.weekIndividualThreeToSixteenWholeDay = new System.Windows.Forms.TextBox();
             this.weekIndividualSixteenToSixtyWholeDay = new System.Windows.Forms.TextBox();
             this.weekIndividualAboveSixtyWholeDay = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.weekGroupTwoToFiveOneHour = new System.Windows.Forms.TextBox();
+            this.weekGroupTwoToFiveDiscount = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.weekGroupFiveToTenOneHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTenToFifteenOneHour = new System.Windows.Forms.TextBox();
-            this.weekGroupAboveFifteenOneHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTwoToFiveTwoHour = new System.Windows.Forms.TextBox();
-            this.weekGroupFiveToTenTwoHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTenToFifteenTwoHour = new System.Windows.Forms.TextBox();
-            this.weekGroupAboveFifteenTwoHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTwoToFiveThreeHour = new System.Windows.Forms.TextBox();
-            this.weekGroupFiveToTenThreeHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTenToFifteenThreeHour = new System.Windows.Forms.TextBox();
-            this.weekGroupAboveFifteenThreeHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTwoToFiveFourHour = new System.Windows.Forms.TextBox();
-            this.weekGroupFiveToTenFourHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTenToFifteenFourHour = new System.Windows.Forms.TextBox();
-            this.weekGroupAboveFifteenFourHour = new System.Windows.Forms.TextBox();
-            this.weekGroupTwoToFiveWholeDay = new System.Windows.Forms.TextBox();
-            this.weekGroupFiveToTenWholeDay = new System.Windows.Forms.TextBox();
-            this.weekGroupTenToFifteenWholeDay = new System.Windows.Forms.TextBox();
-            this.weekGroupAboveFifteenWholeDay = new System.Windows.Forms.TextBox();
+            this.weekGroupFiveToTenDiscount = new System.Windows.Forms.TextBox();
+            this.weekGroupTenToFifteenDiscount = new System.Windows.Forms.TextBox();
+            this.weekGroupAboveFifteenDiscount = new System.Windows.Forms.TextBox();
             this.saveBtnWeek = new System.Windows.Forms.Button();
             this.cancelBtnWeek = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -368,11 +348,11 @@ namespace Coursework1
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 400);
+            this.label13.Location = new System.Drawing.Point(20, 409);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 34);
+            this.label13.Size = new System.Drawing.Size(69, 17);
             this.label13.TabIndex = 28;
-            this.label13.Text = "No.Person\r\nHours\r\n";
+            this.label13.Text = "No.People";
             // 
             // label14
             // 
@@ -380,9 +360,9 @@ namespace Coursework1
             this.label14.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(20, 451);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 17);
+            this.label14.Size = new System.Drawing.Size(63, 17);
             this.label14.TabIndex = 29;
-            this.label14.Text = "Price for 1 hour";
+            this.label14.Text = "Discount";
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
@@ -428,57 +408,14 @@ namespace Coursework1
             this.weekIndividualAboveSixtyWholeDay.TabIndex = 34;
             this.weekIndividualAboveSixtyWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // label16
+            // weekGroupTwoToFiveDiscount
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(15, 492);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 17);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "Price for 2 hours";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(15, 562);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(112, 17);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Price for 4 hours";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(15, 528);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(112, 17);
-            this.label18.TabIndex = 37;
-            this.label18.Text = "Price for 3 hours";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(15, 597);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(133, 17);
-            this.label19.TabIndex = 38;
-            this.label19.Text = "Price for Whole day";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // weekGroupTwoToFiveOneHour
-            // 
-            this.weekGroupTwoToFiveOneHour.Location = new System.Drawing.Point(169, 451);
-            this.weekGroupTwoToFiveOneHour.Name = "weekGroupTwoToFiveOneHour";
-            this.weekGroupTwoToFiveOneHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTwoToFiveOneHour.TabIndex = 39;
-            this.weekGroupTwoToFiveOneHour.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
-            this.weekGroupTwoToFiveOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.weekGroupTwoToFiveDiscount.Location = new System.Drawing.Point(169, 451);
+            this.weekGroupTwoToFiveDiscount.Name = "weekGroupTwoToFiveDiscount";
+            this.weekGroupTwoToFiveDiscount.Size = new System.Drawing.Size(100, 20);
+            this.weekGroupTwoToFiveDiscount.TabIndex = 39;
+            this.weekGroupTwoToFiveDiscount.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
+            this.weekGroupTwoToFiveDiscount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label20
             // 
@@ -521,164 +458,35 @@ namespace Coursework1
             this.label23.TabIndex = 43;
             this.label23.Text = "15+";
             // 
-            // weekGroupFiveToTenOneHour
+            // weekGroupFiveToTenDiscount
             // 
-            this.weekGroupFiveToTenOneHour.Location = new System.Drawing.Point(296, 448);
-            this.weekGroupFiveToTenOneHour.Name = "weekGroupFiveToTenOneHour";
-            this.weekGroupFiveToTenOneHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupFiveToTenOneHour.TabIndex = 44;
-            this.weekGroupFiveToTenOneHour.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
-            this.weekGroupFiveToTenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.weekGroupFiveToTenDiscount.Location = new System.Drawing.Point(296, 448);
+            this.weekGroupFiveToTenDiscount.Name = "weekGroupFiveToTenDiscount";
+            this.weekGroupFiveToTenDiscount.Size = new System.Drawing.Size(100, 20);
+            this.weekGroupFiveToTenDiscount.TabIndex = 44;
+            this.weekGroupFiveToTenDiscount.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
+            this.weekGroupFiveToTenDiscount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // weekGroupTenToFifteenOneHour
+            // weekGroupTenToFifteenDiscount
             // 
-            this.weekGroupTenToFifteenOneHour.Location = new System.Drawing.Point(423, 451);
-            this.weekGroupTenToFifteenOneHour.Name = "weekGroupTenToFifteenOneHour";
-            this.weekGroupTenToFifteenOneHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTenToFifteenOneHour.TabIndex = 45;
-            this.weekGroupTenToFifteenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.weekGroupTenToFifteenDiscount.Location = new System.Drawing.Point(423, 451);
+            this.weekGroupTenToFifteenDiscount.Name = "weekGroupTenToFifteenDiscount";
+            this.weekGroupTenToFifteenDiscount.Size = new System.Drawing.Size(100, 20);
+            this.weekGroupTenToFifteenDiscount.TabIndex = 45;
+            this.weekGroupTenToFifteenDiscount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // weekGroupAboveFifteenOneHour
+            // weekGroupAboveFifteenDiscount
             // 
-            this.weekGroupAboveFifteenOneHour.Location = new System.Drawing.Point(563, 451);
-            this.weekGroupAboveFifteenOneHour.Name = "weekGroupAboveFifteenOneHour";
-            this.weekGroupAboveFifteenOneHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupAboveFifteenOneHour.TabIndex = 46;
-            this.weekGroupAboveFifteenOneHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTwoToFiveTwoHour
-            // 
-            this.weekGroupTwoToFiveTwoHour.Location = new System.Drawing.Point(169, 489);
-            this.weekGroupTwoToFiveTwoHour.Name = "weekGroupTwoToFiveTwoHour";
-            this.weekGroupTwoToFiveTwoHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTwoToFiveTwoHour.TabIndex = 47;
-            this.weekGroupTwoToFiveTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupFiveToTenTwoHour
-            // 
-            this.weekGroupFiveToTenTwoHour.Location = new System.Drawing.Point(296, 489);
-            this.weekGroupFiveToTenTwoHour.Name = "weekGroupFiveToTenTwoHour";
-            this.weekGroupFiveToTenTwoHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupFiveToTenTwoHour.TabIndex = 48;
-            this.weekGroupFiveToTenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTenToFifteenTwoHour
-            // 
-            this.weekGroupTenToFifteenTwoHour.Location = new System.Drawing.Point(423, 489);
-            this.weekGroupTenToFifteenTwoHour.Name = "weekGroupTenToFifteenTwoHour";
-            this.weekGroupTenToFifteenTwoHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTenToFifteenTwoHour.TabIndex = 49;
-            this.weekGroupTenToFifteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupAboveFifteenTwoHour
-            // 
-            this.weekGroupAboveFifteenTwoHour.Location = new System.Drawing.Point(563, 489);
-            this.weekGroupAboveFifteenTwoHour.Name = "weekGroupAboveFifteenTwoHour";
-            this.weekGroupAboveFifteenTwoHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupAboveFifteenTwoHour.TabIndex = 50;
-            this.weekGroupAboveFifteenTwoHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTwoToFiveThreeHour
-            // 
-            this.weekGroupTwoToFiveThreeHour.Location = new System.Drawing.Point(169, 528);
-            this.weekGroupTwoToFiveThreeHour.Name = "weekGroupTwoToFiveThreeHour";
-            this.weekGroupTwoToFiveThreeHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTwoToFiveThreeHour.TabIndex = 51;
-            this.weekGroupTwoToFiveThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupFiveToTenThreeHour
-            // 
-            this.weekGroupFiveToTenThreeHour.Location = new System.Drawing.Point(296, 528);
-            this.weekGroupFiveToTenThreeHour.Name = "weekGroupFiveToTenThreeHour";
-            this.weekGroupFiveToTenThreeHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupFiveToTenThreeHour.TabIndex = 52;
-            this.weekGroupFiveToTenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTenToFifteenThreeHour
-            // 
-            this.weekGroupTenToFifteenThreeHour.Location = new System.Drawing.Point(423, 528);
-            this.weekGroupTenToFifteenThreeHour.Name = "weekGroupTenToFifteenThreeHour";
-            this.weekGroupTenToFifteenThreeHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTenToFifteenThreeHour.TabIndex = 53;
-            this.weekGroupTenToFifteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupAboveFifteenThreeHour
-            // 
-            this.weekGroupAboveFifteenThreeHour.Location = new System.Drawing.Point(563, 525);
-            this.weekGroupAboveFifteenThreeHour.Name = "weekGroupAboveFifteenThreeHour";
-            this.weekGroupAboveFifteenThreeHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupAboveFifteenThreeHour.TabIndex = 54;
-            this.weekGroupAboveFifteenThreeHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTwoToFiveFourHour
-            // 
-            this.weekGroupTwoToFiveFourHour.Location = new System.Drawing.Point(169, 562);
-            this.weekGroupTwoToFiveFourHour.Name = "weekGroupTwoToFiveFourHour";
-            this.weekGroupTwoToFiveFourHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTwoToFiveFourHour.TabIndex = 55;
-            this.weekGroupTwoToFiveFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupFiveToTenFourHour
-            // 
-            this.weekGroupFiveToTenFourHour.Location = new System.Drawing.Point(298, 562);
-            this.weekGroupFiveToTenFourHour.Name = "weekGroupFiveToTenFourHour";
-            this.weekGroupFiveToTenFourHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupFiveToTenFourHour.TabIndex = 56;
-            this.weekGroupFiveToTenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTenToFifteenFourHour
-            // 
-            this.weekGroupTenToFifteenFourHour.Location = new System.Drawing.Point(423, 562);
-            this.weekGroupTenToFifteenFourHour.Name = "weekGroupTenToFifteenFourHour";
-            this.weekGroupTenToFifteenFourHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTenToFifteenFourHour.TabIndex = 57;
-            this.weekGroupTenToFifteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupAboveFifteenFourHour
-            // 
-            this.weekGroupAboveFifteenFourHour.Location = new System.Drawing.Point(563, 559);
-            this.weekGroupAboveFifteenFourHour.Name = "weekGroupAboveFifteenFourHour";
-            this.weekGroupAboveFifteenFourHour.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupAboveFifteenFourHour.TabIndex = 58;
-            this.weekGroupAboveFifteenFourHour.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTwoToFiveWholeDay
-            // 
-            this.weekGroupTwoToFiveWholeDay.Location = new System.Drawing.Point(169, 597);
-            this.weekGroupTwoToFiveWholeDay.Name = "weekGroupTwoToFiveWholeDay";
-            this.weekGroupTwoToFiveWholeDay.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTwoToFiveWholeDay.TabIndex = 59;
-            this.weekGroupTwoToFiveWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupFiveToTenWholeDay
-            // 
-            this.weekGroupFiveToTenWholeDay.Location = new System.Drawing.Point(296, 597);
-            this.weekGroupFiveToTenWholeDay.Name = "weekGroupFiveToTenWholeDay";
-            this.weekGroupFiveToTenWholeDay.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupFiveToTenWholeDay.TabIndex = 60;
-            this.weekGroupFiveToTenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupTenToFifteenWholeDay
-            // 
-            this.weekGroupTenToFifteenWholeDay.Location = new System.Drawing.Point(423, 597);
-            this.weekGroupTenToFifteenWholeDay.Name = "weekGroupTenToFifteenWholeDay";
-            this.weekGroupTenToFifteenWholeDay.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupTenToFifteenWholeDay.TabIndex = 61;
-            this.weekGroupTenToFifteenWholeDay.TextChanged += new System.EventHandler(this.textBox39_TextChanged);
-            this.weekGroupTenToFifteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // weekGroupAboveFifteenWholeDay
-            // 
-            this.weekGroupAboveFifteenWholeDay.Location = new System.Drawing.Point(563, 597);
-            this.weekGroupAboveFifteenWholeDay.Name = "weekGroupAboveFifteenWholeDay";
-            this.weekGroupAboveFifteenWholeDay.Size = new System.Drawing.Size(100, 20);
-            this.weekGroupAboveFifteenWholeDay.TabIndex = 62;
-            this.weekGroupAboveFifteenWholeDay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.weekGroupAboveFifteenDiscount.Location = new System.Drawing.Point(563, 451);
+            this.weekGroupAboveFifteenDiscount.Name = "weekGroupAboveFifteenDiscount";
+            this.weekGroupAboveFifteenDiscount.Size = new System.Drawing.Size(100, 20);
+            this.weekGroupAboveFifteenDiscount.TabIndex = 46;
+            this.weekGroupAboveFifteenDiscount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // saveBtnWeek
             // 
             this.saveBtnWeek.BackColor = System.Drawing.Color.GreenYellow;
-            this.saveBtnWeek.Location = new System.Drawing.Point(266, 653);
+            this.saveBtnWeek.Location = new System.Drawing.Point(216, 500);
             this.saveBtnWeek.Name = "saveBtnWeek";
             this.saveBtnWeek.Size = new System.Drawing.Size(142, 42);
             this.saveBtnWeek.TabIndex = 64;
@@ -689,7 +497,7 @@ namespace Coursework1
             // cancelBtnWeek
             // 
             this.cancelBtnWeek.BackColor = System.Drawing.Color.IndianRed;
-            this.cancelBtnWeek.Location = new System.Drawing.Point(434, 652);
+            this.cancelBtnWeek.Location = new System.Drawing.Point(392, 500);
             this.cancelBtnWeek.Name = "cancelBtnWeek";
             this.cancelBtnWeek.Size = new System.Drawing.Size(153, 43);
             this.cancelBtnWeek.TabIndex = 65;
@@ -705,34 +513,14 @@ namespace Coursework1
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.Controls.Add(this.cancelBtnWeek);
             this.Controls.Add(this.saveBtnWeek);
-            this.Controls.Add(this.weekGroupAboveFifteenWholeDay);
-            this.Controls.Add(this.weekGroupTenToFifteenWholeDay);
-            this.Controls.Add(this.weekGroupFiveToTenWholeDay);
-            this.Controls.Add(this.weekGroupTwoToFiveWholeDay);
-            this.Controls.Add(this.weekGroupAboveFifteenFourHour);
-            this.Controls.Add(this.weekGroupTenToFifteenFourHour);
-            this.Controls.Add(this.weekGroupFiveToTenFourHour);
-            this.Controls.Add(this.weekGroupTwoToFiveFourHour);
-            this.Controls.Add(this.weekGroupAboveFifteenThreeHour);
-            this.Controls.Add(this.weekGroupTenToFifteenThreeHour);
-            this.Controls.Add(this.weekGroupFiveToTenThreeHour);
-            this.Controls.Add(this.weekGroupTwoToFiveThreeHour);
-            this.Controls.Add(this.weekGroupAboveFifteenTwoHour);
-            this.Controls.Add(this.weekGroupTenToFifteenTwoHour);
-            this.Controls.Add(this.weekGroupFiveToTenTwoHour);
-            this.Controls.Add(this.weekGroupTwoToFiveTwoHour);
-            this.Controls.Add(this.weekGroupAboveFifteenOneHour);
-            this.Controls.Add(this.weekGroupTenToFifteenOneHour);
-            this.Controls.Add(this.weekGroupFiveToTenOneHour);
+            this.Controls.Add(this.weekGroupAboveFifteenDiscount);
+            this.Controls.Add(this.weekGroupTenToFifteenDiscount);
+            this.Controls.Add(this.weekGroupFiveToTenDiscount);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.weekGroupTwoToFiveOneHour);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.weekGroupTwoToFiveDiscount);
             this.Controls.Add(this.weekIndividualAboveSixtyWholeDay);
             this.Controls.Add(this.weekIndividualSixteenToSixtyWholeDay);
             this.Controls.Add(this.weekIndividualThreeToSixteenWholeDay);
@@ -769,7 +557,7 @@ namespace Coursework1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "SetTicketPriceForWeekDays";
-            this.Size = new System.Drawing.Size(681, 648);
+            this.Size = new System.Drawing.Size(681, 631);
             this.Load += new System.EventHandler(this.SetTicketPriceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -816,34 +604,14 @@ namespace Coursework1
         private System.Windows.Forms.TextBox weekIndividualThreeToSixteenWholeDay;//5,2
         private System.Windows.Forms.TextBox weekIndividualSixteenToSixtyWholeDay;//5,3
         private System.Windows.Forms.TextBox weekIndividualAboveSixtyWholeDay;//5,4
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveOneHour;//6,1
+        private System.Windows.Forms.TextBox weekGroupTwoToFiveDiscount;//6,1
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox weekGroupFiveToTenOneHour;//6,2
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenOneHour;//6,3
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenOneHour;//6,4
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveTwoHour;//7,1
-        private System.Windows.Forms.TextBox weekGroupFiveToTenTwoHour;//7,2
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenTwoHour;//7,3
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenTwoHour;//7,4
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveThreeHour;//8,1
-        private System.Windows.Forms.TextBox weekGroupFiveToTenThreeHour;//8,2
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenThreeHour;//8,3
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenThreeHour;//8,4
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveFourHour;//9,1
-        private System.Windows.Forms.TextBox weekGroupFiveToTenFourHour;//9,2
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenFourHour;//9,3
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenFourHour;//9,4
-        private System.Windows.Forms.TextBox weekGroupTwoToFiveWholeDay;//10,1
-        private System.Windows.Forms.TextBox weekGroupFiveToTenWholeDay;//10,2
-        private System.Windows.Forms.TextBox weekGroupTenToFifteenWholeDay;//10,3
-        private System.Windows.Forms.TextBox weekGroupAboveFifteenWholeDay;//10,4
+        private System.Windows.Forms.TextBox weekGroupFiveToTenDiscount;//6,2
+        private System.Windows.Forms.TextBox weekGroupTenToFifteenDiscount;//6,3
+        private System.Windows.Forms.TextBox weekGroupAboveFifteenDiscount;//6,4
         private System.Windows.Forms.Button saveBtnWeek;
         private System.Windows.Forms.Button cancelBtnWeek;
     }

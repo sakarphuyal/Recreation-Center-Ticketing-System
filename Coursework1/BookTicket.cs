@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Coursework1
 {
-    
+
     public partial class BookTicket : UserControl
     {
         public BookTicket()
@@ -61,12 +61,9 @@ namespace Coursework1
         {
             Utils.validateForStringPress(sender, e, false);
         }
-
-        private void clearBtnTicketBooking_Click(object sender, EventArgs e)
-        {
-            
+        private void stringKeyDown(object sender, KeyEventArgs e) {
+            Utils.validateForNumberPress(sender, e, true);
         }
-
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)
         {
             Data.Ticket ticketList = new Data.Ticket();
@@ -76,7 +73,7 @@ namespace Coursework1
             //{
             //ticketList.ticket_auto_incresed_id = id;
             //}
-            
+
 
             string name = nameTextField.Text;
             if (!(name.Length < 1))
@@ -87,18 +84,23 @@ namespace Coursework1
             {
                 MessageBox.Show("Enter Name Please.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            string id = ticketAutoIncresedId.Text;
-            int numb;
-            string Id;
-            Random rnd = new Random();
-            for (int i = 0; i <= 4; i++) {
-                numb = (rnd.Next(100));
-                if (!(string.IsNullOrEmpty(name)))
-                {
-                    Id = name + numb;
-                    ticketAutoIncresedId.Text = Id;
-                    ticketList.ticket_auto_incresed_id = id;
-                }
+
+            List<Ticket> mTicketList = Utils.getTicketBookingListFromFile();
+
+            int id;
+            if (mTicketList.Count < 1)
+            {
+                id = 0;
+                System.Diagnostics.Debug.WriteLine(id);
+                ticketList.ticket_auto_incresed_id = id;
+                ticketAutoIncresedId.Text = id.ToString();
+            }
+            else
+            {
+                int generatedId = mTicketList.Max(x => x.ticket_auto_incresed_id);
+                generatedId++; id = generatedId;
+                ticketList.ticket_auto_incresed_id = id;
+                ticketAutoIncresedId.Text = id.ToString();
             }
             string ageGroup = ageGroupComboBox.Text;
             {
@@ -127,29 +129,27 @@ namespace Coursework1
             if (!((numberOfPeopleComboBox.SelectedItem == null) ^ (ageGroupComboBox.SelectedItem == null)))
             {
                 MessageBox.Show("Please Select Either Age Group Or Number of People", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }   
-            Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
-
+            }
+            if (!(name.Length < 1)) {
+                if (((numberOfPeopleComboBox.SelectedItem == null) ^ (ageGroupComboBox.SelectedItem == null))) {
+                    Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
+                }
+            }
         }
 
         private void nameTextField_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back ||e.KeyChar == (char)Keys.Space);
+         
         }
 
         private void ticketIdTextField_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            string checkOutId= checkoutTextBoxId.Text;
-            //System.Diagnostics.Debug.WriteLine(checkOutId);
-            //Utils.getHolidayPriceFromFile();
-            //Utils.getWeekDayPriceFromFile();
-            List <TicketPriceForWeekDays> weekPrice = Utils.getWeekDayPriceFromFile();
-            System.Diagnostics.Debug.WriteLine(weekPrice[0].week_group_ten_to_fifteen_three_hour);
+            
         }
 
         private void ageGroupComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace Coursework1
             /*if (ageGroupComboBox.SelectedItem == null) {
                 numberOfPeopleComboBox.Enabled = true;
             }*/
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -166,28 +166,122 @@ namespace Coursework1
 
         }
 
-        private void numberOfPeopleComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ageGroupComboBox.Enabled = false;
+        //ivate void numberOfPeopleComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        //
+            //eGroupComboBox.Enabled = false;
             /*if (numberOfPeopleComboBox.SelectedItem == null){
                 ageGroupComboBox.Enabled = true;
             }*/
-        }
+        //
 
-        private void clearBtnTicketBooking_Click_1(object sender, EventArgs e)
-        {
-            nameTextField.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            ageGroupComboBox.Text = Properties.Settings.Default.ComboBoxDefaultvalue;
-            numberOfPeopleComboBox.Text = Properties.Settings.Default.ComboBoxDefaultvalue;
-            checkoutTextBoxId.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            totalCostTextBox.Text = Properties.Settings.Default.TextBoxDefaultValue;
-        }
         
-
         private void nameTextField_TextChanged(object sender, EventArgs e)
         {
 
         }
-        //ticketAutoIncresedId
+
+        private void clearBtnTicketBooking_Click_2(object sender, EventArgs e)
+        {
+            nameTextField.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            /*ageGroupComboBox.Text = Properties.Settings.Default.ComboBoxDefaultvalue;
+            numberOfPeopleComboBox.Text = Properties.Settings.Default.ComboBoxDefaultvalue;*/
+            checkoutTextBoxId.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            totalCostTextBox.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            ticketAutoIncresedId.Text = null;
+            ageGroupComboBox.Text = null;
+            numberOfPeopleComboBox.Text = null;
+            ageGroupComboBox.Enabled = true;
+            numberOfPeopleComboBox.Enabled = true;
+        }
+
+        private void numberOfPeopleComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //ageGroupComboBox.Enabled = false;
+        }
+
+        private void ageGroupComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //numberOfPeopleComboBox.Enabled = false;
+        }
+
+        private void searchBtn_Click_1(object sender, EventArgs e)
+        {
+            bool weekDay()
+            {
+                string todaysDay = datePicker.Value.ToString("ddd");
+
+                return (todaysDay != "Sun" || todaysDay != "Sat");
+            }
+            string id = checkoutTextBoxId.Text;
+            if (!(String.IsNullOrEmpty(id)))
+            {
+                int checkOutId = Int32.Parse(checkoutTextBoxId.Text);
+                List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
+
+                for (int i = 0; i <= ((ticketList.Count) - 1); i++)
+                {
+                    if (ticketList[i].ticket_auto_incresed_id == checkOutId)
+                    {
+                        ticketAutoIncresedId.Text = (ticketList[i].ticket_auto_incresed_id.ToString());
+                        nameTextField.Text = (ticketList[i].name);
+                        ageGroupComboBox.Text = (ticketList[i].age_group);
+                        datePicker.Text = (ticketList[i].date.ToString());
+                        numberOfPeopleComboBox.Text = (ticketList[i].number_of_people);
+                        if (!(string.IsNullOrEmpty(ticketList[i].age_group)))
+                        {
+                            bool isWeekDay = weekDay();
+                            if ((isWeekDay) == true)
+                            {
+                                List<TicketPriceForWeekDays> weekPrice = Utils.getWeekDayPriceFromFile();
+                                int oneThreeYear = weekPrice[0].week_individual_less_than_three_one_hour;
+                                int oneThreeToSixteen = weekPrice[0].week_individual_three_to_sixteen_one_hour;
+                                int oneSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_one_hour;
+                                int oneSixtyPlus = weekPrice[0].week_individual_sixty_plus_one_hour;
+                                int twoThreeYear = weekPrice[0].week_individual_less_than_three_two_hour;
+                                int twoThreeTosixteen = weekPrice[0].week_individual_three_to_sixteen_two_hour;
+                                int twoSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_two_hour;
+                                int twoSixtyPlus = weekPrice[0].week_individual_sixty_plus_two_hour;
+                                int threeThreeYear = weekPrice[0].week_individual_less_than_three_three_hour;
+                                int threeThreeToSixteen = weekPrice[0].week_individual_three_to_sixteen_three_hour;
+                                int threeSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_three_hour;
+                                int threeSixtyPlus = weekPrice[0].week_individual_sixty_plus_three_hour;
+                                int fourThreeYear = weekPrice[0].week_individual_less_than_three_four_hour;
+                                int fourThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_four_hour;
+                                int fourSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_four_hour;
+                                int fourSixtyPlus = weekPrice[0].week_individual_sixty_plus_four_hour;
+                                int wholeThreeYear = weekPrice[0].week_individual_less_than_three_whole_day;
+                                int wholeThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_whole_day;
+                                int wholeSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_whole_day;
+                                int twoToFiveDiscount = weekPrice[0].week_group_two_to_five_discount;
+                                int fiveToTenDiscount = weekPrice[0].week_group_five_to_ten_discount;
+                                int tenToFifteenDiscount = weekPrice[0].week_group_ten_to_fifteen_discount;
+                                int fifteenPlusDiscount = weekPrice[0].week_group_fifteen_plus_discount;
+                            }
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                   else{
+                        MessageBox.Show("This Ticket Id is not registeredI am looking for this messege to apper only once rning");
+                        break;
+                    }
+                }
+            }
+            else {
+                MessageBox.Show("Please Enter any Valid Ticket Id", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void nameTextField_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stringKeyDown(object sender, KeyPressEventArgs e)
+        {
+           //Utils.validateForNumberPress(sender);
+        }
     }
 }

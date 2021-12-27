@@ -29,26 +29,11 @@ namespace Coursework1.Data
         public int holiday_individual_three_to_sixteen_whole_day { get; set; }//5,2
         public int holiday_individual_sixteen_to_sixty_whole_day { get; set; }//5,3
         public int holiday_individual_sixty_plus_whole_day { get; set; }//5,4
-        public int holiday_group_two_to_five_one_hour { get; set; }//6,1
-        public int holiday_group_five_to_ten_one_hour { get; set; }//6,2
-        public int holiday_group_ten_to_fifteen_one_hour { get; set; }//6,3
-        public int holiday_group_fifteen_plus_one_hour { get; set; }//6,4
-        public int holiday_group_two_to_five_two_hour { get; set; }//7,1
-        public int holiday_group_five_to_ten_two_hour { get; set; }//7,2
-        public int holiday_group_ten_to_fifteen_two_hour { get; set; }//7,3
-        public int holiday_group_fifteen_plus_two_hour { get; set; }//7,4
-        public int holiday_group_two_to_five_three_hour { get; set; }//8,1
-        public int holiday_group_five_to_ten_three_hour { get; set; }//8,2
-        public int holiday_group_ten_to_fifteen_three_hour { get; set; }//8,3
-        public int holiday_group_fifteen_plus_three_hour { get; set; }//8,4
-        public int holiday_group_two_to_five_four_hour { get; set; }//9,1
-        public int holiday_group_five_to_ten_four_hour { get; set; }//9,2
-        public int holiday_group_ten_to_fifteen_four_hour { get; set; }//9,3
-        public int holiday_group_fifteen_plus_four_hour { get; set; }//9,4
-        public int holiday_group_two_to_five_whole_day { get; set; }//10,1
-        public int holiday_group_five_to_ten_whole_day { get; set; }//10,2
-        public int holiday_group_ten_to_fifteen_whole_day { get; set; }//10,3
-        public int holiday_group_fifteen_plus_whole_day { get; set; }//10,4
+        public int holiday_group_two_to_five_Discount { get; set; }//6,1
+        public int holiday_group_five_to_ten_Discount { get; set; }//6,2
+        public int holiday_group_ten_to_fifteen_Discount { get; set; }//6,3
+        public int holiday_group_fifteen_plus_Discount { get; set; }//6,4
+       
 
         public string toJson()
         {

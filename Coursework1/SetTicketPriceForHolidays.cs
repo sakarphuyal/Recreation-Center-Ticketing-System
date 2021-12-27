@@ -183,126 +183,29 @@ namespace Coursework1
                 holidayPrice.holiday_individual_sixty_plus_whole_day = int.Parse(wholeDaySixtyPlusIndividualHoliday);   
             }
             //6,1
-            string oneHourTwoToFiveGroupHoliday = holidayGroupTwoToFiveOneHour.Text;
+            string oneHourTwoToFiveGroupHoliday = holidayGroupTwoToFiveDiscount.Text;
             if (!(oneHourTwoToFiveGroupHoliday.Length < 1))
             {
-                holidayPrice.holiday_group_two_to_five_one_hour = int.Parse(oneHourTwoToFiveGroupHoliday);               
+                holidayPrice.holiday_group_two_to_five_Discount = int.Parse(oneHourTwoToFiveGroupHoliday);               
             }
             //6,2
-            string oneHourFiveToTenGroupHoliday = holidayGroupFiveToTenOneHour.Text;
-            if (!(oneHourFiveToTenGroupHoliday.Length < 1))
+            string discountFiveToTenGroupHoliday = holidayGroupFiveToTenDiscount.Text;
+            if (!(discountFiveToTenGroupHoliday.Length < 1))
             {
-                holidayPrice.holiday_group_five_to_ten_one_hour = int.Parse(oneHourFiveToTenGroupHoliday);    
+                holidayPrice.holiday_group_five_to_ten_Discount = int.Parse(discountFiveToTenGroupHoliday);    
             }
             //6,3
-            string oneHourTenToFifteenGroupHoliday = holidayGroupTenToFifteenOneHour.Text;
-            if (!(oneHourTenToFifteenGroupHoliday.Length < 1))
+            string discountTenToFifteenGroupHoliday = holidayGroupTenToFifteenDiscount.Text;
+            if (!(discountTenToFifteenGroupHoliday.Length < 1))
             {
-                holidayPrice.holiday_group_ten_to_fifteen_one_hour = int.Parse(oneHourTenToFifteenGroupHoliday);        
+                holidayPrice.holiday_group_ten_to_fifteen_Discount = int.Parse(discountTenToFifteenGroupHoliday);        
             }
             //6,4
-            string oneHourFifteenPlusGroupHoliday = holidayGroupAboveFifteenOneHour.Text;
-            if (!(oneHourFifteenPlusGroupHoliday.Length < 1))
+            string discountFifteenPlusGroupHoliday = holidayGroupAboveFifteenDiscount.Text;
+            if (!(discountFifteenPlusGroupHoliday.Length < 1))
             {
-                holidayPrice.holiday_group_fifteen_plus_one_hour = int.Parse(oneHourFifteenPlusGroupHoliday);   
+                holidayPrice.holiday_group_fifteen_plus_Discount = int.Parse(discountFifteenPlusGroupHoliday);   
             }
-            //7,1
-            string twoHourTwoToFiveGroupHoliday = holidayGroupTwoToFiveTwoHour.Text;
-            if (!(twoHourTwoToFiveGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_two_to_five_two_hour = int.Parse(twoHourTwoToFiveGroupHoliday);    
-            }
-            //7,2
-            string twoHourFiveToTenGroupHoliday = holidayGroupFiveToTenTwoHour.Text;
-            if (!(twoHourFiveToTenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_five_to_ten_two_hour = int.Parse(twoHourFiveToTenGroupHoliday);    
-            }
-            //7,3
-            string twoHourTenToFifteenGroupHoliday = holidayGroupTenToFifteenTwoHour.Text;
-            if (!(twoHourTenToFifteenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_ten_to_fifteen_two_hour = int.Parse(twoHourTenToFifteenGroupHoliday);    
-            }
-            //7,4
-            string twoHourFifteenPlusGroupHoliday = holidayGroupAboveFifteenTwoHour.Text;
-            if (!(twoHourFifteenPlusGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_fifteen_plus_two_hour = int.Parse(twoHourFifteenPlusGroupHoliday);    
-            }
-            //8,1
-            string threeHourTwoToFiveGroupHoliday = holidayGroupTwoToFiveThreeHour.Text;
-            if (!(threeHourTwoToFiveGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_two_to_five_three_hour = int.Parse(threeHourTwoToFiveGroupHoliday);    
-            }
-            //8,2
-            string threeHourFiveToTenGroupHoliday = holidayGroupFiveToTenThreeHour.Text;
-            if (!(threeHourFiveToTenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_five_to_ten_three_hour = int.Parse(threeHourFiveToTenGroupHoliday);    
-            }
-            //8,3
-            string threeHourTenToFifteenGroupHoliday = holidayGroupTenToFifteenThreeHour.Text;
-            if (!(threeHourTenToFifteenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_ten_to_fifteen_three_hour = int.Parse(threeHourTenToFifteenGroupHoliday);    
-            }
-            //8,4
-            string threeHourFifteenPlusGroupHoliday = holidayGroupAboveFifteenThreeHour.Text;
-            if (!(threeHourFifteenPlusGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_fifteen_plus_three_hour = int.Parse(threeHourFifteenPlusGroupHoliday);    
-            }
-            //9,1
-            string fourHourTwoToFiveGroupHoliday = holidayGroupTwoToFiveThreeHour.Text;
-            if (!(fourHourTwoToFiveGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_two_to_five_three_hour = int.Parse(fourHourTwoToFiveGroupHoliday);   
-            }
-            //9,2
-            string fourHourFiveToTenGroupHoliday = holidayGroupFiveToTenFourHour.Text;
-            if (!(fourHourFiveToTenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_five_to_ten_four_hour = int.Parse(fourHourFiveToTenGroupHoliday);    
-            }
-            //9,3
-            string fourHourTenToFifteenGroupHoliday = holidayGroupTenToFifteenFourHour.Text;
-            if (!(fourHourTenToFifteenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_ten_to_fifteen_four_hour = int.Parse(fourHourTenToFifteenGroupHoliday);    
-            }
-            //9,4
-            string fourHourFifteenPlusGroupHoliday = holidayGroupAboveFifteenFourHour.Text;
-            if (!(fourHourFifteenPlusGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_fifteen_plus_four_hour = int.Parse(fourHourFifteenPlusGroupHoliday);    
-            }
-            //10,1
-            string wholeDayTwoToFiveGroupHoliday = holidayGroupTwoToFiveWholeDay.Text;
-            if (!(wholeDayTwoToFiveGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_two_to_five_whole_day = int.Parse(wholeDayTwoToFiveGroupHoliday);    
-            }
-            //10,2
-            string wholeDayFiveToTenGroupHoliday = holidayGroupFiveToTenWholeDay.Text;
-            if (!(wholeDayFiveToTenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_five_to_ten_whole_day = int.Parse(wholeDayFiveToTenGroupHoliday);    
-            }
-            //10,3
-            string wholeDayTenToFifteenGroupHoliday = holidayGroupTenToFifteenWholeDay.Text;
-            if (!(wholeDayTenToFifteenGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_ten_to_fifteen_whole_day = int.Parse(wholeDayTenToFifteenGroupHoliday);   
-            }
-            //10,4
-            string wholeDayFifteenPlusGroupHoliday = holidayGroupAboveFifteenWholeDay.Text;
-            if (!(wholeDayFifteenPlusGroupHoliday.Length < 1))
-            {
-                holidayPrice.holiday_group_fifteen_plus_whole_day = int.Parse(wholeDayFifteenPlusGroupHoliday);
-            }
-
             Utils.setOnFile(holidayPrice.toJson(), Constants.HOLIDAY_FILE);
 
         }
@@ -338,30 +241,18 @@ namespace Coursework1
             holidayIndividualThreeToSixteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
             holidayIndividualSixteenToSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
             holidayIndividualAboveSixtyWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTwoToFiveOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupFiveToTenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTenToFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupAboveFifteenOneHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTwoToFiveTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupFiveToTenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTenToFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupAboveFifteenTwoHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTwoToFiveThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupFiveToTenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTenToFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupAboveFifteenThreeHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTwoToFiveFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupFiveToTenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTenToFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupAboveFifteenFourHour.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTwoToFiveWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupFiveToTenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupTenToFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-            holidayGroupAboveFifteenWholeDay.Text = Properties.Settings.Default.TextBoxDefaultValue;
-
+            holidayGroupTwoToFiveDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupFiveToTenDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupTenToFifteenDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
+            holidayGroupAboveFifteenDiscount.Text = Properties.Settings.Default.TextBoxDefaultValue;
         }
 
         private void holidayGroupFiveToTenOneHour_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void holidayIndividualLessThanThreeOnehour_TextChanged(object sender, EventArgs e)
         {
 
         }

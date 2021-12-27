@@ -36,6 +36,22 @@ namespace Coursework1
                 ((TextBox)sender).ReadOnly = true;
             }
         }
+        public static void validateForNumberPress(object sender, KeyEventArgs e, bool allowDecimal)
+        {
+            int[] exceptionKeyValues = { 8, 37, 39, 46, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105 };
+            int[] numericDecimals = { 110, 190 };
+
+            var decimalKeyValues = exceptionKeyValues.Union(numericDecimals);
+
+            if (!(Char.IsDigit((char)e.KeyValue)) || (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back))
+            {
+                ((TextBox)sender).ReadOnly = false;  
+            }
+            else
+            {
+                ((TextBox)sender).ReadOnly = true;
+            }
+        }
         public static List<TicketPriceForHolidays> getHolidayPriceFromFile()
         {
 
@@ -46,9 +62,22 @@ namespace Coursework1
                 TicketPriceForHolidays mTicket = JsonConvert.DeserializeObject<TicketPriceForHolidays>(line);
                 holidayList.Add(mTicket);
                 System.Diagnostics.Debug.WriteLine(mTicket.holiday_individual_less_than_three_one_hour.ToString());
-                System.Diagnostics.Debug.WriteLine(mTicket.holiday_group_five_to_ten_one_hour.ToString());
+                //System.Diagnostics.Debug.WriteLine(mTicket.holiday_group_five_to_ten_one_hour.ToString());
             }
             return holidayList;
+
+        }
+        public static List<Ticket> getTicketBookingListFromFile()
+        {
+
+            string[] lineValue = File.ReadAllLines(Constants.TICKETBOOKING_FILE);
+            List<Ticket> ticketList = new List<Ticket>();
+            foreach (string line in lineValue)
+            {
+                Ticket mTicket = JsonConvert.DeserializeObject<Ticket>(line);
+                ticketList.Add(mTicket);
+            }
+            return ticketList;
 
         }
         public static List<TicketPriceForWeekDays> getWeekDayPriceFromFile()
