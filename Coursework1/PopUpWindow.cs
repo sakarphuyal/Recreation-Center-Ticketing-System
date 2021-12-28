@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coursework1.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,13 @@ namespace Coursework1
             //PopUpWindow newWindow = new PopUpWindow();
             this.Close();
            //newWindow.Enabled = false;
+        }
+
+        private void PopUpWindow_Load(object sender, EventArgs e)
+        {
+            List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
+            int lengthOfList = ticketList.Count();
+            popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
         }
     }
 }

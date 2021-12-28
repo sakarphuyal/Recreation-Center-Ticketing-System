@@ -41,7 +41,7 @@ namespace Coursework1
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.popUpWindowId = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -62,9 +62,9 @@ namespace Coursework1
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(142, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 17);
+            this.label1.Size = new System.Drawing.Size(390, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Please Enter Number of People with their age";
+            this.label1.Text = "Please Enter Number of People with their respective age group";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -155,14 +155,14 @@ namespace Coursework1
             this.label8.TabIndex = 23;
             this.label8.Text = "Number Of People";
             // 
-            // textBox4
+            // popUpWindowId
             // 
-            this.textBox4.Location = new System.Drawing.Point(125, 35);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.popUpWindowId.Location = new System.Drawing.Point(125, 35);
+            this.popUpWindowId.Name = "popUpWindowId";
+            this.popUpWindowId.ReadOnly = true;
+            this.popUpWindowId.Size = new System.Drawing.Size(100, 20);
+            this.popUpWindowId.TabIndex = 24;
+            this.popUpWindowId.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // saveBtnTicketBooking
             // 
@@ -196,7 +196,7 @@ namespace Coursework1
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.saveBtnTicketBooking);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.popUpWindowId);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -215,6 +215,7 @@ namespace Coursework1
             this.Name = "PopUpWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PopUpWindow";
+            this.Load += new System.EventHandler(this.PopUpWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +235,7 @@ namespace Coursework1
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox popUpWindowId;
         private System.Windows.Forms.Button saveBtnTicketBooking;
         private System.Windows.Forms.Button exitButton;
     }
