@@ -552,7 +552,7 @@ namespace Coursework1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "SetTicketPriceForHolidays";
-            this.Size = new System.Drawing.Size(638, 597);
+            this.Size = new System.Drawing.Size(638, 580);
             this.Load += new System.EventHandler(this.SetTicketPriceForHolidays_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
