@@ -91,10 +91,11 @@ namespace Coursework1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 0);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(95, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(663, 65);
+            this.label1.Size = new System.Drawing.Size(585, 79);
             this.label1.TabIndex = 0;
             this.label1.Text = "Set Price For Week days";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -557,7 +558,7 @@ namespace Coursework1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "SetTicketPriceForWeekDays";
-            this.Size = new System.Drawing.Size(681, 631);
+            this.Size = new System.Drawing.Size(681, 614);
             this.Load += new System.EventHandler(this.SetTicketPriceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

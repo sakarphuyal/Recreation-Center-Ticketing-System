@@ -61,7 +61,8 @@ namespace Coursework1
         {
             Utils.validateForStringPress(sender, e, false);
         }
-        private void stringKeyDown(object sender, KeyEventArgs e) {
+        private void stringKeyDown(object sender, KeyEventArgs e)
+        {
             Utils.validateForNumberPress(sender, e, true);
         }
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)
@@ -70,66 +71,11 @@ namespace Coursework1
             List<Ticket> mTicketList = Utils.getTicketBookingListFromFile();
             if (radioNoButton.Checked)
             {
-                int id;
-                if (mTicketList.Count < 1)
-                {
-                    id = 0;
-                    System.Diagnostics.Debug.WriteLine(id);
-                    ticketList.ticket_auto_incresed_id = id;
-                    ticketAutoIncresedId.Text = id.ToString();
-                }
-                else
-                {
-                    int generatedId = mTicketList.Max(x => x.ticket_auto_incresed_id);
-                    generatedId++; id = generatedId;
-                    ticketList.ticket_auto_incresed_id = id;
-                    ticketAutoIncresedId.Text = id.ToString();
-                }
-                string name = nameTextField.Text;
-                if (!(name.Count() < 1))
-                {
-                    ticketList.name = name;
-                }
-                else
-                {
-                    MessageBox.Show("Enter Name Please.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                
-                string ageGroup = ageGroupComboBox.Text;
-                {
-                    if (!(ageGroupComboBox.SelectedItem == null))
-                    {
-                        ageGroup = ageGroupComboBox.SelectedItem.ToString();
-                        ticketList.age_group = ageGroup;
-                    }
-                    else {
-                        MessageBox.Show("Please Select age Group", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                DateTime todayDate = datePicker.Value.Date;
-                {
-                    ticketList.date = todayDate;
-                }
-                DateTime inTime = timePicker.Value.Date;
-                {
-                    ticketList.in_time = inTime;
-                }
-                radioNoButton.Checked = true;
-                ticketList.is_group = false;
-                Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
-                MessageBox.Show("Ticket Booked with ticket id " + (id), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (radioYesButton.Checked)
-            {
                 string name = nameTextField.Text;
                 if (!(name.Length < 1))
                 {
                     if (ageGroupComboBox.SelectedItem != null)
                     {
-
-                        PopUpWindow newWindow = new PopUpWindow();
-                        newWindow.Show();
-                        newWindow.Enabled = true;
                         ticketList.name = name;
                         int id;
                         if (mTicketList.Count < 1)
@@ -141,13 +87,109 @@ namespace Coursework1
                         }
                         else
                         {
-                            int generatedId = mTicketList.Max(x => x.ticket_auto_incresed_id);
+                            //int generatedId = mTicketList.Max(x => x.ticket_auto_incresed_id);
+                            //generatedId++; id = generatedId;
+                            //ticketList.ticket_auto_incresed_id = id;
+                            //ticketAutoIncresedId.Text = id.ToString();
+                        }
+                        /*
+                        string ageGroup = (ageGroupComboBox.SelectedItem).ToString();
+                        if (ageGroup == "0 - 3 years") {
+                            ticketList.number_of_people_age_below_three = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        else if (ageGroup == "3 - 16 years") {
+                            ticketList.number_of_people_age_three_to_sixteen = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        else if (ageGroup == "16 - 60 years") {
+                            ticketList.number_of_people_age_sixteen_to_sixty=ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        else
+                        { //60 + years
+                            ticketList.number_of_people_age_above_sixty = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        ticketList.total_number_of_people = 1;*/
+                        //ticketList.age_group = ageGroup;
+                        DateTime todayDate = datePicker.Value.Date;
+                        {
+                            ticketList.date = todayDate;
+                        }
+                        DateTime inTime = timePicker.Value.Date;
+                        {
+                            ticketList.in_time = inTime;
+                        }
+                        ticketList.below_three = Constants.numberHolder.below_three;
+                        ticketList.three_to_sixteen = Constants.numberHolder.three_to_sixteen;
+                        ticketList.sixteen_to_sixty = Constants.numberHolder.sixteen_to_sixty;
+                        ticketList.above_sixty = Constants.numberHolder.above_sixty;
+                        Constants.numberHolder.resetData();
+                        System.Diagnostics.Debug.WriteLine(ticketList.toJson());
+                        //Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
+                        MessageBox.Show("Ticket Booked with ticket id " + ("5"), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please Select age Group", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Enter Name Please.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
+            else if (radioYesButton.Checked)
+            {
+                string name = nameTextField.Text;
+                if (!(name.Length < 1))
+                {
+                    if (ageGroupComboBox.SelectedItem != null)
+                    {
+                        ticketList.name = name;
+                        int id;
+                        if (mTicketList.Count < 1)
+                        {
+                            id = 0;
+                            System.Diagnostics.Debug.WriteLine(id);
+                            ticketList.ticket_auto_incresed_id = id;
+                            ticketAutoIncresedId.Text = id.ToString();
+                        }
+                        else
+                        {
+                            //int generatedId =  mTicketList.Max(x => x.ticket_auto_incresed_id);
+                            int generatedId =  21;
+              
                             generatedId++; id = generatedId;
                             ticketList.ticket_auto_incresed_id = id;
                             ticketAutoIncresedId.Text = id.ToString();
                         }
+                        /*
                         string ageGroup = (ageGroupComboBox.SelectedItem).ToString();
-                        ticketList.age_group = ageGroup;
+                        if (ageGroup == "0 - 3 years")
+                        {
+                            ticketList.number_of_people_age_below_three = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        else if (ageGroup == "3 - 16 years")
+                        {
+                            ticketList.number_of_people_age_three_to_sixteen = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        else if (ageGroup == "16 - 60 years")
+                        {
+                            ticketList.number_of_people_age_sixteen_to_sixty = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        else
+                        { //60 + years
+                            ticketList.number_of_people_age_above_sixty = ageGroup;
+                            System.Diagnostics.Debug.WriteLine(ageGroup);
+                        }
+                        //ticketList.age_group = ageGroup;
+                        */
                         DateTime todayDate = datePicker.Value.Date;
                         {
                             ticketList.date = todayDate;
@@ -157,7 +199,7 @@ namespace Coursework1
                             ticketList.in_time = inTime;
                         }
                         ticketList.is_group = true;
-                        Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
+                        //Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
                         MessageBox.Show("Ticket Booked with ticket id " + (id), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
@@ -171,7 +213,8 @@ namespace Coursework1
                 }
 
             }
-            else {
+            else
+            {
                 MessageBox.Show("Select 'Yes' if in group 'no' for single Vistor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -180,10 +223,6 @@ namespace Coursework1
         {
 
         }
-
-        
-
-        
         private void nameTextField_TextChanged(object sender, EventArgs e)
         {
 
@@ -198,9 +237,9 @@ namespace Coursework1
             totalCostTextBox.Text = Properties.Settings.Default.TextBoxDefaultValue;
             ticketAutoIncresedId.Text = null;
             ageGroupComboBox.Text = null;
-           // numberOfPeopleComboBox.Text = null;
+            // numberOfPeopleComboBox.Text = null;
             ageGroupComboBox.Enabled = true;
-           //numberOfPeopleComboBox.Enabled = true;
+            //numberOfPeopleComboBox.Enabled = true;
         }
 
         private void numberOfPeopleComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -233,10 +272,10 @@ namespace Coursework1
                     {
                         ticketAutoIncresedId.Text = (ticketList[i].ticket_auto_incresed_id.ToString());
                         nameTextField.Text = (ticketList[i].name);
-                        ageGroupComboBox.Text = (ticketList[i].age_group);
+                        //ageGroupComboBox.Text = (ticketList[i].age_group);
                         datePicker.Text = (ticketList[i].date.ToString());
-                       // numberOfPeopleComboBox.Text = (ticketList[i].number_of_people);
-                        if (!(string.IsNullOrEmpty(ticketList[i].age_group)))
+                        // numberOfPeopleComboBox.Text = (ticketList[i].number_of_people);
+                        /*if (!(string.IsNullOrEmpty(ticketList[i].age_group)))
                         {
                             bool isWeekDay = weekDay();
                             if ((isWeekDay) == true)
@@ -281,35 +320,32 @@ namespace Coursework1
             else {
                 MessageBox.Show("Please Enter any Valid Ticket Id", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }*/
+                    }
+                }
+            }
         }
 
-        private void nameTextField_TextChanged_1(object sender, EventArgs e)
+        private void radioNoButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            continueBtn.Enabled = false;
+            ageGroupComboBox.Enabled = true;
+            saveBtnTicketBooking.Enabled = true;
         }
 
-        private void stringKeyDown(object sender, KeyPressEventArgs e)
+        private void continueBtn_Click(object sender, EventArgs e)
         {
-           //Utils.validateForNumberPress(sender);
+            PopUpWindow newWindow = new PopUpWindow();
+            newWindow.Show();
+            newWindow.Enabled = true;
+            saveBtnTicketBooking.Enabled = true;
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void radioYesButton_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {   
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            //numberOfPeople.Enabled = false;
+            saveBtnTicketBooking.Enabled = false;
+            ageGroupComboBox.Enabled = false;
+            continueBtn.Enabled = true;
         }
     }
 }

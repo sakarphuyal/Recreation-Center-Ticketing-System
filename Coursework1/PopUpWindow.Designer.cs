@@ -36,10 +36,10 @@ namespace Coursework1
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.holidayIndividualLessThanThreeWholeDay = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.belowThreeTxt = new System.Windows.Forms.TextBox();
+            this.threeToSixteenTxt = new System.Windows.Forms.TextBox();
+            this.sixteenToSixtyTxt = new System.Windows.Forms.TextBox();
+            this.aboveSixtyTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.popUpWindowId = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
@@ -59,10 +59,11 @@ namespace Coursework1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(142, 77);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(56, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(390, 17);
+            this.label1.Size = new System.Drawing.Size(543, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Please Enter Number of People with their respective age group";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -117,33 +118,33 @@ namespace Coursework1
             this.label7.TabIndex = 10;
             this.label7.Text = "Above 60 (60+)";
             // 
-            // holidayIndividualLessThanThreeWholeDay
+            // belowThreeTxt
             // 
-            this.holidayIndividualLessThanThreeWholeDay.Location = new System.Drawing.Point(157, 163);
-            this.holidayIndividualLessThanThreeWholeDay.Name = "holidayIndividualLessThanThreeWholeDay";
-            this.holidayIndividualLessThanThreeWholeDay.Size = new System.Drawing.Size(100, 20);
-            this.holidayIndividualLessThanThreeWholeDay.TabIndex = 19;
+            this.belowThreeTxt.Location = new System.Drawing.Point(157, 163);
+            this.belowThreeTxt.Name = "belowThreeTxt";
+            this.belowThreeTxt.Size = new System.Drawing.Size(100, 20);
+            this.belowThreeTxt.TabIndex = 19;
             // 
-            // textBox1
+            // threeToSixteenTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(278, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 20;
+            this.threeToSixteenTxt.Location = new System.Drawing.Point(278, 160);
+            this.threeToSixteenTxt.Name = "threeToSixteenTxt";
+            this.threeToSixteenTxt.Size = new System.Drawing.Size(100, 20);
+            this.threeToSixteenTxt.TabIndex = 20;
             // 
-            // textBox2
+            // sixteenToSixtyTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(405, 160);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 21;
+            this.sixteenToSixtyTxt.Location = new System.Drawing.Point(405, 160);
+            this.sixteenToSixtyTxt.Name = "sixteenToSixtyTxt";
+            this.sixteenToSixtyTxt.Size = new System.Drawing.Size(100, 20);
+            this.sixteenToSixtyTxt.TabIndex = 21;
             // 
-            // textBox3
+            // aboveSixtyTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(535, 160);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 22;
+            this.aboveSixtyTxt.Location = new System.Drawing.Point(535, 160);
+            this.aboveSixtyTxt.Name = "aboveSixtyTxt";
+            this.aboveSixtyTxt.Size = new System.Drawing.Size(100, 20);
+            this.aboveSixtyTxt.TabIndex = 22;
             // 
             // label8
             // 
@@ -173,6 +174,7 @@ namespace Coursework1
             this.saveBtnTicketBooking.TabIndex = 69;
             this.saveBtnTicketBooking.Text = "Save";
             this.saveBtnTicketBooking.UseVisualStyleBackColor = false;
+            this.saveBtnTicketBooking.Click += new System.EventHandler(this.saveBtnTicketBooking_Click);
             // 
             // exitButton
             // 
@@ -198,10 +200,10 @@ namespace Coursework1
             this.Controls.Add(this.saveBtnTicketBooking);
             this.Controls.Add(this.popUpWindowId);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.holidayIndividualLessThanThreeWholeDay);
+            this.Controls.Add(this.aboveSixtyTxt);
+            this.Controls.Add(this.sixteenToSixtyTxt);
+            this.Controls.Add(this.threeToSixteenTxt);
+            this.Controls.Add(this.belowThreeTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -230,10 +232,10 @@ namespace Coursework1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox holidayIndividualLessThanThreeWholeDay;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox belowThreeTxt;
+        private System.Windows.Forms.TextBox threeToSixteenTxt;
+        private System.Windows.Forms.TextBox sixteenToSixtyTxt;
+        private System.Windows.Forms.TextBox aboveSixtyTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox popUpWindowId;
         private System.Windows.Forms.Button saveBtnTicketBooking;

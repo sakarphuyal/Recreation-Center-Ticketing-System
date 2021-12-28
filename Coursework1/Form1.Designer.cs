@@ -62,13 +62,13 @@ namespace Coursework1
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightCoral;
-            this.label1.Location = new System.Drawing.Point(341, 3);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(327, -8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(472, 67);
+            this.label1.Size = new System.Drawing.Size(435, 81);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ticketing System";
+            this.label1.Text = "Recreation Center";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
@@ -83,7 +83,7 @@ namespace Coursework1
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 75);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(146, 507);
+            this.panel2.Size = new System.Drawing.Size(146, 532);
             this.panel2.TabIndex = 1;
             // 
             // navHolidayBtn
@@ -162,10 +162,10 @@ namespace Coursework1
             this.setTicketPriceForWeekDays1.BackColor = System.Drawing.Color.Aquamarine;
             this.setTicketPriceForWeekDays1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setTicketPriceForWeekDays1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.setTicketPriceForWeekDays1.Location = new System.Drawing.Point(0, 0);
+            this.setTicketPriceForWeekDays1.Location = new System.Drawing.Point(146, 75);
             this.setTicketPriceForWeekDays1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.setTicketPriceForWeekDays1.Name = "setTicketPriceForWeekDays1";
-            this.setTicketPriceForWeekDays1.Size = new System.Drawing.Size(1131, 607);
+            this.setTicketPriceForWeekDays1.Size = new System.Drawing.Size(985, 532);
             this.setTicketPriceForWeekDays1.TabIndex = 4;
             this.setTicketPriceForWeekDays1.Load += new System.EventHandler(this.setTicketPriceForWeekDays1_Load);
             // 
@@ -174,10 +174,10 @@ namespace Coursework1
             this.bookTicket1.BackColor = System.Drawing.Color.Aquamarine;
             this.bookTicket1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bookTicket1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bookTicket1.Location = new System.Drawing.Point(0, 0);
+            this.bookTicket1.Location = new System.Drawing.Point(146, 75);
             this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bookTicket1.Name = "bookTicket1";
-            this.bookTicket1.Size = new System.Drawing.Size(1131, 607);
+            this.bookTicket1.Size = new System.Drawing.Size(985, 532);
             this.bookTicket1.TabIndex = 3;
             // 
             // setTicketPriceForHolidays1
@@ -186,10 +186,10 @@ namespace Coursework1
             this.setTicketPriceForHolidays1.BackColor = System.Drawing.Color.Aquamarine;
             this.setTicketPriceForHolidays1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setTicketPriceForHolidays1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.setTicketPriceForHolidays1.Location = new System.Drawing.Point(0, 0);
+            this.setTicketPriceForHolidays1.Location = new System.Drawing.Point(146, 75);
             this.setTicketPriceForHolidays1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.setTicketPriceForHolidays1.Name = "setTicketPriceForHolidays1";
-            this.setTicketPriceForHolidays1.Size = new System.Drawing.Size(1131, 607);
+            this.setTicketPriceForHolidays1.Size = new System.Drawing.Size(985, 532);
             this.setTicketPriceForHolidays1.TabIndex = 2;
             // 
             // Form1

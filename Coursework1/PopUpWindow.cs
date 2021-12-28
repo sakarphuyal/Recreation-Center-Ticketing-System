@@ -30,16 +30,26 @@ namespace Coursework1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //PopUpWindow newWindow = new PopUpWindow();
             this.Close();
-           //newWindow.Enabled = false;
+            saveBtnTicketBooking.Enabled = true;
         }
 
         private void PopUpWindow_Load(object sender, EventArgs e)
         {
             List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
             int lengthOfList = ticketList.Count();
-            popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
+            //popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
+        }
+
+        private void saveBtnTicketBooking_Click(object sender, EventArgs e)
+        {
+            Constants.numberHolder.below_three = (belowThreeTxt.Text.Length < 1) ? 0 : int.Parse(belowThreeTxt.Text);
+            Constants.numberHolder.three_to_sixteen = (threeToSixteenTxt.Text.Length < 1) ? 0 : int.Parse(threeToSixteenTxt.Text);
+            Constants.numberHolder.sixteen_to_sixty = (sixteenToSixtyTxt.Text.Length < 1) ? 0 : int.Parse(sixteenToSixtyTxt.Text);
+            Constants.numberHolder.above_sixty = (aboveSixtyTxt.Text.Length < 1) ? 0 : int.Parse(aboveSixtyTxt.Text);
+            this.Close();
+            BookTicket newBook = new BookTicket();
+            newBook.Enabled = true;
         }
     }
 }

@@ -54,6 +54,7 @@ namespace Coursework1
             this.radioYesButton = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.radioNoButton = new System.Windows.Forms.RadioButton();
+            this.continueBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,9 +72,11 @@ namespace Coursework1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(294, 51);
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(2, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 13);
+            this.label2.Size = new System.Drawing.Size(213, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "You can book Ticket here";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -81,10 +84,11 @@ namespace Coursework1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, -1);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(225, -4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(428, 65);
+            this.label1.Size = new System.Drawing.Size(375, 79);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ticket Booking";
             // 
@@ -114,12 +118,11 @@ namespace Coursework1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 183);
+            this.label6.Location = new System.Drawing.Point(436, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Age Group";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label8
             // 
@@ -138,9 +141,7 @@ namespace Coursework1
             this.nameTextField.Name = "nameTextField";
             this.nameTextField.Size = new System.Drawing.Size(174, 20);
             this.nameTextField.TabIndex = 13;
-            this.nameTextField.TextChanged += new System.EventHandler(this.nameTextField_TextChanged_1);
             this.nameTextField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.stringKeyDown);
-            this.nameTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.stringKeyDown);
             // 
             // ageGroupComboBox
             // 
@@ -149,9 +150,9 @@ namespace Coursework1
             "3-16 years",
             "16-60 years",
             "60 + years"});
-            this.ageGroupComboBox.Location = new System.Drawing.Point(175, 183);
+            this.ageGroupComboBox.Location = new System.Drawing.Point(575, 177);
             this.ageGroupComboBox.Name = "ageGroupComboBox";
-            this.ageGroupComboBox.Size = new System.Drawing.Size(174, 21);
+            this.ageGroupComboBox.Size = new System.Drawing.Size(121, 21);
             this.ageGroupComboBox.TabIndex = 17;
             this.ageGroupComboBox.Text = "----Select Age Group----";
             this.ageGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.ageGroupComboBox_SelectedIndexChanged_1);
@@ -215,8 +216,8 @@ namespace Coursework1
             // 
             // saveBtnTicketBooking
             // 
-            this.saveBtnTicketBooking.BackColor = System.Drawing.Color.GreenYellow;
-            this.saveBtnTicketBooking.Location = new System.Drawing.Point(320, 252);
+            this.saveBtnTicketBooking.BackColor = System.Drawing.Color.Lime;
+            this.saveBtnTicketBooking.Location = new System.Drawing.Point(240, 236);
             this.saveBtnTicketBooking.Name = "saveBtnTicketBooking";
             this.saveBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
             this.saveBtnTicketBooking.TabIndex = 68;
@@ -251,7 +252,6 @@ namespace Coursework1
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 71;
             this.label5.Text = "Ticket ID";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ticketAutoIncresedId
             // 
@@ -275,20 +275,20 @@ namespace Coursework1
             // radioYesButton
             // 
             this.radioYesButton.AutoSize = true;
-            this.radioYesButton.Location = new System.Drawing.Point(549, 180);
+            this.radioYesButton.Location = new System.Drawing.Point(175, 181);
             this.radioYesButton.Name = "radioYesButton";
             this.radioYesButton.Size = new System.Drawing.Size(43, 17);
             this.radioYesButton.TabIndex = 76;
             this.radioYesButton.TabStop = true;
             this.radioYesButton.Text = "Yes";
             this.radioYesButton.UseVisualStyleBackColor = true;
-            this.radioYesButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioYesButton.CheckedChanged += new System.EventHandler(this.radioYesButton_CheckedChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(436, 180);
+            this.label12.Location = new System.Drawing.Point(69, 180);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 17);
             this.label12.TabIndex = 77;
@@ -297,20 +297,32 @@ namespace Coursework1
             // radioNoButton
             // 
             this.radioNoButton.AutoSize = true;
-            this.radioNoButton.Location = new System.Drawing.Point(631, 180);
+            this.radioNoButton.Location = new System.Drawing.Point(244, 181);
             this.radioNoButton.Name = "radioNoButton";
             this.radioNoButton.Size = new System.Drawing.Size(39, 17);
             this.radioNoButton.TabIndex = 78;
             this.radioNoButton.TabStop = true;
             this.radioNoButton.Text = "No";
             this.radioNoButton.UseVisualStyleBackColor = true;
-            this.radioNoButton.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioNoButton.CheckedChanged += new System.EventHandler(this.radioNoButton_CheckedChanged);
+            // 
+            // continueBtn
+            // 
+            this.continueBtn.BackColor = System.Drawing.Color.Red;
+            this.continueBtn.Location = new System.Drawing.Point(429, 236);
+            this.continueBtn.Name = "continueBtn";
+            this.continueBtn.Size = new System.Drawing.Size(153, 34);
+            this.continueBtn.TabIndex = 79;
+            this.continueBtn.Text = "Continue";
+            this.continueBtn.UseVisualStyleBackColor = false;
+            this.continueBtn.Click += new System.EventHandler(this.continueBtn_Click);
             // 
             // BookTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
+            this.Controls.Add(this.continueBtn);
             this.Controls.Add(this.radioNoButton);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.radioYesButton);
@@ -368,5 +380,6 @@ namespace Coursework1
         private System.Windows.Forms.RadioButton radioYesButton;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioNoButton;
+        private System.Windows.Forms.Button continueBtn;
     }
 }

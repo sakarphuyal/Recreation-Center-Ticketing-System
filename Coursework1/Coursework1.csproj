@@ -57,6 +57,7 @@
       <DependentUpon>BookTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="Data\GroupNumberHolder.cs" />
     <Compile Include="Data\Ticket.cs" />
     <Compile Include="Data\TicketPriceForHolidays.cs" />
     <Compile Include="Data\TicketPriceForWeekDays.cs" />
