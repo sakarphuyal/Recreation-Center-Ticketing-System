@@ -17,13 +17,10 @@ namespace Coursework1.Data
         public int three_to_sixteen { get; set; }
         public int sixteen_to_sixty { get; set; }
         public int above_sixty { get; set; }
-        public int age_group { get; set; }
         public int total_cost { get; set; }
         public bool is_group { get; set; }
-        public bool isGroup() {
-            return this.below_three + this.three_to_sixteen + this.sixteen_to_sixty + this.above_sixty > 1;
-        }
 
+        public DateTime check_out { get; set; }
 
         public string toJson() {
             return JsonConvert.SerializeObject(this);

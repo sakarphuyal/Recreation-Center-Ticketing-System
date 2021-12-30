@@ -55,6 +55,12 @@ namespace Coursework1
             this.label12 = new System.Windows.Forms.Label();
             this.radioNoButton = new System.Windows.Forms.RadioButton();
             this.continueBtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +102,7 @@ namespace Coursework1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 353);
+            this.label3.Location = new System.Drawing.Point(69, 312);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 3;
@@ -187,9 +193,9 @@ namespace Coursework1
             // 
             this.searchBtn.ForeColor = System.Drawing.Color.Transparent;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(365, 351);
+            this.searchBtn.Location = new System.Drawing.Point(339, 390);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(46, 22);
+            this.searchBtn.Size = new System.Drawing.Size(209, 34);
             this.searchBtn.TabIndex = 28;
             this.searchBtn.Tag = "";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -199,7 +205,7 @@ namespace Coursework1
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(67, 400);
+            this.label9.Location = new System.Drawing.Point(70, 353);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 17);
             this.label9.TabIndex = 66;
@@ -208,7 +214,7 @@ namespace Coursework1
             // 
             // totalCostTextBox
             // 
-            this.totalCostTextBox.Location = new System.Drawing.Point(175, 400);
+            this.totalCostTextBox.Location = new System.Drawing.Point(146, 353);
             this.totalCostTextBox.Name = "totalCostTextBox";
             this.totalCostTextBox.ReadOnly = true;
             this.totalCostTextBox.Size = new System.Drawing.Size(108, 20);
@@ -227,8 +233,8 @@ namespace Coursework1
             // 
             // checkOutBtnTicketBooking
             // 
-            this.checkOutBtnTicketBooking.BackColor = System.Drawing.Color.LightCoral;
-            this.checkOutBtnTicketBooking.Location = new System.Drawing.Point(487, 363);
+            this.checkOutBtnTicketBooking.BackColor = System.Drawing.Color.Red;
+            this.checkOutBtnTicketBooking.Location = new System.Drawing.Point(565, 315);
             this.checkOutBtnTicketBooking.Name = "checkOutBtnTicketBooking";
             this.checkOutBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
             this.checkOutBtnTicketBooking.TabIndex = 69;
@@ -237,7 +243,7 @@ namespace Coursework1
             // 
             // checkoutTextBoxId
             // 
-            this.checkoutTextBoxId.Location = new System.Drawing.Point(175, 351);
+            this.checkoutTextBoxId.Location = new System.Drawing.Point(146, 312);
             this.checkoutTextBoxId.Name = "checkoutTextBoxId";
             this.checkoutTextBoxId.Size = new System.Drawing.Size(108, 20);
             this.checkoutTextBoxId.TabIndex = 70;
@@ -263,8 +269,8 @@ namespace Coursework1
             // 
             // clearBtnTicketBooking
             // 
-            this.clearBtnTicketBooking.BackColor = System.Drawing.Color.LightCoral;
-            this.clearBtnTicketBooking.Location = new System.Drawing.Point(487, 417);
+            this.clearBtnTicketBooking.BackColor = System.Drawing.Color.Red;
+            this.clearBtnTicketBooking.Location = new System.Drawing.Point(565, 356);
             this.clearBtnTicketBooking.Name = "clearBtnTicketBooking";
             this.clearBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
             this.clearBtnTicketBooking.TabIndex = 73;
@@ -308,7 +314,7 @@ namespace Coursework1
             // 
             // continueBtn
             // 
-            this.continueBtn.BackColor = System.Drawing.Color.Red;
+            this.continueBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.continueBtn.Location = new System.Drawing.Point(429, 236);
             this.continueBtn.Name = "continueBtn";
             this.continueBtn.Size = new System.Drawing.Size(153, 34);
@@ -317,11 +323,71 @@ namespace Coursework1
             this.continueBtn.UseVisualStyleBackColor = false;
             this.continueBtn.Click += new System.EventHandler(this.continueBtn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(279, 315);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 17);
+            this.label7.TabIndex = 80;
+            this.label7.Text = "Name";
+            // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(339, 315);
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Size = new System.Drawing.Size(209, 20);
+            this.name.TabIndex = 81;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(279, 356);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 17);
+            this.label10.TabIndex = 82;
+            this.label10.Text = "In Time";
+            // 
+            // date
+            // 
+            this.date.Location = new System.Drawing.Point(339, 353);
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Size = new System.Drawing.Size(209, 20);
+            this.date.TabIndex = 83;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(70, 398);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 17);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "CheckOut Time";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(200, 398);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker1.TabIndex = 85;
+            // 
             // BookTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.date);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.continueBtn);
             this.Controls.Add(this.radioNoButton);
             this.Controls.Add(this.label12);
@@ -381,5 +447,11 @@ namespace Coursework1
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioNoButton;
         private System.Windows.Forms.Button continueBtn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox date;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

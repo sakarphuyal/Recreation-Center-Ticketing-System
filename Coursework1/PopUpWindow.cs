@@ -28,17 +28,13 @@ namespace Coursework1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            saveBtnTicketBooking.Enabled = true;
-        }
+
 
         private void PopUpWindow_Load(object sender, EventArgs e)
         {
             List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
             int lengthOfList = ticketList.Count();
-            //popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
+            popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
         }
 
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)
@@ -48,8 +44,12 @@ namespace Coursework1
             Constants.numberHolder.sixteen_to_sixty = (sixteenToSixtyTxt.Text.Length < 1) ? 0 : int.Parse(sixteenToSixtyTxt.Text);
             Constants.numberHolder.above_sixty = (aboveSixtyTxt.Text.Length < 1) ? 0 : int.Parse(aboveSixtyTxt.Text);
             this.Close();
-            BookTicket newBook = new BookTicket();
-            newBook.Enabled = true;
+            saveBtnTicketBooking.Enabled = true;
+        }
+
+        private void numberKeyDown(object sender, KeyEventArgs e)
+        {
+            Utils.validateForStringPress(sender, e, true);
         }
     }
 }

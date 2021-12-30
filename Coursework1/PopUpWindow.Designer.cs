@@ -43,7 +43,6 @@ namespace Coursework1
             this.label8 = new System.Windows.Forms.Label();
             this.popUpWindowId = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -124,6 +123,7 @@ namespace Coursework1
             this.belowThreeTxt.Name = "belowThreeTxt";
             this.belowThreeTxt.Size = new System.Drawing.Size(100, 20);
             this.belowThreeTxt.TabIndex = 19;
+            this.belowThreeTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // threeToSixteenTxt
             // 
@@ -131,6 +131,7 @@ namespace Coursework1
             this.threeToSixteenTxt.Name = "threeToSixteenTxt";
             this.threeToSixteenTxt.Size = new System.Drawing.Size(100, 20);
             this.threeToSixteenTxt.TabIndex = 20;
+            this.threeToSixteenTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // sixteenToSixtyTxt
             // 
@@ -138,6 +139,7 @@ namespace Coursework1
             this.sixteenToSixtyTxt.Name = "sixteenToSixtyTxt";
             this.sixteenToSixtyTxt.Size = new System.Drawing.Size(100, 20);
             this.sixteenToSixtyTxt.TabIndex = 21;
+            this.sixteenToSixtyTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // aboveSixtyTxt
             // 
@@ -145,6 +147,7 @@ namespace Coursework1
             this.aboveSixtyTxt.Name = "aboveSixtyTxt";
             this.aboveSixtyTxt.Size = new System.Drawing.Size(100, 20);
             this.aboveSixtyTxt.TabIndex = 22;
+            this.aboveSixtyTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label8
             // 
@@ -176,27 +179,13 @@ namespace Coursework1
             this.saveBtnTicketBooking.UseVisualStyleBackColor = false;
             this.saveBtnTicketBooking.Click += new System.EventHandler(this.saveBtnTicketBooking_Click);
             // 
-            // exitButton
-            // 
-            this.exitButton.BackColor = System.Drawing.Color.Red;
-            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.exitButton.Location = new System.Drawing.Point(446, 202);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(153, 34);
-            this.exitButton.TabIndex = 70;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // PopUpWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
-            this.CancelButton = this.exitButton;
             this.ClientSize = new System.Drawing.Size(653, 248);
             this.ControlBox = false;
-            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.saveBtnTicketBooking);
             this.Controls.Add(this.popUpWindowId);
             this.Controls.Add(this.label8);
@@ -239,6 +228,5 @@ namespace Coursework1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox popUpWindowId;
         private System.Windows.Forms.Button saveBtnTicketBooking;
-        private System.Windows.Forms.Button exitButton;
     }
 }
