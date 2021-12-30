@@ -220,81 +220,85 @@ namespace Coursework1
 
         private void searchBtn_Click_1(object sender, EventArgs e)
         {
-            bool weekDay()
-            {
-                string todaysDay = datePicker.Value.ToString("ddd");
-
-                return (todaysDay != "Sun" || todaysDay != "Sat");
-            }
             string id = checkoutTextBoxId.Text;
             if (!(String.IsNullOrEmpty(id)))
             {
                 int checkOutId = int.Parse(checkoutTextBoxId.Text);
                 List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
-                
+
                 for (int i = 0; i <= ((ticketList.Count) - 1); i++)
                 {
+                    bool weekDay()
+                    {
+                        string todaysDay = datePicker.Value.ToString("ddd");
+
+                        return (todaysDay != "Sun" || todaysDay != "Sat");
+                    }
                     if (ticketList[i].ticket_auto_incresed_id == checkOutId)
                     {
-                        System.Diagnostics.Debug.WriteLine(ticketList[i].name);
-                        if (ticketList[i].check_out == null)
+                        checkoutTextBoxId.Text = ticketList[i].ticket_auto_incresed_id.ToString();
+                        name.Text = ticketList[i].name;
+                        date.Value = ticketList[i].in_time.Date;
+                        bool isWeekDay = weekDay();
+                        if (isWeekDay == true)
                         {
-                            ticketAutoIncresedId.Text = (ticketList[i].ticket_auto_incresed_id.ToString());
-                            name.Text = (ticketList[i].name);
-                            date.Text = (ticketList[i].in_time).ToString();
-                            datePicker.Text = (ticketList[i].date.ToString());
-                            // numberOfPeopleComboBox.Text = (ticketList[i].number_of_people);
-                            /*if (!(string.IsNullOrEmpty(ticketList[i].age_group)))
-                            {
-                                bool isWeekDay = weekDay();
-                                if ((isWeekDay) == true)
-                                {
-                                    List<TicketPriceForWeekDays> weekPrice = Utils.getWeekDayPriceFromFile();
-                                    int oneThreeYear = weekPrice[0].week_individual_less_than_three_one_hour;
-                                    int oneThreeToSixteen = weekPrice[0].week_individual_three_to_sixteen_one_hour;
-                                    int oneSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_one_hour;
-                                    int oneSixtyPlus = weekPrice[0].week_individual_sixty_plus_one_hour;
-                                    int twoThreeYear = weekPrice[0].week_individual_less_than_three_two_hour;
-                                    int twoThreeTosixteen = weekPrice[0].week_individual_three_to_sixteen_two_hour;
-                                    int twoSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_two_hour;
-                                    int twoSixtyPlus = weekPrice[0].week_individual_sixty_plus_two_hour;
-                                    int threeThreeYear = weekPrice[0].week_individual_less_than_three_three_hour;
-                                    int threeThreeToSixteen = weekPrice[0].week_individual_three_to_sixteen_three_hour;
-                                    int threeSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_three_hour;
-                                    int threeSixtyPlus = weekPrice[0].week_individual_sixty_plus_three_hour;
-                                    int fourThreeYear = weekPrice[0].week_individual_less_than_three_four_hour;
-                                    int fourThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_four_hour;
-                                    int fourSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_four_hour;
-                                    int fourSixtyPlus = weekPrice[0].week_individual_sixty_plus_four_hour;
-                                    int wholeThreeYear = weekPrice[0].week_individual_less_than_three_whole_day;
-                                    int wholeThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_whole_day;
-                                    int wholeSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_whole_day;
-                                    int twoToFiveDiscount = weekPrice[0].week_group_two_to_five_discount;
-                                    int fiveToTenDiscount = weekPrice[0].week_group_five_to_ten_discount;
-                                    int tenToFifteenDiscount = weekPrice[0].week_group_ten_to_fifteen_discount;
-                                    int fifteenPlusDiscount = weekPrice[0].week_group_fifteen_plus_discount;
-                                }
-                            }
-                            else
-                            {
-
-                            }*/
+                            List<TicketPriceForWeekDays> weekPrice = Utils.getWeekDayPriceFromFile();
+                            int oneThreeYear = weekPrice[0].week_individual_less_than_three_one_hour;
+                            int oneThreeToSixteen = weekPrice[0].week_individual_three_to_sixteen_one_hour;
+                            int oneSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_one_hour;
+                            int oneSixtyPlus = weekPrice[0].week_individual_sixty_plus_one_hour;
+                            int twoThreeYear = weekPrice[0].week_individual_less_than_three_two_hour;
+                            int twoThreeTosixteen = weekPrice[0].week_individual_three_to_sixteen_two_hour;
+                            int twoSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_two_hour;
+                            int twoSixtyPlus = weekPrice[0].week_individual_sixty_plus_two_hour;
+                            int threeThreeYear = weekPrice[0].week_individual_less_than_three_three_hour;
+                            int threeThreeToSixteen = weekPrice[0].week_individual_three_to_sixteen_three_hour;
+                            int threeSixteenToSixty = weekPrice[0].week_individual_sixteen_to_sixty_three_hour;
+                            int threeSixtyPlus = weekPrice[0].week_individual_sixty_plus_three_hour;
+                            int fourThreeYear = weekPrice[0].week_individual_less_than_three_four_hour;
+                            int fourThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_four_hour;
+                            int fourSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_four_hour;
+                            int fourSixtyPlus = weekPrice[0].week_individual_sixty_plus_four_hour;
+                            int wholeThreeYear = weekPrice[0].week_individual_less_than_three_whole_day;
+                            int wholeThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_whole_day;
+                            int wholeSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_whole_day;
+                            int twoToFiveDiscount = weekPrice[0].week_group_two_to_five_discount;
+                            int fiveToTenDiscount = weekPrice[0].week_group_five_to_ten_discount;
+                            int tenToFifteenDiscount = weekPrice[0].week_group_ten_to_fifteen_discount;
+                            int fifteenPlusDiscount = weekPrice[0].week_group_fifteen_plus_discount;
                         }
                         else {
-                            MessageBox.Show("This Ticket_Id is already Checked-Out at  " + (ticketList[i].check_out), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            List<TicketPriceForHolidays> weekPrice = Utils.getHolidayPriceFromFile();
+                            int oneThreeYear = weekPrice[0].holiday_individual_less_than_three_one_hour;
+                            int oneThreeToSixteen = weekPrice[0].holiday_individual_three_to_sixteen_one_hour;
+                            int oneSixteenToSixty = weekPrice[0].holiday_individual_sixteen_to_sixty_one_hour;
+                            int oneSixtyPlus = weekPrice[0].holiday_individual_sixty_plus_one_hour;
+                            int twoThreeYear = weekPrice[0].holiday_individual_less_than_three_two_hour;
+                            int twoThreeTosixteen = weekPrice[0].holiday_individual_three_to_sixteen_two_hour;
+                            int twoSixteenToSixty = weekPrice[0].holiday_individual_sixteen_to_sixty_two_hour;
+                            int twoSixtyPlus = weekPrice[0].holiday_individual_sixty_plus_two_hour;
+                            int threeThreeYear = weekPrice[0].holiday_individual_less_than_three_three_hour;
+                            int threeThreeToSixteen = weekPrice[0].holiday_individual_three_to_sixteen_three_hour;
+                            int threeSixteenToSixty = weekPrice[0].holiday_individual_sixteen_to_sixty_three_hour;
+                            int threeSixtyPlus = weekPrice[0].holiday_individual_sixty_plus_three_hour;
+                            int fourThreeYear = weekPrice[0].holiday_individual_less_than_three_four_hour;
+                            int fourThreeToSixteenYear = weekPrice[0].holiday_individual_three_to_sixteen_four_hour;
+                            int fourSixteenToSixtyYear = weekPrice[0].holiday_individual_sixteen_to_sixty_four_hour;
+                            int fourSixtyPlus = weekPrice[0].holiday_individual_sixty_plus_four_hour;
+                            int wholeThreeYear = weekPrice[0].holiday_individual_less_than_three_whole_day;
+                            int wholeThreeToSixteenYear = weekPrice[0].holiday_individual_three_to_sixteen_whole_day;
+                            int wholeSixteenToSixtyYear = weekPrice[0].holiday_individual_sixteen_to_sixty_whole_day;
+                            int twoToFiveDiscount = weekPrice[0].holiday_group_two_to_five_Discount;
+                            int fiveToTenDiscount = weekPrice[0].holiday_group_five_to_ten_Discount;
+                            int tenToFifteenDiscount = weekPrice[0].holiday_group_ten_to_fifteen_Discount;
+                            int fifteenPlusDiscount = weekPrice[0].holiday_group_fifteen_plus_Discount;
                         }
-                    }
-                    else
-                    {
-                        System.Diagnostics.Debug.WriteLine(ticketList[i].name);
-                        MessageBox.Show("This Ticket Id is not registered", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Please Enter Ticket ID, Ticket Id Field is Empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Enter Ticket Id", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -320,6 +324,17 @@ namespace Coursework1
             saveBtnTicketBooking.Enabled = false;
             ageGroupComboBox.Enabled = false;
             continueBtn.Enabled = true;
+        }
+
+        private void checkoutTextBoxId_TextChanged(object sender, EventArgs e)
+        {
+            name.Text= Properties.Settings.Default.TextBoxDefaultValue;
+            date.Value = datePicker.Value.Date;
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
