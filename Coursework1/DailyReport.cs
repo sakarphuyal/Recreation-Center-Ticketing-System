@@ -43,8 +43,8 @@ namespace Coursework1
                     Dictionary<string, int> ageDict = new Dictionary<string, int>();
 
                     ageDict.Add("Child", ticktList.Where(t => t.childCount > 0).Count());
-                    ageDict.Add("Adult", ticktList.Where(t => t.childCount > 0).Count());
-                    ageDict.Add("Senior", ticktList.Where(t => t.childCount > 0).Count());
+                    ageDict.Add("Adult", ticktList.Where(t => t.normalCount > 0).Count());
+                    ageDict.Add("Senior", ticktList.Where(t => t.oldCount > 0).Count());
 
                    var dataSource = ageDict.Select(t => new
                     {
