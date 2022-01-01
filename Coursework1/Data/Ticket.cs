@@ -18,8 +18,6 @@ namespace Coursework1.Data
         public int sixteen_to_sixty { get; set; }
         public int above_sixty { get; set; }
         public int total_cost { get; set; }
-        public bool is_group { get; set; }
-
         public DateTime check_out { get; set; }
 
         public string toJson() {

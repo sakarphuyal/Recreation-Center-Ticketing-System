@@ -381,9 +381,9 @@ namespace Coursework1
             this.label15.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(15, 456);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 17);
+            this.label15.Size = new System.Drawing.Size(112, 17);
             this.label15.TabIndex = 36;
-            this.label15.Text = "Discount";
+            this.label15.Text = "Overall Discount";
             // 
             // label20
             // 
@@ -553,7 +553,7 @@ namespace Coursework1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "SetTicketPriceForHolidays";
-            this.Size = new System.Drawing.Size(638, 563);
+            this.Size = new System.Drawing.Size(621, 546);
             this.Load += new System.EventHandler(this.SetTicketPriceForHolidays_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -18,6 +18,7 @@ namespace Coursework1
         public BookTicket()
         {
             InitializeComponent();
+            saveBtnTicketBooking.Enabled = false;
         }
 
         public static bool Visisble { get; internal set; }
@@ -67,122 +68,38 @@ namespace Coursework1
         }
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)
         {
-            Data.Ticket ticketList = new Data.Ticket();
+            Data.Ticket ticket = new Data.Ticket();
             List<Ticket> mTicketList = Utils.getTicketBookingListFromFile();
-            if (radioNoButton.Checked)
+            bool weekDay()
             {
-                string name = nameTextField.Text;
-                if (!(name.Length < 1))
-                {
-                    if (ageGroupComboBox.SelectedItem != null)
-                    {
-                        ticketList.name = name;
-                        int id;
-                        if (mTicketList.Count < 1)
-                        {
-                            id = 0;
-                            System.Diagnostics.Debug.WriteLine(id);
-                            ticketList.ticket_auto_incresed_id = id;
-                            ticketAutoIncresedId.Text = id.ToString();
-                        }
-                        else
-                        {
-                            int generatedId = mTicketList.Max(x => x.ticket_auto_incresed_id);
-                            generatedId++; id = generatedId;
-                            ticketList.ticket_auto_incresed_id = id;
-                            ticketAutoIncresedId.Text = id.ToString();
-                        }
-                        string ageGroup = (ageGroupComboBox.SelectedItem).ToString();
-                        System.Diagnostics.Debug.WriteLine(ageGroup);
-                        if (ageGroup == "0-3 years")
-                        {
-                            ticketList.below_three = 1;
-                        }
-                        else if (ageGroup == "3-16 years")
-                        {
-                            ticketList.three_to_sixteen = 1;
-                        }
-                        else if (ageGroup == "16-60 years")
-                        {
-                            ticketList.sixteen_to_sixty = 1;
-                        }
-                        else
-                        { //60 + years
-                            ticketList.above_sixty = 1;
-                        }
-                        DateTime todayDate = datePicker.Value.Date;
-                        {
-                            ticketList.date = todayDate;
-                        }
-                        DateTime inTime = timePicker.Value.Date;
-                        {
-                            ticketList.in_time = inTime;
-                        }
-                        Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
-                        MessageBox.Show("Ticket Booked with ticket id  " + id, "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please Select age Group", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Enter Name Please.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                string todaysDay = datePicker.Value.ToString("ddd");
 
+                return (todaysDay != "Sun" || todaysDay != "Sat");
             }
-            else if (radioYesButton.Checked)
+    
+            string name = nameTextField.Text;
+            if (!(name.Length < 1))
             {
-                string name = nameTextField.Text;
-                if (!(name.Length < 1))
-                {
-                    if (ageGroupComboBox.SelectedItem == null)
-                    {
-                        ticketList.name = name;
-                        int id;
-                        if (mTicketList.Count < 1)
-                        {
-                            id = 0;
-                            ticketList.ticket_auto_incresed_id = id;
-                            ticketAutoIncresedId.Text = id.ToString();
-                        }
-                        else
-                        {
-                            int generatedId = mTicketList.Max(x => x.ticket_auto_incresed_id);
-                            generatedId++; id = generatedId;
-                            ticketList.ticket_auto_incresed_id = id;
-                            ticketAutoIncresedId.Text = id.ToString();
-                        }
-                        ticketList.below_three = Constants.numberHolder.below_three;
-                        ticketList.three_to_sixteen = Constants.numberHolder.three_to_sixteen;
-                        ticketList.sixteen_to_sixty = Constants.numberHolder.sixteen_to_sixty;
-                        ticketList.above_sixty = Constants.numberHolder.above_sixty;
-                        Constants.numberHolder.resetData();
-
-                        DateTime todayDate = datePicker.Value.Date;
-                        {
-                            ticketList.date = todayDate;
-                        }
-                        DateTime inTime = timePicker.Value.Date;
-                        {
-                            ticketList.in_time = inTime;
-                        }
-                        ticketList.is_group = true;
-                        Utils.setOnFile(ticketList.toJson(), Constants.TICKETBOOKING_FILE);
-                        MessageBox.Show("Ticket Booked with ticket id " + (id), "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Enter Name Please.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                ticket.ticket_auto_incresed_id = mTicketList.Count > 0 ? mTicketList.Max(t => t.ticket_auto_incresed_id) + 1 : 1;
+                ticketAutoIncresedId.Text = ticket.ticket_auto_incresed_id.ToString();
+                ticket.name = name;
+                DateTime inTime = timePicker.Value;
+                ticket.in_time = inTime;
+                DateTime todayDate = datePicker.Value;
+                ticket.date = todayDate;
+                ticket.below_three = Constants.numberHolder.below_three;
+                ticket.three_to_sixteen = Constants.numberHolder.three_to_sixteen;
+                ticket.sixteen_to_sixty = Constants.numberHolder.sixteen_to_sixty;
+                ticket.above_sixty = Constants.numberHolder.above_sixty;
+                Constants.numberHolder.resetData();
+                MessageBox.Show("Ticket Booked with ticket id " + ticket.ticket_auto_incresed_id.ToString(), "Succcess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                saveBtnTicketBooking.Enabled = false;
+                Utils.setOnFile(ticket.toJson(), Constants.TICKETBOOKING_FILE);
             }
-            else
-            {
-                MessageBox.Show("Select 'Yes' if in group 'No' for single Vistor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else {
+                MessageBox.Show("Enter Name Please!!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -202,9 +119,9 @@ namespace Coursework1
             checkoutTextBoxId.Text = Properties.Settings.Default.TextBoxDefaultValue;
             totalCostTextBox.Text = Properties.Settings.Default.TextBoxDefaultValue;
             ticketAutoIncresedId.Text = null;
-            ageGroupComboBox.Text = null;
+            //ageGroupComboBox.Text = null;
             // numberOfPeopleComboBox.Text = null;
-            ageGroupComboBox.Enabled = true;
+            //ageGroupComboBox.Enabled = true;
             //numberOfPeopleComboBox.Enabled = true;
         }
 
@@ -225,7 +142,7 @@ namespace Coursework1
             {
                 int checkOutId = int.Parse(checkoutTextBoxId.Text);
                 List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
-
+                Data.Ticket ticket = new Data.Ticket();
                 for (int i = 0; i <= ((ticketList.Count) - 1); i++)
                 {
                     bool weekDay()
@@ -238,7 +155,14 @@ namespace Coursework1
                     {
                         checkoutTextBoxId.Text = ticketList[i].ticket_auto_incresed_id.ToString();
                         name.Text = ticketList[i].name;
-                        date.Value = ticketList[i].in_time.Date;
+                        int belowThree = ticketList[i].below_three;
+                        int threeToSixteen = ticketList[i].three_to_sixteen;
+                        int sixteeToSixty = ticketList[i].sixteen_to_sixty;
+                        int aboveSixty = ticketList[i].above_sixty;
+                        DateTime outTime = checkOut.Value;
+                       /* ticketList[i].check_out = outTime;
+                        Utils.setOnFile((ticket.check_out).toJson(), Constants.TICKETBOOKING_FILE);*/
+                        int totalPeople = (belowThree+threeToSixteen+sixteeToSixty+aboveSixty);
                         bool isWeekDay = weekDay();
                         if (isWeekDay == true)
                         {
@@ -262,10 +186,155 @@ namespace Coursework1
                             int wholeThreeYear = weekPrice[0].week_individual_less_than_three_whole_day;
                             int wholeThreeToSixteenYear = weekPrice[0].week_individual_three_to_sixteen_whole_day;
                             int wholeSixteenToSixtyYear = weekPrice[0].week_individual_sixteen_to_sixty_whole_day;
+                            int wholeSixtyPlus = weekPrice[0].week_individual_sixty_plus_whole_day;
                             int twoToFiveDiscount = weekPrice[0].week_group_two_to_five_discount;
                             int fiveToTenDiscount = weekPrice[0].week_group_five_to_ten_discount;
                             int tenToFifteenDiscount = weekPrice[0].week_group_ten_to_fifteen_discount;
                             int fifteenPlusDiscount = weekPrice[0].week_group_fifteen_plus_discount;
+                            //Individual total amount Calculation Without Discount
+                            int totalHour = 1;
+                            if (totalPeople == 1) {
+                                if (belowThree == 1) {
+                                    if (totalHour <= 1)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * oneThreeYear).ToString();
+                                        
+                                    }
+                                    else if (totalHour > 1 && totalHour <= 2)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * twoThreeYear).ToString();
+                                        
+                                        
+                                    }
+                                    else if (totalHour > 2 && totalHour <= 3)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * threeThreeYear).ToString();
+                                        
+                                       
+                                    }
+                                    else if (totalHour > 3 && totalHour <= 4)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * fourThreeYear).ToString();
+                                        
+                                        
+                                    }
+                                    else {
+                                        totalCostTextBox.Text = (totalHour * wholeThreeYear).ToString();
+                                        
+                                        
+                                    }
+                                }
+                                else if (threeToSixteen == 1) {
+                                    if (totalHour <= 1)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * oneThreeToSixteen).ToString();
+
+                                    }
+                                    else if (totalHour > 1 && totalHour <= 2)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * twoThreeTosixteen).ToString();
+
+
+                                    }
+                                    else if (totalHour > 2 && totalHour <= 3)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * threeThreeToSixteen).ToString();
+
+
+                                    }
+                                    else if (totalHour > 3 && totalHour <= 4)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * fourThreeToSixteenYear).ToString();
+
+
+                                    }
+                                    else
+                                    {
+                                        totalCostTextBox.Text = (totalHour * wholeThreeToSixteenYear).ToString();
+
+
+                                    }
+                                }
+                                else if (sixteeToSixty == 1) {
+                                    if (totalHour <= 1)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * oneSixteenToSixty).ToString();
+
+                                    }
+                                    else if (totalHour > 1 && totalHour <= 2)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * twoSixteenToSixty).ToString();
+
+
+                                    }
+                                    else if (totalHour > 2 && totalHour <= 3)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * threeSixteenToSixty).ToString();
+
+
+                                    }
+                                    else if (totalHour > 3 && totalHour <= 4)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * fourSixteenToSixtyYear).ToString();
+
+
+                                    }
+                                    else
+                                    {
+                                        totalCostTextBox.Text = (totalHour * wholeSixteenToSixtyYear).ToString();
+
+
+                                    }
+
+                                }
+                                else if (aboveSixty == 1) {
+                                    if (totalHour <= 1)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * oneSixtyPlus).ToString();
+
+                                    }
+                                    else if (totalHour > 1 && totalHour <= 2)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * twoSixtyPlus).ToString();
+
+
+                                    }
+                                    else if (totalHour > 2 && totalHour <= 3)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * threeSixtyPlus).ToString();
+
+
+                                    }
+                                    else if (totalHour > 3 && totalHour <= 4)
+                                    {
+                                        totalCostTextBox.Text = (totalHour * fourSixtyPlus).ToString();
+
+
+                                    }
+                                    else
+                                    {
+                                        totalCostTextBox.Text = (totalHour * wholeSixtyPlus).ToString();
+
+
+                                    }
+                                }
+                                else {
+                                    MessageBox.Show("Number Of people is not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            //Group total amount calculation With Discount
+                            else {
+                                int totalamount = 0;
+                                /*int belowThree = ticketList[i].below_three;
+                                int threeToSixteen = ticketList[i].three_to_sixteen;
+                                int sixteeToSixty = ticketList[i].sixteen_to_sixty;
+                                int aboveSixty = ticketList[i].above_sixty;*/
+                                if (belowThree != 0) { 
+
+                                }
+                                
+                            }
+
                         }
                         else {
                             List<TicketPriceForHolidays> weekPrice = Utils.getHolidayPriceFromFile();
@@ -307,32 +376,52 @@ namespace Coursework1
         private void radioNoButton_CheckedChanged(object sender, EventArgs e)
         {
             continueBtn.Enabled = false;
-            ageGroupComboBox.Enabled = true;
+            //ageGroupComboBox.Enabled = true;
             saveBtnTicketBooking.Enabled = true;
         }
 
         private void continueBtn_Click(object sender, EventArgs e)
         {
-            PopUpWindow newWindow = new PopUpWindow();
-            newWindow.Show();
-            newWindow.Enabled = true;
-            saveBtnTicketBooking.Enabled = true;
+            string name = nameTextField.Text;
+            if (!(name.Length < 1))
+            {
+                Data.Ticket ticket = new Data.Ticket();
+                List<Ticket> mTicketList = Utils.getTicketBookingListFromFile();
+                PopUpWindow newWindow = new PopUpWindow();
+                newWindow.Show();
+                newWindow.Enabled = true;
+                saveBtnTicketBooking.Enabled = true;
+                
+            }
+            else {
+                MessageBox.Show("Enter Name Please!!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void radioYesButton_CheckedChanged(object sender, EventArgs e)
         {
             saveBtnTicketBooking.Enabled = false;
-            ageGroupComboBox.Enabled = false;
+            //ageGroupComboBox.Enabled = false;
             continueBtn.Enabled = true;
         }
 
         private void checkoutTextBoxId_TextChanged(object sender, EventArgs e)
         {
             name.Text= Properties.Settings.Default.TextBoxDefaultValue;
-            date.Value = datePicker.Value.Date;
+            totalCostTextBox.Text = "0";
         }
 
         private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BookTicket_Load(object sender, EventArgs e)
+        {
+            saveBtnTicketBooking.Enabled = false;
+        }
+
+        private void checkOutBtnTicketBooking_Click(object sender, EventArgs e)
         {
 
         }

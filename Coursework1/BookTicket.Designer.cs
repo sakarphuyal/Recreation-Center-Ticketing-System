@@ -35,10 +35,8 @@ namespace Coursework1
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.nameTextField = new System.Windows.Forms.TextBox();
-            this.ageGroupComboBox = new System.Windows.Forms.ComboBox();
             this.timePicker = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
@@ -51,16 +49,11 @@ namespace Coursework1
             this.label5 = new System.Windows.Forms.Label();
             this.ticketAutoIncresedId = new System.Windows.Forms.TextBox();
             this.clearBtnTicketBooking = new System.Windows.Forms.Button();
-            this.radioYesButton = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.radioNoButton = new System.Windows.Forms.RadioButton();
             this.continueBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.date = new System.Windows.Forms.DateTimePicker();
+            this.checkOut = new System.Windows.Forms.DateTimePicker();
             this.Enter = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,16 +114,6 @@ namespace Coursework1
             this.label4.Text = "Name";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(436, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 17);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Age Group";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -149,20 +132,6 @@ namespace Coursework1
             this.nameTextField.Size = new System.Drawing.Size(174, 20);
             this.nameTextField.TabIndex = 13;
             this.nameTextField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.stringKeyDown);
-            // 
-            // ageGroupComboBox
-            // 
-            this.ageGroupComboBox.Items.AddRange(new object[] {
-            "0-3 years",
-            "3-16 years",
-            "16-60 years",
-            "60 + years"});
-            this.ageGroupComboBox.Location = new System.Drawing.Point(575, 177);
-            this.ageGroupComboBox.Name = "ageGroupComboBox";
-            this.ageGroupComboBox.Size = new System.Drawing.Size(121, 21);
-            this.ageGroupComboBox.TabIndex = 17;
-            this.ageGroupComboBox.Text = "----Select Age Group----";
-            this.ageGroupComboBox.SelectedIndexChanged += new System.EventHandler(this.ageGroupComboBox_SelectedIndexChanged_1);
             // 
             // timePicker
             // 
@@ -194,9 +163,9 @@ namespace Coursework1
             // 
             this.searchBtn.ForeColor = System.Drawing.Color.Transparent;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(339, 390);
+            this.searchBtn.Location = new System.Drawing.Point(339, 353);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(209, 34);
+            this.searchBtn.Size = new System.Drawing.Size(209, 33);
             this.searchBtn.TabIndex = 28;
             this.searchBtn.Tag = "";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -220,11 +189,12 @@ namespace Coursework1
             this.totalCostTextBox.ReadOnly = true;
             this.totalCostTextBox.Size = new System.Drawing.Size(108, 20);
             this.totalCostTextBox.TabIndex = 67;
+            this.totalCostTextBox.Text = "0";
             // 
             // saveBtnTicketBooking
             // 
             this.saveBtnTicketBooking.BackColor = System.Drawing.Color.Lime;
-            this.saveBtnTicketBooking.Location = new System.Drawing.Point(240, 224);
+            this.saveBtnTicketBooking.Location = new System.Drawing.Point(230, 198);
             this.saveBtnTicketBooking.Name = "saveBtnTicketBooking";
             this.saveBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
             this.saveBtnTicketBooking.TabIndex = 68;
@@ -235,12 +205,13 @@ namespace Coursework1
             // checkOutBtnTicketBooking
             // 
             this.checkOutBtnTicketBooking.BackColor = System.Drawing.Color.Red;
-            this.checkOutBtnTicketBooking.Location = new System.Drawing.Point(565, 315);
+            this.checkOutBtnTicketBooking.Location = new System.Drawing.Point(565, 312);
             this.checkOutBtnTicketBooking.Name = "checkOutBtnTicketBooking";
             this.checkOutBtnTicketBooking.Size = new System.Drawing.Size(153, 34);
             this.checkOutBtnTicketBooking.TabIndex = 69;
             this.checkOutBtnTicketBooking.Text = "Check-Out";
             this.checkOutBtnTicketBooking.UseVisualStyleBackColor = false;
+            this.checkOutBtnTicketBooking.Click += new System.EventHandler(this.checkOutBtnTicketBooking_Click);
             // 
             // checkoutTextBoxId
             // 
@@ -280,44 +251,10 @@ namespace Coursework1
             this.clearBtnTicketBooking.UseVisualStyleBackColor = false;
             this.clearBtnTicketBooking.Click += new System.EventHandler(this.clearBtnTicketBooking_Click_2);
             // 
-            // radioYesButton
-            // 
-            this.radioYesButton.AutoSize = true;
-            this.radioYesButton.Location = new System.Drawing.Point(175, 181);
-            this.radioYesButton.Name = "radioYesButton";
-            this.radioYesButton.Size = new System.Drawing.Size(43, 17);
-            this.radioYesButton.TabIndex = 76;
-            this.radioYesButton.TabStop = true;
-            this.radioYesButton.Text = "Yes";
-            this.radioYesButton.UseVisualStyleBackColor = true;
-            this.radioYesButton.CheckedChanged += new System.EventHandler(this.radioYesButton_CheckedChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(69, 180);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 17);
-            this.label12.TabIndex = 77;
-            this.label12.Text = "Is Group";
-            // 
-            // radioNoButton
-            // 
-            this.radioNoButton.AutoSize = true;
-            this.radioNoButton.Location = new System.Drawing.Point(244, 181);
-            this.radioNoButton.Name = "radioNoButton";
-            this.radioNoButton.Size = new System.Drawing.Size(39, 17);
-            this.radioNoButton.TabIndex = 78;
-            this.radioNoButton.TabStop = true;
-            this.radioNoButton.Text = "No";
-            this.radioNoButton.UseVisualStyleBackColor = true;
-            this.radioNoButton.CheckedChanged += new System.EventHandler(this.radioNoButton_CheckedChanged);
-            // 
             // continueBtn
             // 
             this.continueBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.continueBtn.Location = new System.Drawing.Point(424, 224);
+            this.continueBtn.Location = new System.Drawing.Point(410, 198);
             this.continueBtn.Name = "continueBtn";
             this.continueBtn.Size = new System.Drawing.Size(153, 34);
             this.continueBtn.TabIndex = 79;
@@ -344,16 +281,6 @@ namespace Coursework1
             this.name.TabIndex = 81;
             this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(279, 356);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 17);
-            this.label10.TabIndex = 82;
-            this.label10.Text = "In Time";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -364,21 +291,13 @@ namespace Coursework1
             this.label13.TabIndex = 84;
             this.label13.Text = "CheckOut Time";
             // 
-            // dateTimePicker1
+            // checkOut
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(200, 398);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker1.TabIndex = 85;
-            // 
-            // date
-            // 
-            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.date.Location = new System.Drawing.Point(339, 356);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(113, 20);
-            this.date.TabIndex = 86;
+            this.checkOut.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.checkOut.Location = new System.Drawing.Point(200, 398);
+            this.checkOut.Name = "checkOut";
+            this.checkOut.Size = new System.Drawing.Size(83, 20);
+            this.checkOut.TabIndex = 85;
             // 
             // Enter
             // 
@@ -398,16 +317,11 @@ namespace Coursework1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.Controls.Add(this.Enter);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.checkOut);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.name);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.continueBtn);
-            this.Controls.Add(this.radioNoButton);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.radioYesButton);
             this.Controls.Add(this.clearBtnTicketBooking);
             this.Controls.Add(this.ticketAutoIncresedId);
             this.Controls.Add(this.label5);
@@ -420,15 +334,14 @@ namespace Coursework1
             this.Controls.Add(this.datePicker);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.timePicker);
-            this.Controls.Add(this.ageGroupComboBox);
             this.Controls.Add(this.nameTextField);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Name = "BookTicket";
             this.Size = new System.Drawing.Size(748, 475);
+            this.Load += new System.EventHandler(this.BookTicket_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -443,10 +356,8 @@ namespace Coursework1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox nameTextField;
-        private System.Windows.Forms.ComboBox ageGroupComboBox;
         private System.Windows.Forms.DateTimePicker timePicker;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker datePicker;
@@ -459,16 +370,11 @@ namespace Coursework1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ticketAutoIncresedId;
         private System.Windows.Forms.Button clearBtnTicketBooking;
-        private System.Windows.Forms.RadioButton radioYesButton;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RadioButton radioNoButton;
         private System.Windows.Forms.Button continueBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker date;
+        private System.Windows.Forms.DateTimePicker checkOut;
         private System.Windows.Forms.Button Enter;
     }
 }
