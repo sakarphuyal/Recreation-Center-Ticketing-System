@@ -32,9 +32,9 @@ namespace Coursework1
 
         private void PopUpWindow_Load(object sender, EventArgs e)
         {
-            List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
-            int lengthOfList = ticketList.Count();
-            popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
+            //List<Ticket> ticketList = Utils.getTicketBookingListFromFile();
+            //int lengthOfList = ticketList.Count();
+            //popUpWindowId.Text = (ticketList[lengthOfList-1].ticket_auto_incresed_id + 1).ToString();
         }
 
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Coursework1.Data
 {
-    class Ticket
+    class Ticket : IComparable<Ticket>
     {
         public int ticket_auto_incresed_id { get; set; }
         public string name { get; set; }
@@ -19,6 +19,11 @@ namespace Coursework1.Data
         public int above_sixty { get; set; }
         public int total_cost { get; set; }
         public DateTime check_out { get; set; }
+
+        public int CompareTo(Ticket other)
+        {
+            return ticket_auto_incresed_id - other.ticket_auto_incresed_id;
+        }
 
         public string toJson() {
             return JsonConvert.SerializeObject(this);

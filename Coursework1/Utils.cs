@@ -65,18 +65,74 @@ namespace Coursework1
             return holidayList;
 
         }
+
+        // FIXME Use this function instead of reading from file directly
         public static List<Ticket> getTicketBookingListFromFile()
         {
-            string[] lineValue = File.ReadAllLines(Constants.TICKETBOOKING_FILE);
-            List<Ticket> ticketList = new List<Ticket>();
-            foreach (string line in lineValue)
+            if (File.Exists(Constants.TICKETBOOKING_FILE))
             {
-                Ticket mTicket = JsonConvert.DeserializeObject<Ticket>(line);
-                ticketList.Add(mTicket);
+                string[] lineValue = File.ReadAllLines(Constants.TICKETBOOKING_FILE);
+                List<Ticket> ticketList = new List<Ticket>();
+                foreach (string line in lineValue)
+                {
+                    Ticket mTicket = JsonConvert.DeserializeObject<Ticket>(line);
+                    ticketList.Add(mTicket);
+                }
+                return ticketList;
             }
-            return ticketList;
+            return new List<Ticket>();
 
         }
+
+        public static bool setCheckoutValues(int id, DateTime checkOutTime) {
+            List<Ticket> allTicket = getTicketBookingListFromFile();
+            List<Ticket> selectedTicket = allTicket.Where(t => t.ticket_auto_incresed_id == id).ToList();
+
+
+            if (selectedTicket.Count > 0)
+            {
+                //  Assumes that every ticket has unique ID
+                Ticket mTicket = selectedTicket.First();
+
+                mTicket.check_out = checkOutTime;
+
+                // TODO do price calculation here.
+                mTicket.total_cost =  calculatePrice(mTicket);
+
+                allTicket.Remove(selectedTicket.First());
+                allTicket.Add(mTicket);
+                allTicket.Sort();
+
+                string jsonHolder = "";
+                allTicket.ForEach(t => jsonHolder += t.toJson()+"\n");
+
+                writeToFile(Constants.TICKETBOOKING_FILE, jsonHolder);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public static int calculatePrice(Ticket ticket) {
+            // TODO calculate price here
+
+            return ticket.three_to_sixteen * 12 + 1;  // TODO remove this - DUMMY VALUE
+        }
+
+
+        /// <summary>
+        /// Replaces everything on the file with 'data'
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="data"></param>
+        public static void writeToFile(string fileName, string data) {
+            if (File.Exists(fileName))
+            {
+                File.WriteAllText(fileName, data);
+            }
+        }
+
         public static List<TicketPriceForWeekDays> getWeekDayPriceFromFile()
         {
             string[] lineValue = File.ReadAllLines(Constants.WeekDay_FILE);
