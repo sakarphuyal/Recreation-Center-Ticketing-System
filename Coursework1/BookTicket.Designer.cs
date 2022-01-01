@@ -375,6 +375,6 @@ namespace Coursework1
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker checkOut;
-        private System.Windows.Forms.Button Enter;
+        private new System.Windows.Forms.Button Enter;
     }
 }

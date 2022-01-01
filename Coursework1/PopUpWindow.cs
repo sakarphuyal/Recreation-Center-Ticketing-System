@@ -39,10 +39,9 @@ namespace Coursework1
 
         private void saveBtnTicketBooking_Click(object sender, EventArgs e)
         {
-            Constants.numberHolder.below_three = (belowThreeTxt.Text.Length < 1) ? 0 : int.Parse(belowThreeTxt.Text);
-            Constants.numberHolder.three_to_sixteen = (threeToSixteenTxt.Text.Length < 1) ? 0 : int.Parse(threeToSixteenTxt.Text);
-            Constants.numberHolder.sixteen_to_sixty = (sixteenToSixtyTxt.Text.Length < 1) ? 0 : int.Parse(sixteenToSixtyTxt.Text);
-            Constants.numberHolder.above_sixty = (aboveSixtyTxt.Text.Length < 1) ? 0 : int.Parse(aboveSixtyTxt.Text);
+            Constants.numberHolder.below_three = (childPrice.Text.Length < 1) ? 0 : int.Parse(childPrice.Text);
+            Constants.numberHolder.sixteen_to_sixty = (normalPrice.Text.Length < 1) ? 0 : int.Parse(normalPrice.Text);
+            Constants.numberHolder.above_sixty = (oldPrice.Text.Length < 1) ? 0 : int.Parse(oldPrice.Text);
             this.Close();
             saveBtnTicketBooking.Enabled = true;
         }

@@ -33,13 +33,11 @@ namespace Coursework1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.belowThreeTxt = new System.Windows.Forms.TextBox();
-            this.threeToSixteenTxt = new System.Windows.Forms.TextBox();
-            this.sixteenToSixtyTxt = new System.Windows.Forms.TextBox();
-            this.aboveSixtyTxt = new System.Windows.Forms.TextBox();
+            this.childPrice = new System.Windows.Forms.TextBox();
+            this.normalPrice = new System.Windows.Forms.TextBox();
+            this.oldPrice = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.popUpWindowId = new System.Windows.Forms.TextBox();
             this.saveBtnTicketBooking = new System.Windows.Forms.Button();
@@ -81,31 +79,21 @@ namespace Coursework1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(142, 131);
+            this.label4.Location = new System.Drawing.Point(174, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 17);
+            this.label4.Size = new System.Drawing.Size(139, 17);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Less than 3 yrs (<3)";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(275, 131);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "3 to 16 yrs (3-16)";
+            this.label4.Text = "Less than 12 yrs (<12)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(392, 131);
+            this.label6.Location = new System.Drawing.Point(345, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 17);
             this.label6.TabIndex = 9;
-            this.label6.Text = "16 to 60 yrs (16-60)";
+            this.label6.Text = "12 to 60 yrs (12-60)";
             // 
             // label7
             // 
@@ -117,37 +105,29 @@ namespace Coursework1
             this.label7.TabIndex = 10;
             this.label7.Text = "Above 60 (60+)";
             // 
-            // belowThreeTxt
+            // childPrice
             // 
-            this.belowThreeTxt.Location = new System.Drawing.Point(157, 163);
-            this.belowThreeTxt.Name = "belowThreeTxt";
-            this.belowThreeTxt.Size = new System.Drawing.Size(100, 20);
-            this.belowThreeTxt.TabIndex = 19;
-            this.belowThreeTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.childPrice.Location = new System.Drawing.Point(189, 163);
+            this.childPrice.Name = "childPrice";
+            this.childPrice.Size = new System.Drawing.Size(100, 20);
+            this.childPrice.TabIndex = 19;
+            this.childPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // threeToSixteenTxt
+            // normalPrice
             // 
-            this.threeToSixteenTxt.Location = new System.Drawing.Point(278, 160);
-            this.threeToSixteenTxt.Name = "threeToSixteenTxt";
-            this.threeToSixteenTxt.Size = new System.Drawing.Size(100, 20);
-            this.threeToSixteenTxt.TabIndex = 20;
-            this.threeToSixteenTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.normalPrice.Location = new System.Drawing.Point(358, 160);
+            this.normalPrice.Name = "normalPrice";
+            this.normalPrice.Size = new System.Drawing.Size(100, 20);
+            this.normalPrice.TabIndex = 21;
+            this.normalPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
-            // sixteenToSixtyTxt
+            // oldPrice
             // 
-            this.sixteenToSixtyTxt.Location = new System.Drawing.Point(405, 160);
-            this.sixteenToSixtyTxt.Name = "sixteenToSixtyTxt";
-            this.sixteenToSixtyTxt.Size = new System.Drawing.Size(100, 20);
-            this.sixteenToSixtyTxt.TabIndex = 21;
-            this.sixteenToSixtyTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
-            // 
-            // aboveSixtyTxt
-            // 
-            this.aboveSixtyTxt.Location = new System.Drawing.Point(535, 160);
-            this.aboveSixtyTxt.Name = "aboveSixtyTxt";
-            this.aboveSixtyTxt.Size = new System.Drawing.Size(100, 20);
-            this.aboveSixtyTxt.TabIndex = 22;
-            this.aboveSixtyTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
+            this.oldPrice.Location = new System.Drawing.Point(535, 160);
+            this.oldPrice.Name = "oldPrice";
+            this.oldPrice.Size = new System.Drawing.Size(100, 20);
+            this.oldPrice.TabIndex = 22;
+            this.oldPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberKeyDown);
             // 
             // label8
             // 
@@ -189,13 +169,11 @@ namespace Coursework1
             this.Controls.Add(this.saveBtnTicketBooking);
             this.Controls.Add(this.popUpWindowId);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.aboveSixtyTxt);
-            this.Controls.Add(this.sixteenToSixtyTxt);
-            this.Controls.Add(this.threeToSixteenTxt);
-            this.Controls.Add(this.belowThreeTxt);
+            this.Controls.Add(this.oldPrice);
+            this.Controls.Add(this.normalPrice);
+            this.Controls.Add(this.childPrice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -218,13 +196,11 @@ namespace Coursework1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox belowThreeTxt;
-        private System.Windows.Forms.TextBox threeToSixteenTxt;
-        private System.Windows.Forms.TextBox sixteenToSixtyTxt;
-        private System.Windows.Forms.TextBox aboveSixtyTxt;
+        private System.Windows.Forms.TextBox childPrice;
+        private System.Windows.Forms.TextBox normalPrice;
+        private System.Windows.Forms.TextBox oldPrice;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox popUpWindowId;
         private System.Windows.Forms.Button saveBtnTicketBooking;
