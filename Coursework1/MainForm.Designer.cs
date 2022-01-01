@@ -36,8 +36,8 @@ namespace Coursework1
             this.navGenerateReportBtn = new System.Windows.Forms.Button();
             this.navBookBtn = new System.Windows.Forms.Button();
             this.navWeekBtn = new System.Windows.Forms.Button();
-            this.setTicketPriceForWeekDays1 = new Coursework1.SetTicketPrice();
             this.bookTicket1 = new Coursework1.BookTicket();
+            this.setTicketPriceForWeekDays1 = new Coursework1.SetTicketPrice();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,7 @@ namespace Coursework1
             this.navGenerateReportBtn.TabIndex = 2;
             this.navGenerateReportBtn.Text = "Generate Report";
             this.navGenerateReportBtn.UseVisualStyleBackColor = false;
+            this.navGenerateReportBtn.Click += new System.EventHandler(this.navGenerateReportBtn_Click);
             // 
             // navBookBtn
             // 
@@ -135,6 +136,17 @@ namespace Coursework1
             this.navWeekBtn.UseVisualStyleBackColor = false;
             this.navWeekBtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // bookTicket1
+            // 
+            this.bookTicket1.BackColor = System.Drawing.Color.Aquamarine;
+            this.bookTicket1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookTicket1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.bookTicket1.Location = new System.Drawing.Point(146, 75);
+            this.bookTicket1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.bookTicket1.Name = "bookTicket1";
+            this.bookTicket1.Size = new System.Drawing.Size(985, 532);
+            this.bookTicket1.TabIndex = 3;
+            // 
             // setTicketPriceForWeekDays1
             // 
             this.setTicketPriceForWeekDays1.AutoScroll = true;
@@ -142,24 +154,13 @@ namespace Coursework1
             this.setTicketPriceForWeekDays1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setTicketPriceForWeekDays1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.setTicketPriceForWeekDays1.Location = new System.Drawing.Point(146, 75);
-            this.setTicketPriceForWeekDays1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.setTicketPriceForWeekDays1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.setTicketPriceForWeekDays1.Name = "setTicketPriceForWeekDays1";
             this.setTicketPriceForWeekDays1.Size = new System.Drawing.Size(985, 532);
             this.setTicketPriceForWeekDays1.TabIndex = 4;
             this.setTicketPriceForWeekDays1.Load += new System.EventHandler(this.setTicketPriceForWeekDays1_Load);
             // 
-            // bookTicket1
-            // 
-            this.bookTicket1.BackColor = System.Drawing.Color.Aquamarine;
-            this.bookTicket1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookTicket1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.bookTicket1.Location = new System.Drawing.Point(146, 75);
-            this.bookTicket1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.bookTicket1.Name = "bookTicket1";
-            this.bookTicket1.Size = new System.Drawing.Size(985, 532);
-            this.bookTicket1.TabIndex = 3;
-            // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,7 +175,7 @@ namespace Coursework1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.panel1.ResumeLayout(false);
