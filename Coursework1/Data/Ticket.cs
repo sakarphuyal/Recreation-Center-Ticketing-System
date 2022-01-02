@@ -31,5 +31,8 @@ namespace Coursework1.Data
         {
             return this.toJson();
         }
+        public int getTotalVistor() {
+            return childCount + normalCount + oldCount;
+        }
     }
 }
