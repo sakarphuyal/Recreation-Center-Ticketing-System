@@ -16,6 +16,7 @@ namespace Coursework1
     {
 
         private DailyReport dailyReport;
+        private WeeklyReport weeklyReport;
 
         private List<Control> mainControls = new List<Control>();
         public MainForm()
@@ -23,16 +24,22 @@ namespace Coursework1
             InitializeComponent();
 
             dailyReport = new DailyReport();
+            weeklyReport = new WeeklyReport();
 
             
             dailyReport.TopLevel = false;
             dailyReport.Size = bookTicket1.Size;
             dailyReport.Location = new Point(110, 60);
-           // dailyReport.TabIndex = 4;
+
+            weeklyReport.TopLevel = false;
+            weeklyReport.Size = bookTicket1.Size;
+            weeklyReport.Location = new Point(110, 60);
 
             this.Controls.Add(dailyReport);
+            this.Controls.Add(weeklyReport);
 
             mainControls.Add(dailyReport);
+            mainControls.Add(weeklyReport);
             mainControls.Add(setTicketPriceForWeekDays1);
             mainControls.Add(bookTicket1);
         }
@@ -70,5 +77,12 @@ namespace Coursework1
             mainControls.ForEach(x => x.Visible = false);
         }
 
+        private void navProgressChartBtn_Click(object sender, EventArgs e)
+        {
+            hideControls();
+
+            weeklyReport.Show();
+            weeklyReport.Visible = true;
+        }
     }
 }

@@ -93,6 +93,7 @@ namespace Coursework1
             this.navProgressChartBtn.TabIndex = 3;
             this.navProgressChartBtn.Text = "Weekly Progress Chart";
             this.navProgressChartBtn.UseVisualStyleBackColor = false;
+            this.navProgressChartBtn.Click += new System.EventHandler(this.navProgressChartBtn_Click);
             // 
             // navGenerateReportBtn
             // 
